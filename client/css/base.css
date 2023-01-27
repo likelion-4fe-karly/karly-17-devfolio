@@ -1,10 +1,11 @@
-/* Base Style */
+/* Base Style*/
+
 body,
 body::before,
 body::after,
-body *,
-body *::before,
-body *::after {
+body,
+body ::before,
+body::after {
   box-sizing: border-box;
 }
 
