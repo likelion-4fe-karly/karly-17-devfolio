@@ -1,3 +1,3 @@
-# karly-17-devfolio
+# Lab17
 
-# vanilla project Lab 17
+# JS
