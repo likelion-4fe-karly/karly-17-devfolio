@@ -18,7 +18,8 @@
   "author": "담당자",
   "license": "ISC",
   "devDependencies": {
-    "json-server": "0.17.1",
-    "live-server": "1.2.2"
+    "eslint": "^8.32.0",
+    "json-server": "^0.17.1",
+    "live-server": "^1.2.2"
   }
 }
