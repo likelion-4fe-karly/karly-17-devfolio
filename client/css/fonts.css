@@ -1,0 +1,19 @@
+/*공통 글자크기*/
+
+:root {
+--font-heading-xl: 28px;
+--font-heading-medium: 16px;
+--font-heading-xxl: 38px;
+--font-heading-large: 21px;
+--font-heading-xxxl: 51px;
+--font-label-small: 12px;
+--font-label-medium: 16px;
+--font-label-large: 21px;
+--font-label-xl: 28px;
+--font-label-xxl: 38px;
+--font-paragraph-small: 12px;
+--font-paragraph-medium: 16px;
+--font-paragraph-large: 21px;
+--font-paragraph-xl: 28px;
+
+}
