@@ -1,0 +1,49 @@
+.signup_container {
+  min-width: 1050px;
+  margin-top: 50px;
+  margin-bottom: 60px;
+  background-color: rgb(255, 255, 255);
+}
+.signup_container h2 {
+  margin-bottom: 50px;
+  font-size: 28px;
+  line-height: 35px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: -1px;
+  color: rgb(51, 51, 51);
+  margin-bottom: 50px;
+}
+.signup_wrapper{
+  width: 640px;
+  margin: 0px auto;
+}
+.star {
+  color: red;
+  background-color: blue;
+}
+.signup_wrapper .essential_check {
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgb(51, 51, 51);
+  font-size: 12px;
+  color: rgb(102, 102, 102);
+  line-height: 17px;
+  float: right;
+}
+
+.signProcess_container{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.signProcess_container .id_title {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: pink;
+  width: 100px;
+}
+.signProcess_container .id_input {
+  flex-grow: 1;
+  width: 50%;
+  display: inline;
+}
