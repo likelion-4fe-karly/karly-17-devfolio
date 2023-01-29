@@ -1,30 +1,27 @@
-
 /* detail_product_main */
 
-html{
-	width: 100%;
-	height: 100%;
+html {
+  width: 100%;
+  height: 100%;
 }
 
-.product_detail{
-	background: khaki;
-/* Auto layout */
+.product_detail {
+  background: khaki;
+  /* Auto layout */
 
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding: 4px 4px 96px;
-	gap: 4px; 
-	
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 4px 4px 96px;
+  gap: 4px;
 
-
-	/* 
+  /* 
 	align-items: flex-start;
 	padding: 4px 4px 96px;
  	*/
 
-/* Inside auto layout */
-/* 
+  /* Inside auto layout */
+  /* 
 flex: none;
 order: 2;
 flex-grow: 0; 
@@ -32,49 +29,44 @@ flex-grow: 0;
 */
 }
 
-
-.product_detail .container{
-	background-color: #fff;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 40px 0px 0px;
-	/* Auto layout */
-	/* Inside auto layout */
-	/* 
+.product_detail .container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0px 0px;
+  /* Auto layout */
+  /* Inside auto layout */
+  /* 
 	flex: none;
 	order: 0;
 	flex-grow: 0;
 	 */
 }
 
+.product_detail .main_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 84.84px;
 
-.product_detail .main_content{
-	
- display: flex;
- flex-direction: row;
- justify-content: space-between;
- gap: 84.84px;
-
- /* align-items: flex-start; */
-/* 
+  /* align-items: flex-start; */
+  /* 
 padding: 0px;
 */
-/* 
+  /* 
 flex: none;
 order: 0;
 flex-grow: 0; */
-	
 }
-
 
 /* 상세 상품 대표이미지 */
 .product_detail .product_img {
-	width: 400px;
-	background: url(./images/product01.jpg) no-repeat;
-	height: 513px; 
-	border-radius: 21px; 
-	/* 
+  width: 400px;
+  background: url(./images/product01.jpg) no-repeat;
+  height: 513px;
+  border-radius: 21px;
+  /* 
 
 	/* flex: none;
 order: 0;
@@ -82,116 +74,188 @@ flex-grow: 0; */
 }
 
 .product_detail section {
-	width: 559px;
+  width: 559px;
 }
 
 /* 문제점, 각 p들의 스타일 지정을 어떻게 해야 효율적? */
 
-#text1{
-	color: #6B6B6B;
-	font-family: 'Pretendard';
-	font-style: normal;
-	font-weight: 700;
-	font-size: 21.2874px;
-	line-height: 140%;
-	margin-bottom: 10px;
+#text1 {
+  color: #6b6b6b;
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21.2874px;
+  line-height: 140%;
+  margin-bottom: 10px;
 }
 
-#text2{
-	font-family: 'Pretendard';
-font-style: normal;
-font-weight: 600;
-font-size: 28px;
-line-height: 150%;
-/* identical to box height, or 43px */
-margin-bottom: 10px;
+#text2 {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+  /* identical to box height, or 43px */
+  margin-bottom: 10px;
 
+  /* content */
 
-/* content */
-
-color: #333333;
-
+  color: #333333;
 }
 
-#text3{
-	
-/* Auto layout */
+#text3 {
+  /* Auto layout */
 
-font-family: 'Pretendard';
-font-style: normal;
-font-weight: 400;
-font-size: 15.9695px;
-line-height: 160%;
-/* identical to box height, or 26px */
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.9695px;
+  line-height: 160%;
+  /* identical to box height, or 26px */
 
-margin-bottom: 10px;
+  margin-bottom: 10px;
 
-/* gray/400 */
+  /* gray/400 */
 
-color: #898989;
+  color: #898989;
 }
 
-#text4{
-	font-family: 'Pretendard';
-font-style: normal;
-font-weight: 600;
-font-size: 28.3758px;
-line-height: 150%;
-/* identical to box height, or 43px */
+#text4 {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28.3758px;
+  line-height: 150%;
+  /* identical to box height, or 43px */
 
+  /* content */
 
-/* content */
-
-color: #333333;
-
+  color: #333333;
 }
 
-#text5{
-	font-family: 'Pretendard';
-font-style: normal;
-font-weight: 700;
-font-size: 15.9695px;
-line-height: 140%;
-/* or 22px */
+#text5 {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15.9695px;
+  line-height: 140%;
+  /* or 22px */
 
-/* content */
-margin-bottom: 10px;
+  /* content */
+  margin-bottom: 10px;
 
-color: #333333;
+  color: #333333;
 }
 
 #text6 {
-font-family: 'Pretendard';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 150%;
-/* identical to box height, or 24px */
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  /* identical to box height, or 24px */
 
-/* primary */
-margin-bottom: 10px;
+  /* primary */
+  margin-bottom: 10px;
 
-color: #5F0080;
+  color: #5f0080;
 }
 
 .product_dl {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	padding: 0px;
-	width: 558.93px;
-height: 479.22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  width: 559px;
 }
 
-.product_dl dl{
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
-	padding: 17px 0 18px;
-	border-top: 1px solid #E1E1E1;
-	width: 100%;
+.product_dl dl {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 17px 0 18px;
+  border-top: 1px solid #e1e1e1;
+  width: 100%;
 }
 
-.product_dl dl dt{
-	width: 128px;
+.product_dl dl dt {
+  width: 128px;
+}
+
+.detail_count {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.product_detail .detail_count_tb {
+  position: relative;
+  border: 1px solid #e1e1e1;
+  width: 410px;
+  height: 83.84px;
+  display: flex;
+  flex-direction: row;
+  padding: 11px 10px 11px 15px;
+}
+
+#count {
+  display: flex;
+  flex-direction: column;
+}
+
+#count_tb_price {
+  position: absolute;
+  top: 54px;
+  left: 375px;
+}
+
+.last_cost {
+}
+
+#is_last_cost {
+  font-weight: bold;
+  font-size: 32px;
+  color: #333;
+  line-height: 36px;
+  padding-left: 12px;
+}
+
+#cost_icon {
+  background-color: #fa622f;
+  border-radius: 12px;
+  color: #fff;
+  padding: 0 7px;
+  font-size: 11px;
+  font-weight: 500;
+  margin: 1px 6px 0 0;
+}
+
+#cost_span {
+  line-height: 1.45;
+  color: #666;
+}
+
+.cart_container {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.cart_button {
+  background-color: #5f0080;
+  color: #fff;
+
+  width: 100%;
+  height: 52px;
+  border-radius: 5px;
+  display: block;
+  padding: 0 15px;
+  text-align: center;
+  width: 423px;
+  height: 54px;
+}
+
+.cart_button span {
+  font-size: 16px;
+  font-weight: 500;
 }
