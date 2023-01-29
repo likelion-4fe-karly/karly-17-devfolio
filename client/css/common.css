@@ -31,10 +31,12 @@ body {
   position: relative;
 }
 
-.top_banner_inner svg {
+.top_banner_inner button {
   position: absolute;
   top: 0px;
   right: 0px;
+  border: none;
+  background-color: transparent;
 }
 
 /* header 영역  - 선영 */
@@ -186,24 +188,27 @@ header {
   gap: 143px;
 }
 
-.nav_category {
+.nav_category button {
   display: flex;
   align-items: center;
-  gap: 12px;
-  width: 90px;
+  justify-content: space-between;
+  width: 87px;
   height: 24px;
   box-sizing: border-box;
+  padding: 0;
+}
+
+.nav_category button {
+  font-weight: 600;
+  border: none;
+  background-color: transparent;
 }
 
 .nav_category:hover,
-.nav_category path:hover {
+.nav_category button:hover {
   color: var(--primary);
   stroke: var(--primary);
   cursor: pointer;
-}
-
-.nav_category span {
-  font-weight: 600;
 }
 
 .nav_menu {
@@ -214,16 +219,18 @@ header {
   justify-content: space-between;
 }
 
-.nav_menu li {
+.nav_menu button {
   height: inherit;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   font-weight: 600;
+  border: none;
+  background-color: transparent;
 }
 
-.nav_menu li:hover {
+.nav_menu button:hover {
   color: var(--primary);
   text-decoration: underline;
 }
