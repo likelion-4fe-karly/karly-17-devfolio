@@ -20,6 +20,8 @@
 }
 .form_container .id_form_tag{
   width: 100%;
+  display: block;
+  box-sizing: border-box;
   height: 54px;
   padding: 0 11px 1px 15px;
   border-radius: 4px;
@@ -32,8 +34,10 @@
   
 }
 .form_container .password_form_tag{
-  width: 100%;
   height: 54px;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
   padding: 0 11px 1px 15px;
   border-radius: 4px;
   border: 1px solid #ddd;
@@ -45,11 +49,12 @@
 }
 
 .login_wrapper .find_container {
-  text-align: center;
-  margin-left: 245px;
+  text-align: right;
   margin-bottom: 30px
 
 }
+
+
 .find_container .id_find, .pw_find{
   cursor: pointer;
   font-size: 12px;
@@ -57,12 +62,6 @@
   line-height: 160%;
   font-family: 'Pretendard';
   font-style: normal;
-}
-.find_container span {
-  width: 1px;
-  height: 10px;
-  
-  
 }
 .button_container{
   display: flex;
