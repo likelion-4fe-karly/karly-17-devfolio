@@ -1,1 +1,3 @@
-안녕하세요
+import { includeIframeToHTML } from './../lib/include/includeIframeToHTML.js';
+
+includeIframeToHTML();
