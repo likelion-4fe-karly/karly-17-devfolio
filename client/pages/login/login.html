@@ -4,42 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../css/reset.css" />
-    <link rel="stylesheet" href="../../css/base.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" href="../../css/style.css" />
 
-    <link rel="stylesheet" href="../login/login.css" />
-
-    <title>로그인 - 칼리</title>
+    <title>로그인 칼리</title>
   </head>
   <body>
     <div class="login_wrapper">
       <h2>로그인</h2>
-      <div class="form_container">
-        <form >
-          <input
-            type="text"
-            placeholder="아이디를 입력해주세요."
-            class="id_form_tag"
-          />
-          <input
-            type="password"
-            placeholder="비밀번호를 입력해주세요."
-            class="password_form_tag"
-          />
-        </form>
+      <form class="form_container">
+        <label for="id" class="a11yHidden">아이디</label>
+        <input
+          id="id"
+          type="text"
+          placeholder="아이디를 입력해주세요."
+          class="id_form_tag"
+        />
+        <label for="pw" class="a11yHidden">비밀번호</label>
+        <input
+          id="pw"
+          type="password"
+          placeholder="비밀번호를 입력해주세요."
+          class="password_form_tag"
+        />
 
         <div class="find_container">
           <a class="id_find">아이디 찾기</a>
-          <img src="../../assets/bar/bar.png" />
+          <span></span>
           <a class="pw_find">비밀번호 찾기</a>
         </div>
 
-    </div>
-
-      <div class="button_container">
-        <button type="button" class="login_btn">로그인</button>
-        <button type="button" class="signup_btn">회원가입</button>
-      </div>
+        <div class="button_container">
+          <button type="button" class="login_btn">로그인</button>
+          <button type="button" class="signup_btn">회원가입</button>
+        </div>
+      </form>
     </div>
   </body>
 </html>
