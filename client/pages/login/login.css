@@ -12,14 +12,15 @@
   text-align: center;
   margin-bottom: 30px;
 }
-.form_container{
+.form_container {
   display: flex;
   flex-direction: column;
   width: 340px;
   margin: 0 auto;
 }
-.form_container .id_form_tag{
+.form_container .id_form_tag {
   width: 100%;
+  box-sizing: border-box;
   height: 54px;
   padding: 0 11px 1px 15px;
   border-radius: 4px;
@@ -29,10 +30,10 @@
   line-height: 1.5;
   color: #333;
   outline: none;
-  
 }
-.form_container .password_form_tag{
+.form_container .password_form_tag {
   width: 100%;
+  box-sizing: border-box;
   height: 54px;
   padding: 0 11px 1px 15px;
   border-radius: 4px;
@@ -45,39 +46,35 @@
 }
 
 .login_wrapper .find_container {
-  text-align: center;
-  margin-left: 245px;
-  margin-bottom: 30px
-
+  text-align: right;
+  margin-bottom: 30px;
 }
-.find_container .id_find, .pw_find{
+.find_container .id_find,
+.pw_find {
   cursor: pointer;
   font-size: 12px;
   font-weight: 400;
   line-height: 160%;
-  font-family: 'Pretendard';
+  /* font-family: "Pretendard"; */
   font-style: normal;
 }
 .find_container span {
   width: 1px;
   height: 10px;
-  
-  
 }
-.button_container{
+.button_container {
   display: flex;
   flex-direction: column;
   width: 340px;
   margin: 0 auto;
-
 }
-.button_container .login_btn{
+.button_container .login_btn {
   width: 100%;
   height: 54px;
   padding: 0 11px 1px 15px;
   border-radius: 4px;
   border: 1px solid #ddd;
-  background-color:  #5F0080;
+  background-color: #5f0080;
   font-weight: 400;
   margin-bottom: 20px;
   line-height: 1.5;
@@ -86,19 +83,18 @@
   cursor: pointer;
 }
 
-.button_container .signup_btn{
+.button_container .signup_btn {
   width: 100%;
   height: 54px;
   padding: 0 11px 1px 15px;
   border-radius: 4px;
-  border: 1px solid #5F0080; 
-  background-color:#ffffff;
+  border: 1px solid #5f0080;
+  background-color: #ffffff;
   font-weight: 400;
   margin-bottom: 20px;
   line-height: 1.5;
-  color:  #5F0080; 
+  color: #5f0080;
   outline: none;
-  
+
   cursor: pointer;
 }
-
