@@ -187,6 +187,7 @@ header {
   justify-content: space-between;
   height: 72px;
   gap: 143px;
+  position: relative;
 }
 
 .nav_category button {
@@ -195,22 +196,52 @@ header {
   justify-content: space-between;
   width: 87px;
   height: 24px;
-  box-sizing: border-box;
   padding: 0;
-}
-
-.nav_category button {
   font-weight: 600;
   border: none;
   background-color: transparent;
 }
 
-.nav_category:hover,
-.nav_category button:hover {
+.nav_category button.active {
   color: var(--primary);
   stroke: var(--primary);
   cursor: pointer;
 }
+
+.category_menu {
+  position: absolute;
+  top: 73px;
+  display: none;
+  background-color: #fff;
+  width: 247px;
+  height: 840px;
+  border: 1px solid var(--gray-100);
+  border-top: none;
+}
+
+.category_menu li {
+  width: 235px;
+  align-items: center;
+  display: flex;
+  padding-left: 12px;
+  gap: 8px;
+  height: 40px;
+}
+
+.category_menu li:hover {
+  background-color: var(--gray-100);
+  color: var(--primary);
+}
+
+.category_menu li span {
+  font-weight: 600;
+  line-height: 150%;
+}
+/* 
+.nav_category:hover .category_menu,
+.nav_category button:hover .category_menu {
+  display: block;
+} */
 
 .nav_menu {
   width: 600px;
