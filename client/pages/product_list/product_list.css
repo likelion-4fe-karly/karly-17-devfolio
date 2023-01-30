@@ -1,0 +1,78 @@
+@import url(../../css/a11y.css);
+@import url(../../css/base.css);
+@import url(../../css/color.css);
+@import url(../../css/fonts.css);
+@import url(../../css/common.css);
+@import url(../../css/reset.css);
+
+/* backgroun-color - 삭제예정 */
+section {
+  background-color: lightyellow;
+}
+h3 {
+  background-color: lightcyan;
+}
+.list_container {
+  background-color: lightgrey;
+}
+aside {
+  background-color: lightslategray;
+}
+article {
+  background-color: lightskyblue;
+}
+.product {
+  border: 2px solid red;
+}
+
+/* All - 전체 스타일 */
+button {
+  all: unset;
+}
+/* product_list_content */
+.product_list_section {
+  width: 1050px;
+  margin: 0 auto;
+  font-family: 'Pretendard';
+}
+/* product_list_container */
+.product_list_section .list_container {
+  display: flex;
+  /* height:100vh; */
+  flex-direction: row;
+  padding-top: 50px;
+}
+/* product_list_title_h3 */
+.product_list_section h3 {
+  height: 35px;
+  padding-top: 50px;
+  font-weight: 600;
+  font-size: var(--font-heading-xl);
+  text-align: center;
+  line-height: 35px;
+}
+/* product_list_aside */
+.product_list_section .list_accordion {
+  width: 220px;
+  margin-right: 47px;
+  /* height:100vh; */
+}
+.product_list_section .list_accordion .list_accordion_head {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  align-items: center;
+  border-bottom: 1px solid var(--gray-300);
+}
+.product_list_section .list_accordion .list_accordion_head span {
+  font-size: var(--font-label-medium);
+  color: var(--content);
+}
+.product_list_section .list_accordion .list_accordion_head button span {
+  font-size: 10px;
+  color: var(--gray-300);
+}
+.product_list_section .list_accordion .list_accordion_area {
+  border: 1px solid red;
+}
+.product_list_section .list_accordion .list_accordion_area;
