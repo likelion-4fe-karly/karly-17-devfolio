@@ -202,7 +202,7 @@ header {
   background-color: transparent;
 }
 
-.nav_category button.active {
+.nav_category button:hover {
   color: var(--primary);
   stroke: var(--primary);
   cursor: pointer;
@@ -237,11 +237,11 @@ header {
   font-weight: 600;
   line-height: 150%;
 }
-/* 
+
 .nav_category:hover .category_menu,
 .nav_category button:hover .category_menu {
   display: block;
-} */
+}
 
 .nav_menu {
   width: 600px;
