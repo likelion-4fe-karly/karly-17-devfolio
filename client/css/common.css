@@ -60,7 +60,8 @@ header {
   padding-top: 12px;
 }
 
-.header_login ul div {
+.header_login ul li:nth-child(2),
+.header_login ul li:nth-child(4) {
   width: 1px;
   height: 13px;
   background-color: #d9d9d9;
