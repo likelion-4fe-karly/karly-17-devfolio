@@ -449,7 +449,7 @@ footer {
   height: 108px;
   width: 100%;
   text-align: center;
-  color: var(--gray-400);
+  color: var(--gray-500);
 }
 
 .footer_bottom p {
