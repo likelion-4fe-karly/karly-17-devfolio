@@ -251,7 +251,7 @@ header {
   justify-content: space-between;
 }
 
-.nav_menu button {
+.nav_menu a {
   height: inherit;
   display: flex;
   align-items: center;
@@ -262,7 +262,7 @@ header {
   background-color: transparent;
 }
 
-.nav_menu button:hover {
+.nav_menu a:hover {
   color: var(--primary);
   text-decoration: underline;
 }
