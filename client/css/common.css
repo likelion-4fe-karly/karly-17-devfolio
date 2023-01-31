@@ -535,11 +535,11 @@ footer {
   cursor: pointer;
 }
 
-.popup_button_list button:first-child {
-  border-right: 1px solid var(--gray-100);
+.popup_button_list .popup_never_watch {
   border-bottom-left-radius: 16px;
+  border-right: 1px solid var(--gray-100);
 }
 
-.popup_button_list button:last-child {
+.popup_button_list .popup_close {
   border-bottom-right-radius: 16px;
 }
