@@ -7,22 +7,17 @@
 
 /* backgroun-color - 삭제예정 */
 section {
-  background-color: lightyellow;
+  /* background-color: lightyellow; */
 }
-h3 {
-  background-color: lightcyan;
-}
+
 .list_container {
-  background-color: lightgrey;
+  /* background-color: lightgrey; */
 }
-aside {
+/* aside {
   background-color: lightslategray;
-}
+} */
 article {
   background-color: lightskyblue;
-}
-.product {
-  border: 2px solid red;
 }
 
 /* All - 전체 스타일 */
@@ -55,8 +50,8 @@ button {
 .product_list_section .list_accordion {
   width: 220px;
   margin-right: 47px;
-  /* height:100vh; */
 }
+/* product_list_aside_head */
 .product_list_section .list_accordion .list_accordion_head {
   display: flex;
   justify-content: space-between;
@@ -67,12 +62,87 @@ button {
 .product_list_section .list_accordion .list_accordion_head span {
   font-size: var(--font-label-medium);
   color: var(--content);
+  font-weight: 600;
 }
 .product_list_section .list_accordion .list_accordion_head button span {
   font-size: 10px;
   color: var(--gray-300);
 }
+/* product_aside_area  */
 .product_list_section .list_accordion .list_accordion_area {
-  border: 1px solid red;
+  border-bottom: 1px solid var(--gray-300);
+  text-align: center;
 }
-.product_list_section .list_accordion .list_accordion_area;
+/* product_aside_accordion_head */
+.product_list_section .list_accordion .list_accordion_area .accordion_btn {
+  width: 100%;
+  height: 52px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.product_list_section .list_accordion .list_accordion_area .accordion_btn h4 {
+  color: var(--content);
+  font-size: var(--font-label-medium);
+  font-weight: 600;
+}
+/* product_list_accordion_item */
+.product_list_section .list_accordion .accordion_item_list li {
+  margin-bottom: 24px;
+  align-items: center;
+}
+.product_list_section .list_accordion .accordion_item_list li a {
+  display: block;
+}
+.product_list_section .list_accordion .accordion_item_list li .list_item {
+  font-size: var(--font-label-medium);
+  color: var(--content);
+  display: flex;
+  align-items: center;
+}
+.product_list_section .list_accordion .accordion_item_list li .list_item svg {
+  margin-right: 8px;
+}
+.product_list_section .accordion_item_list li a .list_item span {
+  margin-right: 4px;
+  font-weight: 400;
+}
+.product_list_section .list_accordion .accordion_item_list li .list_item_count {
+  font-size: var(--font-label-small);
+  color: var(--gray-300);
+}
+.product_list_section .list_accordion .accordion_item_list li:first-child {
+  margin-top: 4px;
+}
+.product_list_section .list_accordion .accordion_item_list li:last-child {
+  margin-bottom: 22px;
+}
+/* product_list_accordion_add */
+.product_list_section
+  .list_accordion
+  .list_accordion_area
+  .product_list_accordion_add
+  span {
+  width: 4px;
+  height: 8px;
+  margin-left: 7px;
+}
+.product_list_section
+  .list_accordion
+  .list_accordion_area
+  .product_list_accordion_add {
+  color: var(--gray-300);
+  margin-bottom: 18px;
+  font-size: var(--font-paragraph-small);
+}
+
+/* accordion_list_checkbox */
+.list_item_check {
+  display: none;
+}
+.list_item_check:checked + svg {
+  fill: var(--primary);
+}
+.list_item_check:checked + svg g path:first-child {
+  stroke: var(--primary);
+}
