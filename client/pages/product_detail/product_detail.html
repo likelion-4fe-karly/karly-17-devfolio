@@ -4,138 +4,142 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="/client/pages/product_detail/product_detail.css"
-    />
+    <meta name="description" content="풀무원의 튀기지않아 매콤한 탱탱쫄면">
+		<title>Document</title>
+    <link rel="stylesheet" href="./product_detail.css"/>
     <link rel="stylesheet" href="/client/css/reset.css" />
+    <link rel="stylesheet" href="/client/css/fonts.css" />
+    <link rel="stylesheet" href="/client/css/color.css" />
+
   </head>
   <body>
     <div class="product_detail">
-      <div class="container">
-        <div class="main_content">
-          <div class="product_img"></div>
+      <div class="product_detail_container">
+        <section class="product_detail_main">
+          <div class="product_detail_main_img"></div>
           <section>
-            <div class="product_detail_text">
-              <p id="text1">샛별배송</p>
-              <p id="text2">[풀무원] 탱탱쫄면 (4개입)</p>
-              <p id="text3">튀기지 않아 부담없는 매콤함</p>
-              <span id="text4">4,980</span> <span id="text5">원</span>
-              <p id="text6">로그인 후, 적립 혜택이 제공됩니다.</p>
-            </div>
-            <div class="product_dl">
+              <p class="product_detail_subtitle">샛별배송</p>
+              <p class="product_detail_title">[풀무원] 탱탱쫄면 (4개입)</p>
+              <p class="product_detail_info">튀기지 않아 부담없는 매콤함</p>
+              <p class="product_detail_cost">4,980 <span>원</span></p> 
+              <p class="product_detail_advice">로그인 후, 적립 혜택이 제공됩니다.</p>
+            <div class="product_detail_main_dl">
               <dl>
-                <dt>배송</dt>
-                <dd>샛별배송</br>23시 전 주문 시 내일 아침 7시 전 도착</br>
-                (대구 부산 울산 샛별배송 운영시간 별도 확인)</dd>
+                <dt class="product_detail_main_dt">배송</dt>
+                <dd><p class="product_detail_main_dt">샛별배송</p><p class="product_detail_main_dd">23시 전 주문 시 내일 아침 7시 전 도착
+                (대구 부산 울산 샛별배송 운영시간 별도 확인)</p></dd>
               </dl>
               <dl>
-                <dt>판매자</dt>
-                <dd>칼리</dd>
+                <dt class="product_detail_main_dt">판매자</dt>
+                <dd class="product_detail_main_dd">칼리</dd>
               </dl>
               <dl>
-                <dt>포장타입</dt>
-                <dd>상온(종이포장)</dd>
-                <dd>택배배송은 에코 포장이 스티로폼으로 대체됩니다.</dd>
+                <dt class="product_detail_main_dt">포장타입</dt>
+                <dd><p class="product_detail_main_dt">상온(종이포장) </p><p class="product_detail_main_dd">택배배송은 에코 포장이 스티로폼으로 대체됩니다.</p></dd>
               </dl>
               <dl>
-                <dt>판매단위</dt>
-                <dd>1봉</dd>
+                <dt class="product_detail_main_dt">판매단위</dt>
+                <dd class="product_detail_main_dd">1봉</dd>
               </dl>
               <dl>
-                <dt>중량/용량</dt>
-                <dd>123g*4봉</dd>
+                <dt class="product_detail_main_dt">중량/용량</dt>
+                <dd class="product_detail_main_dd">123g*4봉</dd>
               </dl>
               <dl>
-                <dt>원산지</dt>
-                <dd>상세페이지 별도 표기</dd>
+                <dt class="product_detail_main_dt">원산지</dt>
+                <dd class="product_detail_main_dd">상세페이지 별도 표기</dd>
               </dl>
               <dl>
-                <dt>알레르기정보</dt>
-                <dd>-대두, 밀, 쇠고기 함유</dd>
+                <dt class="product_detail_main_dt">알레르기정보</dt>
+                <dd class="product_detail_main_ddflex"><p class="product_detail_main_dd">-대두, 밀, 쇠고기 함유</p>
+								<p class="product_detail_main_dd">-계란, 우유, 메밀, 땅콩, 고등어, 게, 돼지고기, 새우, 복숭아, 토마토, 아황산류, 호두, 잣, 닭고기, 오징어, 조개류(굴, 전복, 홍합 포함)를 사용한 제품과 같은 제조시설에서 제조</p></dd>
               </dl>
 
 
-              <div class="detail_count">
+              <div class="product_detail_payment">
                 <dl>
-                  <dt>상품선택</dt>
+                  <dt class="product_detail_main_dt">상품선택</dt>
                   <dd>
-                    <div class="detail_count_tb">
-                      <div>[풀무원] 탱탱쫄면 (4개입)</br>
-												<button>-</button>
-												<span>1</span>
-												<button>+</button>
+                    <div class="product_detail_cnt_window">
+                      <div><p class="product_detail_cnt_tilte">[풀무원] 탱탱쫄면 (4개입)</p>
+												<div class="product_detail_cnt_btn">
+												<button class="product_detail_minus_btn" type="button" aria-label="count minus button"></button>
+												<div class="product_detail_cnt_number">1</div>
+												<button class="product_detail_plus_btn" type="button" aria-label="count plus button"></button>
 											</div>
-											<span id="count_tb_price">4,890원</span>
+											</div>
+											<span class="product_detail_cnt_last_price">4,890원</span>
                     </div>
+								
                   </dd>
                 </dl>
-								<div class="last_cost">
-									<p>총 상품금액: <span id="is_last_cost">4,890</span>원</p>
-									<span id="cost_icon">적립</span>
-									<span id="cost_span">로그인 후, 적립 혜택 제공</span>
+								<div class="product_detail_last_cost_div">
+									<p>총 상품금액: <span class="product_detail_last_price">4,890</span>원</p>
+									<span class="product_detail_icon">적립</span>
+									<span class="product_detail_icon_span">로그인 후, 적립 혜택 제공</span>
 								</div>
-								<div class="cart_container">
-									<button>
+								<div class="product_detail_cart_container">
+									<div>
+									<button class="product_detail_cart_icon" type="button" aria-label="heart button">
 										<span>
-											<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0yNS44MDcgNy44NjNhNS43NzcgNS43NzcgMCAwIDAtOC4xNzIgMEwxNiA5LjQ5N2wtMS42MzUtMS42MzRhNS43NzkgNS43NzkgMCAxIDAtOC4xNzMgOC4xNzJsMS42MzQgMS42MzQgNy40NjYgNy40NjdhMSAxIDAgMCAwIDEuNDE1IDBzMCAwIDAgMGw3LjQ2Ni03LjQ2N2gwbDEuNjM0LTEuNjM0YTUuNzc3IDUuNzc3IDAgMCAwIDAtOC4xNzJ6IiBzdHJva2U9IiM1RjAwODAiIHN0cm9rZS13aWR0aD0iMS42IiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K" alt="" class="css-0">
+											<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0yNS44MDcgNy44NjNhNS43NzcgNS43NzcgMCAwIDAtOC4xNzIgMEwxNiA5LjQ5N2wtMS42MzUtMS42MzRhNS43NzkgNS43NzkgMCAxIDAtOC4xNzMgOC4xNzJsMS42MzQgMS42MzQgNy40NjYgNy40NjdhMSAxIDAgMCAwIDEuNDE1IDBzMCAwIDAgMGw3LjQ2Ni03LjQ2N2gwbDEuNjM0LTEuNjM0YTUuNzc3IDUuNzc3IDAgMCAwIDAtOC4xNzJ6IiBzdHJva2U9IiM1RjAwODAiIHN0cm9rZS13aWR0aD0iMS42IiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K" alt="heart" class="css-0">
 										</span>
 									</button>
-									<button>
+									<button class="product_detail_cart_icon" type="button" aria-label="alarm button">
 										<span>
-											<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIHN0cm9rZT0iI0NDQyIgc3Ryb2tlLXdpZHRoPSIxLjYiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTEyLjY2NiAyM2EzLjMzMyAzLjMzMyAwIDEgMCA2LjY2NiAwIi8+CiAgICAgICAgPHBhdGggZD0iTTI1Ljk5OCAyMi43MzhINmwuMDEzLS4wM2MuMDc2LS4xMzUuNDcxLS43MDQgMS4xODYtMS43MDlsLjc1LTEuMDV2LTYuNjM1YzAtNC40ODUgMy40MzgtOC4xNCA3Ljc0MS04LjMwOEwxNiA1YzQuNDQ2IDAgOC4wNSAzLjcyMiA4LjA1IDguMzE0djYuNjM0bDEuNzA3IDIuNDExYy4xNzMuMjUzLjI1NC4zOC4yNDIuMzh6IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgIDwvZz4KPC9zdmc+Cg==" alt="" class="css-0">
+											<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIHN0cm9rZT0iI0NDQyIgc3Ryb2tlLXdpZHRoPSIxLjYiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTEyLjY2NiAyM2EzLjMzMyAzLjMzMyAwIDEgMCA2LjY2NiAwIi8+CiAgICAgICAgPHBhdGggZD0iTTI1Ljk5OCAyMi43MzhINmwuMDEzLS4wM2MuMDc2LS4xMzUuNDcxLS43MDQgMS4xODYtMS43MDlsLjc1LTEuMDV2LTYuNjM1YzAtNC40ODUgMy40MzgtOC4xNCA3Ljc0MS04LjMwOEwxNiA1YzQuNDQ2IDAgOC4wNSAzLjcyMiA4LjA1IDguMzE0djYuNjM0bDEuNzA3IDIuNDExYy4xNzMuMjUzLjI1NC4zOC4yNDIuMzh6IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgIDwvZz4KPC9zdmc+Cg==" alt="alarm" class="css-0">
 										</span>
 									</button>
-									<button class="cart_button">
+								</div>
+								<div class="product_detail_cart_button">
+									<button class="product_detail_cart_button" type="button" aria-label="cart button">
 										<span>장바구니 담기</span>
 									</button>
+								</div>
 								</div>
               </div>
             </div>
           </section>
-        </div>
+        </section>
         <nav class="product_detail_nav">
-					<ul class="detail_nav">
-						<li class="detail_nav_li"><a><span>상품설명</span></a></li>
-						<li class="detail_nav_li"><a><span>상세정보</span></a></li>
-						<li class="detail_nav_li"><a><span>후기 (1,000)</span></a></li>
-						<li class="detail_nav_li"><a><span>문의</span></a></li>
+					<ul class="product_detail_nav_container">
+						<li class="product_detail_nav_li"><a><span>상품설명</span></a></li>
+						<li class="product_detail_nav_li"><a><span>상세정보</span></a></li>
+						<li class="product_detail_nav_li"><a><span>후기 (1,000)</span></a></li>
+						<li class="product_detail_nav_li"><a><span>문의</span></a></li>
 					</ul>
 				</nav>
         <div class="product_detail_description">
-					<div class="good_intro">
-						<img src="./images/intro.png"/>
-						<div class="intro_text">
+					<div class="product_detail_description_intro">
+						<img src="./images/intro.png" alt="product intro"/>
+						<div class="product_detail_description_introtext">
 							<h3>
 								<small>튀기지 않아 부담없는 매콤함</small>
 								[풀무원] 탱탱쫄면
 							</h3>
-							<p class="intro_p">쫄면의 진가는 매콤새콤한 양념과 탱탱한 면발에서 찾을 수 있지요. 풀무원은 이 맛을 더 부담 없이 즐길 수 있도록 튀기지 않고 만든 탱탱쫄면을 선보입니다. 밀가루와 감자 전분을 적절히 배합해 탄력이 좋고, 입에 넣었을 때는 찰지게 씹히죠. 고추장을 넣어 숙성한 비빔장은 자연스럽고 깊은 맛을 냅니다. 간단하게 조리해 마지막 한 가닥까지 탱탱한 식감을 즐겨보세요. 취향에 따라 다양한 고명을 올려 드셔도 좋아요.</p>
+							<p class="product_detail_description_intro_p">쫄면의 진가는 매콤새콤한 양념과 탱탱한 면발에서 찾을 수 있지요. 풀무원은 이 맛을 더 부담 없이 즐길 수 있도록 튀기지 않고 만든 탱탱쫄면을 선보입니다. 밀가루와 감자 전분을 적절히 배합해 탄력이 좋고, 입에 넣었을 때는 찰지게 씹히죠. 고추장을 넣어 숙성한 비빔장은 자연스럽고 깊은 맛을 냅니다. 간단하게 조리해 마지막 한 가닥까지 탱탱한 식감을 즐겨보세요. 취향에 따라 다양한 고명을 올려 드셔도 좋아요.</p>
 						</div>
 					</div>
-					<div class="good_point">
+					<div class="product_detail_description_point">
 						<h3><span>Karly's Check Point</span></h3>
 						<div>
 							<div>
-							<img src="./images/goodpoint.png">
+							<img src="./images/goodpoint.png" alt="product good point">
 							</div>
 						</div>
-
 					</div>
 				</div>
-        <div class="product_detail_then">
+        <div>
 					<div>
-						<img src="./images/Frame 62.png">
+						<img src="./images/Frame 62.png" alt="More information">
 					</div>
-					<div class="detail_why_karly">
-						<div class="why_karly"><span>WHY KARLY</span></div>
-						<div class="karly_dl_container">
-							<div class="karly_dl_oneline">
-
-							<dl class="karly_d1">
-								<dt class="karly_dl_header">깐깐한 상품위원회</dt>
-								<dd class="karly_dl_dd">
+					<div class="product_detail_why_karly">
+						<div class="product_detail_karly_header"><span>WHY KARLY</span></div>
+						<div>
+							<div class="product_detail_karly_oneline">
+							<dl class="product_detail_karly_content">
+								<dt class="product_detail_karly_headers product_detail_karly_one">깐깐한 상품위원회</dt>
+								<dd class="product_detail_karly_text">
 									나와 내 가족이 먹고 쓸 상품을 고르는
 								</br>
 								마음으로 매주 상품을 직접 먹어보고,
@@ -145,9 +149,9 @@
 							기준을 통과한 상품만을 판매합니다.
 								</dd>
 							</dl>
-							<dl class="karly_d1">
-								<dt class="karly_dl_header">차별화된 Karly Only 상품</dt>
-								<dd class="karly_dl_dd">전국 각지와 해외의 훌륭한 생산자가
+							<dl class="product_detail_karly_content">
+								<dt class="product_detail_karly_headers product_detail_karly_two">차별화된 Karly Only 상품</dt>
+								<dd class="product_detail_karly_text">전국 각지와 해외의 훌륭한 생산자가
 									<br />
 									믿고 선택하는 파트너, 컬리.
 									<br />3천여 개가 넘는 컬리 단독 브랜드, 스펙의
@@ -155,9 +159,9 @@
 									Kurly Only 상품을 믿고 만나보세요.
 								</dd>
 							</dl>
-							<dl class="karly_d1">
-								<dt class="karly_dl_header">신선한 폴콜드체인 배송</dt>
-								<dd class="karly_dl_dd">
+							<dl class="product_detail_karly_content">
+								<dt class="product_detail_karly_headers product_detail_karly_three">신선한 폴콜드체인 배송</dt>
+								<dd class="product_detail_karly_text">
 									온라인 업계 최초로 산지에서 문 앞까지
 									<br />
 									상온, 냉장, 냉동 상품을 분리 포장 후
@@ -168,10 +172,10 @@
 								</dd>
 							</dl>
 						</div>
-						<div class="karly_dl_twoline">
-							<dl class="karly_d1">
-								<dt class="karly_dl_header">고객, 생산자를 위한 최선의 가격</dt>
-								<dd class="karly_dl_dd">
+						<div class="product_detail_karly_twoline">
+							<dl class="product_detail_karly_content">
+								<dt class="product_detail_karly_headers product_detail_karly_four">고객, 생산자를 위한 최선의 가격</dt>
+								<dd class="product_detail_karly_text">
 									매주 대형 마트와 주요 온라인 마트의 가격
 									<br />
 									변동 상황을 확인해 신선식품은 품질을
@@ -182,9 +186,9 @@
 									정기 조정합니다.
 								</dd>
 							</dl>
-							<dl class="karly_d1">
-								<dt class="karly_dl_header">환경을 생각하는 지속 가능한 유통</dt>
-								<dd class="karly_dl_dd">
+							<dl class="product_detail_karly_content">
+								<dt class="product_detail_karly_headers product_detail_karly_five">환경을 생각하는 지속 가능한 유통</dt>
+								<dd class="product_detail_karly_text">
 									친환경 포장재부터 생산자가 상품에만 
 									<br />
 									집중할 수 있는 직매입 유통구조까지,
