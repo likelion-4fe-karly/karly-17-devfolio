@@ -4,29 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../css/reset.css" />
-    <link rel="stylesheet" href="../../css/base.css" />
-    <link rel="stylesheet" href="../signup/signup.css" />
+    <meta name="author" content="kyoungholee" />
+    <meta name="keywords" content="회원가입" />
+    <meta name="description" content="마켓칼리 회원가입 사이트입니다." />
+
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" href="../../css/style.css" />
     <title>회원가입 - 칼리</title>
   </head>
   <body>
     <div class="signup_container">
       <h2>회원가입</h2>
-
       <div class="signup_wrapper">
         <span class="essential_check">
           <span class="star">*</span>
           필수입력사항
         </span>
         <form class="signProcess_container">
-          <div class="bottom_line"></div>
           <div class="id_write">
             <span class="id_title"
               >아이디
               <span class="star">*</span>
             </span>
-
+            <label for="id" class="a11yHidden">아이디</label>
             <input
+              id="id"
               type="text"
               placeholder="아이디를 입력해주세요"
               class="id_input"
@@ -39,20 +46,23 @@
               >비밀번호
               <span class="star">*</span>
             </span>
-
+            <label for="pw" class="a11yHidden">비밀번호</label>
             <input
+              id="pw"
               type="password"
               placeholder="비밀번호를 입력해주세요"
               class="password_input"
             />
           </div>
+
           <div class="password_confirm">
             <span class="password_confirm_title"
               >비밀번호 확인
               <span class="star">*</span>
             </span>
-
+            <label for="confirmpw" class="a11yHidden">비밀번호확인</label>
             <input
+              id="confirmpw"
               type="password"
               placeholder="비밀번호를 한번 더 입력해주세요"
               class="password_confirm_input"
@@ -64,7 +74,9 @@
               >이름
               <span class="star">*</span>
             </span>
+            <label for="name" class="a11yHidden">이름</label>
             <input
+              id="name"
               type="text"
               placeholder="이름을 입력해 주세요"
               class="name_input"
@@ -76,7 +88,9 @@
               >이메일
               <span class="star">*</span>
             </span>
+            <label for="email" class="a11yHidden">이메일</label>
             <input
+              id="email"
               type="text"
               placeholder="예: marketkurly@kurly.com"
               class="email_input"
@@ -89,7 +103,9 @@
               >휴대폰
               <span class="star">*</span>
             </span>
+            <label for="phone" class="a11yHidden">휴대폰</label>
             <input
+              id="phone"
               type="text"
               placeholder="숫자만 입력해주세요."
               class="phone_input"
@@ -110,74 +126,111 @@
 
           <div class="gender_container">
             <span class="gender">성별</span>
-            <div>
-              <span class="gender_man"></span>
-              <span>남자</span>
-            </div>
-            <div>
-              <span class="gender_woman"> </span>
-              <span>여자</span>
-            </div>
-            <div>
-              <span class="gender_none"> </span>
-              <span>선택안함</span>
+            <div class="gender_wrapper">
+              <div>
+                <span class="gender_man"></span>
+                <span id="man">남자</span>
+              </div>
+              <div>
+                <span class="gender_woman"> </span>
+                <span id="woman">여자</span>
+              </div>
+              <div>
+                <span class="gender_none"> </span>
+                <span id="none">선택안함</span>
+              </div>
             </div>
           </div>
-          <span>생년월일</span>
-          <input type="text" placeholder="YYYY" />
-          <span>/</span>
-          <input type="text" placeholder="MM" />
-          <span>/</span>
-          <input type="text" placeholder="DD" />
 
-          <span>추가입력 사항</span>
-          <label
-            ><input type="radio" name="gender" value="man" /> 친구초대 추천인
-            아이디</label
-          >
-          <label
-            ><input type="radio" name="gender" value="woman" /> 참여
-            이벤트명</label
-          >
+          <div class="birth_container">
+            <span class="birthday">생년월일</span>
 
-          <span>이용약관동의</span>
-          <span class="star">*</span>
-          <label
-            ><input type="checkbox" name="gender" value="man" /> 전체
-            동의합니다.
-            <span
-              >선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를
-              이용 할 수 있습니다.</span
-            >
-          </label>
-          <label
-            ><input type="checkbox" name="gender" value="man" /> 이용약관 동의
-            <span> (필수)</span>
-          </label>
+            <div class="birth_wrapper">
+              <label for="birth" class="a11yHidden">생일</label>
+              <input
+                id="birth"
+                type="text"
+                placeholder="YYYY   /   MM   /   DD"
+                class="birth_year"
+              />
+            </div>
+          </div>
 
-          <label
-            ><input type="checkbox" name="gender" value="man" /> 개인정보 수집
-            이용동의
-            <span> (필수)</span>
-          </label>
+          <div class="additional_input_container">
+            <span class="add_input">추가입력 사항</span>
+            <div class="additional_input_wrapper">
+              <div>
+                <span class="suggestion_id"></span>
+                <span id="recommender">친구초대 추천인 아이디</span>
+              </div>
+              <div>
+                <span class="event"> </span>
+                <span id="event_name">참여 이벤트명</span>
+              </div>
+            </div>
+          </div>
 
-          <label
-            ><input type="checkbox" name="gender" value="man" /> 개인정보 수집
-            이용 동의
-            <span> (선택)</span>
-          </label>
+          <div class="contour"></div>
 
-          <label
-            ><input type="checkbox" name="gender" value="man" /> 개인정보 수집
-            이용 동의
-            <span> (선택)</span>
-            <label
-              ><input type="checkbox" name="gender" value="man" />SMS</label
-            >
-            <label
-              ><input type="checkbox" name="gender" value="man" />이메일
-            </label>
-          </label>
+          <div class="agree_check_container">
+            <span class="agree">이용약관동의 <span class="star">*</span></span>
+            <div class="check_list_wrapper">
+              <div class="check_list">
+                <div class="check_list_first_type">
+                  <span class="agree_check_mark"></span>
+                  <span class="check_list_letter">전체 동의합니다.</span>
+                </div>
+                <span class="check_list_explain"
+                  >선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를
+                  이용 할 수 있습니다.</span
+                >
+              </div>
+
+              <div class="agree_letter_wrapper">
+                <div class="check_list_second_type">
+                  <span class="agree_check_mark"></span>
+                  <span class="check_list_letter">이용약관 동의 (필수)</span>
+                </div>
+                <a href="/">약관보기</a>
+              </div>
+
+              <div class="agree_letter_wrapper">
+                <div class="check_list_third_type">
+                  <span class="agree_check_mark"></span>
+                  <span class="check_list_letter"
+                    >개인정보 수집 이용 동의 (필수)</span
+                  >
+                </div>
+                <a href="/">약관보기</a>
+              </div>
+
+              <div class="agree_letter_wrapper">
+                <div class="check_list_fourth_type">
+                  <span class="agree_check_mark"></span>
+                  <span class="check_list_letter"
+                    >무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택)</span
+                  >
+                </div>
+                <a href="/">약관보기</a>
+              </div>
+
+              <div class="agree_letter_wrapper">
+                <div class="check_list_fifth_type">
+                  <span class="agree_check_mark"></span>
+                  <span class="check_list_letter"
+                    >본인은 만 14세 이상입니다. (필수)</span
+                  >
+                </div>
+                <a href="/">약관보기</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="last_line"></div>
+
+          <div class="signup_btn">
+            <button>가입하기</button>
+          </div>
         </form>
       </div>
     </div>
