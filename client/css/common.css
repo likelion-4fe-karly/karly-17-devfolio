@@ -253,7 +253,7 @@ header {
 }
 
 .nav_menu a {
-  width: 100px;
+  /* width: 85px; */
   height: 72px;
   display: flex;
   align-items: center;
@@ -262,13 +262,24 @@ header {
   font-weight: 600;
   border: none;
   background-color: transparent;
+  position: relative;
 }
 
 .nav_menu a:hover {
   color: var(--primary);
 }
 
-.nav_menu .nav_delivery_notice {
+.nav_menu a:hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  display: block;
+  bottom: 26px;
+  height: 1px;
+  background: var(--primary);
+}
+
+.nav_delivery_notice {
   display: flex;
   align-items: center;
   justify-content: center;
