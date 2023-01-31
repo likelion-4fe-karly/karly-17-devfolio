@@ -253,6 +253,7 @@ header {
 }
 
 .nav_menu a {
+  width: 100px;
   height: 72px;
   display: flex;
   align-items: center;
@@ -265,10 +266,9 @@ header {
 
 .nav_menu a:hover {
   color: var(--primary);
-  text-decoration: underline;
 }
 
-.nav_delivery_notice {
+.nav_menu .nav_delivery_notice {
   display: flex;
   align-items: center;
   justify-content: center;
