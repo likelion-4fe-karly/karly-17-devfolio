@@ -503,3 +503,43 @@ footer {
   font-size: 10px;
   line-height: 160%;
 }
+
+/* POP UP  */
+
+.popup {
+  position: absolute;
+  top: 297px;
+  left: calc(50% - 440px / 2);
+  width: 440px;
+  height: 672px;
+  border-radius: 16px;
+  background-color: var(--white);
+  box-shadow: 0px 8px 36px rgba(0, 0, 0, 0.2);
+}
+
+.popup img {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.popup_button_list {
+  width: inherit;
+  height: 86px;
+  display: flex;
+}
+
+.popup_button_list button {
+  flex: 1;
+  background-color: var(--white);
+  border: none;
+  cursor: pointer;
+}
+
+.popup_button_list button:first-child {
+  border-right: 1px solid var(--gray-100);
+  border-bottom-left-radius: 16px;
+}
+
+.popup_button_list button:last-child {
+  border-bottom-right-radius: 16px;
+}
