@@ -227,8 +227,8 @@ header {
 
 .category_menu li {
   width: 235px;
-  align-items: center;
   display: flex;
+  align-items: center;
   padding-left: 12px;
   gap: 8px;
   height: 40px;
@@ -242,11 +242,6 @@ header {
 .category_menu li span {
   font-weight: 600;
   line-height: 150%;
-}
-
-.nav_category:hover .category_menu,
-.nav_category button:hover .category_menu {
-  display: block;
 }
 
 .nav_menu {
