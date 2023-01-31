@@ -5,34 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <meta name="author" content="kyoungholee" />
+    <meta name="keywords" content="회원가입" />
+    <meta name="description" content="마켓칼리 회원가입 사이트입니다." />
+
     <link
       rel="stylesheet"
       as="style"
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
     />
-
-    <link rel="stylesheet" href="../signup/signup.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
     <title>회원가입 - 칼리</title>
   </head>
   <body>
     <div class="signup_container">
       <h2>회원가입</h2>
-
       <div class="signup_wrapper">
         <span class="essential_check">
           <span class="star">*</span>
           필수입력사항
         </span>
         <form class="signProcess_container">
-          <div class="bottom_line"></div>
           <div class="id_write">
             <span class="id_title"
               >아이디
               <span class="star">*</span>
             </span>
-
+            <label for="id" class="a11yHidden">아이디</label>
             <input
+              id="id"
               type="text"
               placeholder="아이디를 입력해주세요"
               class="id_input"
@@ -45,20 +47,23 @@
               >비밀번호
               <span class="star">*</span>
             </span>
-
+            <label for="pw" class="a11yHidden">비밀번호</label>
             <input
+              id="pw"
               type="password"
               placeholder="비밀번호를 입력해주세요"
               class="password_input"
             />
           </div>
+
           <div class="password_confirm">
             <span class="password_confirm_title"
               >비밀번호 확인
               <span class="star">*</span>
             </span>
-
+            <label for="confirmpw" class="a11yHidden">비밀번호확인</label>
             <input
+              id="confirmpw"
               type="password"
               placeholder="비밀번호를 한번 더 입력해주세요"
               class="password_confirm_input"
@@ -70,7 +75,9 @@
               >이름
               <span class="star">*</span>
             </span>
+            <label for="name" class="a11yHidden">이름</label>
             <input
+              id="name"
               type="text"
               placeholder="이름을 입력해 주세요"
               class="name_input"
@@ -82,7 +89,9 @@
               >이메일
               <span class="star">*</span>
             </span>
+            <label for="email" class="a11yHidden">이메일</label>
             <input
+              id="email"
               type="text"
               placeholder="예: marketkurly@kurly.com"
               class="email_input"
@@ -95,7 +104,9 @@
               >휴대폰
               <span class="star">*</span>
             </span>
+            <label for="phone" class="a11yHidden">휴대폰</label>
             <input
+              id="phone"
               type="text"
               placeholder="숫자만 입력해주세요."
               class="phone_input"
@@ -135,8 +146,10 @@
           <div class="birth_container">
             <span class="birthday">생년월일</span>
 
-            <div class="bith_wrapper">
+            <div class="birth_wrapper">
+              <label for="birth" class="a11yHidden">생일</label>
               <input
+                id="birth"
                 type="text"
                 placeholder="YYYY   /   MM   /   DD"
                 class="birth_year"
