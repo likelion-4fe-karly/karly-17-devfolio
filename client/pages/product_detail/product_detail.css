@@ -40,7 +40,7 @@ html {
   border-radius: 21px;
 }
 
-.product_detail_delivery {
+.product_detail_sub_title {
   color: var(--gray-500);
   font-family: 'Pretendard';
   font-weight: 700;
@@ -57,7 +57,7 @@ html {
   color: var(--content);
 }
 
-.product_detail_sub_title {
+.product_detail_info {
   font-weight: 400;
   font-size: var(--font-label-medium);
   color: var(--gray-400);
@@ -72,7 +72,7 @@ html {
   color: var(--content);
 }
 
-.product_detail_won {
+.product_detail_cost span {
   font-weight: 700;
   font-size: var(--font-label-medium);
   line-height: 140%;
