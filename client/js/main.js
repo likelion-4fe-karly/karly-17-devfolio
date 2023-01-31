@@ -7,11 +7,11 @@ includeIframeToHTML()
     const bodyHandler = (e) => {
       const category = e.target.closest('button');
       const subCategory = document.querySelector('.category_menu');
-      if (category) {
-        subCategory.style.display = 'block';
+      if (!category || !category.classList.contains('nav_category_button')) {
+        subCategory.style.display = 'none';
         return;
       }
-      subCategory.style.display = 'none';
+      subCategory.style.display = 'block';
     };
 
     body.addEventListener('click', bodyHandler);
