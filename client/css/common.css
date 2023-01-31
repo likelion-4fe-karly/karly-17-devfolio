@@ -111,7 +111,7 @@ header {
 }
 
 .header_switch_beauty {
-  color: var(--gray-400);
+  color: var(--gray-500);
   position: relative;
 }
 
@@ -445,6 +445,11 @@ footer {
   gap: 20px;
 }
 
+.footer_sns img {
+  width: 30px;
+  height: 30px;
+}
+
 .footer_inner_middle {
   display: flex;
   justify-content: space-between;
@@ -456,22 +461,17 @@ footer {
   align-items: center;
   gap: 8px;
   cursor: pointer;
+  flex: 1;
 }
 
-#middle_center_isms {
-  width: 217px;
+.footer_item img {
+  width: 34px;
+  height: 34px;
 }
 
-#middle_center_privacy {
-  width: 222px;
-}
-
-#middle_center_toss {
-  width: 270px;
-}
-
-#middle_center_bank {
-  width: 283px;
+.footer_long_item img {
+  width: 102px;
+  height: 32px;
 }
 
 .footer_inner_middle li span {
