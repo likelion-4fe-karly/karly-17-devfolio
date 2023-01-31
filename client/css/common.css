@@ -100,16 +100,16 @@ header {
   font-weight: 600;
 }
 
-.header_switch > a {
+.header_switch a:first-child {
   color: var(--primary);
 }
 
-.header_switch_beauty a {
+.header_switch_beauty {
   color: var(--gray-400);
   position: relative;
 }
 
-.header_switch_beauty a:hover {
+.header_switch_beauty:hover {
   color: var(--primary);
 }
 
@@ -120,7 +120,7 @@ header {
   margin: 7px 11px;
 }
 
-.header_switch_beauty a::after {
+.header_switch_beauty::after {
   content: '';
   display: block;
   position: absolute;
