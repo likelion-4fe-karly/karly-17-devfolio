@@ -9,9 +9,6 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  rules: {
-    'no-unused-vars': 'warn',
-  },
   plugins: ['prettier'],
   extends: ['eslint:recommended', 'plugin:prettier/recommended'],
   rules: {
@@ -21,5 +18,6 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
+    'no-unused-vars': 'warn',
   },
 };
