@@ -15,6 +15,18 @@ includeIframeToHTML()
     };
 
     body.addEventListener('click', bodyHandler);
+
+    // POP UP 영역
+    const popup = document.querySelector('.popup');
+    const neverWatch = document.querySelector('.popup_never_watch');
+    const close = document.querySelector('.popup_close');
+
+    const closeHandler = () => {
+      popup.style.display = 'none';
+    };
+
+    neverWatch.addEventListener('click', closeHandler);
+    close.addEventListener('click', closeHandler);
   })
   .catch(() => {
     console.error('실패');
