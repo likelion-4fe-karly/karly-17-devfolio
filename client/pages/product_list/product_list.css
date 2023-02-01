@@ -6,19 +6,26 @@
 @import url(../../css/reset.css);
 
 /* backgroun-color - 삭제예정 */
-section {
+/* section {
   background-color: lightyellow;
 }
 
 .list_container {
   background-color: lightgrey;
-}
-aside {
+} */
+/* aside {
   background-color: lightslategray;
-}
+} */
 article {
-  background-color: lightskyblue;
+  /* background-color: lightskyblue; */
+  width: 100%;
 }
+/*.product_filter_column {
+  background-color: lightcyan;
+}
+.product_list-grid {
+  background-color: lightgreen;
+} */
 
 /* All - 전체 스타일 */
 button {
@@ -35,14 +42,15 @@ button {
   display: flex;
   /* height:100vh; */
   flex-direction: row;
-  padding-top: 50px;
+  margin-top: 50px;
+  margin-bottom: 75px;
 }
 /* product_list_title_h3 */
 .product_list_section h3 {
   height: 35px;
   padding-top: 50px;
   font-weight: 600;
-  font-size: var(--font-heading-xl);
+  font-size: var(--font-label-large);
   text-align: center;
   line-height: 35px;
 }
@@ -50,6 +58,7 @@ button {
 .product_list_section .list_accordion {
   width: 220px;
   margin-right: 47px;
+  flex-shrink: 0;
 }
 /* product_list_aside_head */
 .product_list_section .list_accordion .list_accordion_head {
@@ -57,7 +66,7 @@ button {
   justify-content: space-between;
   padding-bottom: 20px;
   align-items: center;
-  border-bottom: 1px solid var(--gray-300);
+  border-bottom: 1px solid var(--gray-100);
 }
 .product_list_section .list_accordion .list_accordion_head span {
   font-size: var(--font-label-medium);
@@ -70,7 +79,7 @@ button {
 }
 /* product_aside_area  */
 .product_list_section .list_accordion .list_accordion_area {
-  border-bottom: 1px solid var(--gray-300);
+  border-bottom: 1px solid var(--gray-100);
   text-align: center;
 }
 /* product_aside_accordion_head */
@@ -95,7 +104,7 @@ button {
   display: block;
 }
 .product_list_section .list_accordion .accordion_item_list li .list_item {
-  font-size: var(--font-label-medium);
+  font-size: var(--font-paragraph-medium);
   color: var(--content);
   display: flex;
   align-items: center;
@@ -108,7 +117,7 @@ button {
   font-weight: 400;
 }
 .product_list_section .list_accordion .accordion_item_list li .list_item_count {
-  font-size: var(--font-label-small);
+  font-size: var(--font-paragraph-small);
   color: var(--gray-300);
 }
 .product_list_section .list_accordion .accordion_item_list li:first-child {
@@ -133,7 +142,7 @@ button {
   .product_list_accordion_add {
   color: var(--gray-300);
   margin-bottom: 18px;
-  font-size: var(--font-paragraph-small);
+  font-size: var(--font-label-small);
 }
 
 /* accordion_list_checkbox */
@@ -146,7 +155,7 @@ button {
 .list_item_check:checked + svg g path:first-child {
   stroke: var(--primary);
 }
-/* accordion */
+/* accordion animation */
 .accordion_item_list {
   max-height: 0;
   overflow: hidden;
@@ -159,3 +168,67 @@ button {
 .btn_toggle.active .accordion_arrow {
   transform: rotate(180deg);
 }
+
+/* product_column */
+
+.product_list_section .product_filter_column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  font-weight: 600;
+  font-size: var(--font-label-medium);
+}
+/* product_filter */
+.product_list_section .product_filter_column ul {
+  display: flex;
+  color: var(--gray-300);
+  /* font-size: var(--font-label-medium); */
+}
+.product_list_section .product_filter_column ul li {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.product_list_section .product_filter_column ul li:first-child {
+  color: var(--content);
+}
+.product_list_section .product_filter_column ul li:first-child a {
+  margin-right: 4px;
+}
+.product_list_section .product_filter_column ul li:after {
+  content: '|';
+  color: var(--gray-300);
+  margin: 0 8px;
+}
+.product_list_section .product_filter_column ul li:last-child:after {
+  content: '';
+}
+/* product_list_grid */
+.product_list_section .list_container .product_list_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 249px);
+  gap: 31px 18px;
+  width: 100%;
+}
+/* product_list_item_image_box */
+.product_list_section .product_list_grid .product_item_img_box {
+  width: 250px;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+}
+
+.product_list_section .product_list_grid .product_item_img_box img {
+  position: absolute;
+  margin: auto;
+  background-size: cover;
+}
+.product_list_section .product_list_grid .product_item_cart {
+  position: absolute;
+  right: 15px;
+  bottom: 17px;
+  width: 45px;
+  height: 45px;
+}
+/* product_list_item_text_box */
