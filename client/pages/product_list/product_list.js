@@ -6,9 +6,10 @@ for (i = 0; i < accordion.length; i++) {
     this.classList.toggle('active');
     var accordion_item_list = this.nextElementSibling;
     if (!this.classList.contains('active')) {
-      accordion_item_list.style.display = 'none';
+      accordion_item_list.style.maxHeight = null;
     } else {
-      accordion_item_list.style.display = 'block';
+      accordion_item_list.style.maxHeight =
+        accordion_item_list.scrollHeight + 'px';
     }
   });
 }

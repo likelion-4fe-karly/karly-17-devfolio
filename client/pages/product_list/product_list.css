@@ -148,8 +148,14 @@ button {
 }
 /* accordion */
 .accordion_item_list {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
 }
-/* .list_accordion_area .active {
-  display: block;
-} */
+.btn_toggle .accordion_arrow {
+  transform: rotate(0deg);
+  transition: all 0.5s ease-in-out;
+}
+.btn_toggle.active .accordion_arrow {
+  transform: rotate(180deg);
+}
