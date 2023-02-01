@@ -17,10 +17,10 @@ includeIframeToHTML()
 
     body.addEventListener('click', bodyHandler);
 
-    // POP UP 영역
-    const popup = document.querySelector('.popup');
-    const neverWatch = document.querySelector('.popup_never_watch');
-    const close = document.querySelector('.popup_close');
+    // ! 뷰티 플랫폼 POP UP 영역
+    const popup = document.querySelector('.beauty_popup');
+    const neverWatch = document.querySelector('.beauty_popup_never_watch');
+    const close = document.querySelector('.beauty_popup_close');
 
     /* 스토리지 제어 함수 정의 */
     var handleStorage = {
@@ -62,6 +62,31 @@ includeIframeToHTML()
 
     neverWatch.addEventListener('click', noTodayHandler);
     close.addEventListener('click', closeHandler);
+
+    // ! 장바구니 POP UP 영역
+    const cartPopUpContainer = document.querySelector('.cart_popup_container');
+    const cartButton = document.querySelector('.cart_button');
+
+    const cartHandler = () => {
+      cartPopUpContainer.classList.add('on');
+    };
+
+    const cartContainerHandler = (e) => {
+      const button = e.target.closest('button');
+
+      if (!button) return;
+
+      if (button.classList.contains('cart_popup_cancel')) {
+        cartPopUpContainer.classList.remove('on');
+      }
+
+      if (button.classList.contains('cart_popup_save')) {
+        cartPopUpContainer.classList.remove('on');
+      }
+    };
+
+    cartButton.addEventListener('click', cartHandler);
+    cartPopUpContainer.addEventListener('click', cartContainerHandler);
   })
   .catch(() => {
     console.error('실패');
