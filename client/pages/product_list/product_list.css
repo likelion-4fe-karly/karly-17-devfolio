@@ -7,15 +7,15 @@
 
 /* backgroun-color - 삭제예정 */
 section {
-  /* background-color: lightyellow; */
+  background-color: lightyellow;
 }
 
 .list_container {
-  /* background-color: lightgrey; */
+  background-color: lightgrey;
 }
-/* aside {
+aside {
   background-color: lightslategray;
-} */
+}
 article {
   background-color: lightskyblue;
 }
@@ -146,3 +146,10 @@ button {
 .list_item_check:checked + svg g path:first-child {
   stroke: var(--primary);
 }
+/* accordion */
+.accordion_item_list {
+  display: none;
+}
+/* .list_accordion_area .active {
+  display: block;
+} */
