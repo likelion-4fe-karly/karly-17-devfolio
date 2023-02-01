@@ -174,7 +174,7 @@ a:hover {
   text-decoration: line-through;
 }
 
-/* .event_banner  */
+/* 이벤트 배너 */
 .event_banner {
   width: 1050px;
   height: 139px;
@@ -185,4 +185,48 @@ a:hover {
 
 .event_banner img {
   width: 100%;
+}
+
+/* 최근 본 상품 */
+.recent_product {
+  position: fixed;
+  top: 500px;
+  right: 79px;
+  z-index: 10;
+  background: #fff;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  padding: 8px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.recent_product p {
+  font-size: var(--font-label-small);
+  color: var(--black);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.recent_product img {
+  width: 40px;
+  height: 51px;
+}
+
+.recent_product .recent_product_arrow_up {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: url(../../assets/index/small_arrow.png) center center no-repeat;
+  background-size: 8px 4px;
+}
+
+.recent_product .recent_product_arrow_down {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: url(../../assets/index/small_arrow.png) center center no-repeat;
+  background-size: 8px 4px;
+  transform: rotate(180deg);
 }
