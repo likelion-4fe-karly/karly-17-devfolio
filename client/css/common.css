@@ -507,6 +507,7 @@ footer {
 /* POP UP  */
 
 .popup {
+  display: block;
   position: absolute;
   top: 297px;
   left: calc(50% - 440px / 2);
@@ -515,6 +516,10 @@ footer {
   border-radius: 16px;
   background-color: var(--white);
   box-shadow: 0px 8px 36px rgba(0, 0, 0, 0.2);
+}
+
+.popup.off {
+  display: none;
 }
 
 .popup img {
