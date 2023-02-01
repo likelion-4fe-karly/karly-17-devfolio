@@ -117,6 +117,7 @@ a:hover {
 
 .recommend_product ul li .product_item {
   display: block;
+  cursor: pointer;
 }
 
 .recommend_product ul li .product_item div {
@@ -128,15 +129,23 @@ a:hover {
   width: 100%;
 }
 
-.recommend_product ul li .product_item div .cart {
+.recommend_product ul li .product_item div button {
+  display: block;
   position: absolute;
   right: 17px;
   bottom: 16px;
   width: 45px;
   height: 45px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  padding: 0;
+  background-color: transparent;
 }
 
 .recommend_product ul li .product_item div .cart img {
+  width: 100%;
 }
 
 .product_title {
