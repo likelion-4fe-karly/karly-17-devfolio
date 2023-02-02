@@ -37,17 +37,14 @@ a:hover {
 }
 
 /*  메인 배너  */
-.visual {
+.index_visual {
   height: 370px;
   max-width: 1900px;
   margin: 0px auto;
   position: relative;
 }
 
-.visual .swiper {
-}
-
-.visual .swiper-button-next {
+.index_visual .swiper-button-next {
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -55,7 +52,7 @@ a:hover {
   margin: auto 0px auto 590px;
 }
 
-.visual .swiper-button-prev {
+.index_visual .swiper-button-prev {
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -64,14 +61,14 @@ a:hover {
   left: initial;
 }
 
-.visual .swiper img {
+.index_visual .swiper img {
   width: 100%;
   min-width: 1050px;
   height: 370px;
   object-fit: cover;
 }
 
-.visual .swiper-pagination {
+.index_visual .swiper-pagination {
   display: block;
   background-color: rgb(64 64 64 / 0.4);
   width: 47px;
@@ -85,8 +82,14 @@ a:hover {
   bottom: 29px;
 }
 
-/* .recommend_product section  */
-.recommend_product h2 {
+/* 이 상품 어때요?  */
+.index_recommend_product {
+  width: 1050px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.index_recommend_product h2 {
   font-size: var(--font-heading-xl);
   color: var(--content);
   font-weight: 700;
@@ -94,76 +97,84 @@ a:hover {
   text-align: center;
 }
 
-.recommend_product {
-  width: 1050px;
-  margin: 0 auto;
-  padding: 40px 0;
-  overflow: hidden;
-}
-
-.recommend_product .swiper2 {
+.index_recommend_product .index_recommend_product_swiper {
   margin-top: 40px;
 }
 
-.recommend_product ul {
+.index_recommend_product ul {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 }
 
-.recommend_product ul li {
+.index_recommend_product ul li {
   width: 250px;
 }
 
-.recommend_product ul li .product_item {
+.index_recommend_product ul li .index_recommend_product_swiper_item {
   display: block;
+  cursor: pointer;
+  position: relative;
 }
 
-.recommend_product ul li .product_item div {
-  position: relative;
+.index_recommend_product ul li .index_recommend_product_swiper_item img {
   margin-bottom: 16px;
 }
 
-.recommend_product ul li .product_item div .thumbnail {
+.index_recommend_product
+  ul
+  li
+  .index_recommend_product_swiper_item
+  .recommend_swiper_item_cart {
+  display: block;
+  position: absolute;
+  right: 17px;
+  top: 259px;
+  width: 45px;
+  height: 45px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.index_recommend_product
+  ul
+  li
+  .product_item
+  div
+  .recommend_swiper_item_cart
+  img {
   width: 100%;
 }
 
-.recommend_product ul li .product_item div .cart {
-  position: absolute;
-  right: 17px;
-  bottom: 16px;
-  width: 45px;
-  height: 45px;
-}
-
-.recommend_product ul li .product_item div .cart img {
-}
-
-.product_title {
+.recommend_product_swiper_item {
   font-size: var(--font-paragraph-medium);
   color: var(--content);
   margin-bottom: 8px;
 }
 
-.product_price {
+.recommend_swiper_item_price {
   font-size: var(--font-label-large);
   font-weight: 600;
   margin-bottom: 8px;
 }
 
-.product_price span {
+.recommend_swiper_item_price span {
   color: var(--accent-yellow);
   font-weight: 600;
   margin-right: 8px;
 }
 
-.product_origin_price {
+.recommend_swiper_item_origin_cost {
   font-size: var(--font-paragraph-small);
   color: var(--gray-400);
   text-decoration: line-through;
 }
 
-/* .event_banner  */
+/* 이벤트 배너 */
 .event_banner {
   width: 1050px;
   height: 139px;
@@ -174,4 +185,48 @@ a:hover {
 
 .event_banner img {
   width: 100%;
+}
+
+/* 최근 본 상품 */
+.recent_product {
+  position: fixed;
+  top: 500px;
+  right: 79px;
+  z-index: 10;
+  background: #fff;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  padding: 8px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.recent_product p {
+  font-size: var(--font-label-small);
+  color: var(--black);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.recent_product img {
+  width: 40px;
+  height: 51px;
+}
+
+.recent_product .recent_product_arrow_up {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: url(../../assets/index/small_arrow.png) center center no-repeat;
+  background-size: 8px 4px;
+}
+
+.recent_product .recent_product_arrow_down {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: url(../../assets/index/small_arrow.png) center center no-repeat;
+  background-size: 8px 4px;
+  transform: rotate(180deg);
 }
