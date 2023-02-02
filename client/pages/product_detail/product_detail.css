@@ -216,6 +216,8 @@ html {
 .product_detail_cart_container {
   display: flex;
   gap: 8px;
+  width: 100%;
+  justify-content: space-between;
   flex-direction: row;
   align-items: center;
   margin-top: 20px;
@@ -225,12 +227,11 @@ html {
   background-color: var(--primary);
   color: var(--white);
   border-radius: 5px;
-  display: block;
   padding: 0 15px;
   text-align: center;
-  width: 410px;
   height: 54px;
   border: none;
+  flex: 1;
 }
 
 .product_detail_cart_icon {
