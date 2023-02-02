@@ -4,7 +4,7 @@ body,
 body::before,
 body::after,
 body,
-body ::before,
+body::before,
 body::after {
   box-sizing: border-box;
 }
@@ -21,8 +21,8 @@ a {
 body {
   font: inherit;
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
-    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
-    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
+    'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
     sans-serif;
   background-color: #fff;
 }
@@ -37,6 +37,7 @@ video {
   width: 100%;
   height: auto;
 }
+
 :root {
   --baseSpace: 4px;
   --space-1: var(--baseSpace);
@@ -63,3 +64,4 @@ video {
   --space-22: 4px;
   --space-23: 4px;
 }
+
