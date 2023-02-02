@@ -1,1 +1,2 @@
-console.log('hi');
+import {} from '../js/common/common.js';
+

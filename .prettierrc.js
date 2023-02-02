@@ -32,7 +32,7 @@ module.exports = {
 
   // 객체 마지막 속성 선언 뒷 부분에 콤마 추가 여부
   trailingComma: 'es5',
-  
+
   // 탭 사용 여부
   useTabs: false,
 };
