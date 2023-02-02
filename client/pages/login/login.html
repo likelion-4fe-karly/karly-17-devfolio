@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="kyoungholee" />
+    <meta name="keywords" content="로그인" />
+    <meta name="description" content="마켓칼리 로그인 사이트입니다." />
     <link
       rel="stylesheet"
       as="style"
@@ -11,10 +14,12 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
     />
     <link rel="stylesheet" href="../../css/style.css" />
+    <script src="../../js/main.js" type="module"></script>
 
     <title>로그인 칼리</title>
   </head>
   <body>
+    <iframe data-include="../../layout/header.html" frameborder="0"></iframe>
     <div class="login_wrapper">
       <h2>로그인</h2>
       <form class="form_container">
@@ -34,16 +39,17 @@
         />
 
         <div class="find_container">
-          <a class="id_find">아이디 찾기</a>
+          <a href="./login.html" class="id_find">아이디 찾기</a>
           <span></span>
-          <a class="pw_find">비밀번호 찾기</a>
+          <a href="./login.html" class="pw_find">비밀번호 찾기</a>
         </div>
 
         <div class="button_container">
-          <button type="button" class="login_btn">로그인</button>
-          <button type="button" class="signup_btn">회원가입</button>
+          <button type="button" class="login_button">로그인</button>
+          <button type="button" class="initiate_button">회원가입</button>
         </div>
       </form>
     </div>
+    <iframe data-include="../../layout/footer.html" frameborder="0"></iframe>
   </body>
 </html>
