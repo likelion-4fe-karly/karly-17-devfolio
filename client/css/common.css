@@ -594,6 +594,7 @@ body {
 .cart_popup_count button {
   background-color: var(--white);
   border: none;
+  cursor: pointer;
 }
 
 .cart_popup_total {
@@ -645,6 +646,8 @@ body {
   border-radius: 4px;
   background-color: var(--white);
   font-weight: 600;
+  cursor: pointer;
+  text-align: center;
 }
 
 .cart_popup_buttons .cart_popup_save {
