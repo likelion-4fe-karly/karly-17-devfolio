@@ -150,6 +150,10 @@ a:hover {
   width: 100%;
 }
 
+.recommend_swiper_item_title {
+  margin-bottom: 8px;
+}
+
 .recommend_product_swiper_item {
   font-size: var(--font-paragraph-medium);
   color: var(--content);
