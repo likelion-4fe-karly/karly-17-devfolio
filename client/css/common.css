@@ -537,6 +537,7 @@ body {
   background-color: var(--white);
   border: none;
   cursor: pointer;
+  text-align: center;
 }
 
 .beauty_popup_button_list .beauty_popup_never_watch {
