@@ -230,6 +230,7 @@ body {
   padding-left: 12px;
   gap: 8px;
   height: 40px;
+  cursor: pointer;
 }
 
 .category_menu li:hover {
