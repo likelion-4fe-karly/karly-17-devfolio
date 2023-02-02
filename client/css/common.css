@@ -549,6 +549,10 @@ body {
 }
 
 /* 장바구니 POP UP  */
+.cart_button {
+  cursor: pointer;
+}
+
 .cart_popup_container {
   display: none;
 }
@@ -557,6 +561,7 @@ body {
   display: block;
 }
 .cart_popup {
+  z-index: 9;
   box-sizing: border-box;
   background-color: var(--white);
   padding: 24px 20px;
@@ -568,9 +573,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
-  top: 297px;
-  left: calc(50% - 440px / 2);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -198px;
+  margin-top: -146px;
 }
 
 .cart_popup_info {
