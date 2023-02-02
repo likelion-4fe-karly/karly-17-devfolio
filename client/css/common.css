@@ -37,6 +37,10 @@ body {
 
 /* header 중 Top 영역 */
 .header {
+  box-shadow: rgb(0 0 0 / 7%) 0px 3px 4px 0px;
+}
+
+.header_container {
   width: 1050px;
   margin: 0 auto;
 }
@@ -209,14 +213,14 @@ body {
 }
 
 .category_menu {
+  z-index: 9;
   position: absolute;
-  top: 73px;
+  top: 71.5px;
   display: none;
   background-color: #fff;
   width: 247px;
   height: 840px;
   border: 1px solid var(--gray-100);
-  border-top: none;
 }
 
 .category_menu li {
