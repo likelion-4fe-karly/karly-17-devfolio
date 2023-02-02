@@ -24,11 +24,12 @@ a:hover {
 
 .swiper-button-next {
   background: url(../../assets/index/Arrow_right.png) no-repeat;
-  background-position: center;
+  background-size: 100%;
 }
 
 .swiper-button-prev {
   background: url(../../assets/index/Arrow_left.png) no-repeat;
+  background-size: 100%;
 }
 
 .swiper-button-next::after,
