@@ -5,31 +5,12 @@
 @import url(../../css/common.css);
 @import url(../../css/reset.css);
 
-/* backgroun-color - 삭제예정 */
-/* section {
-  background-color: lightyellow;
-}
-
-.list_container {
-  background-color: lightgrey;
-} */
-/* aside {
-  background-color: lightslategray;
-} */
-article {
-  /* background-color: lightskyblue; */
-  width: 100%;
-}
-/*.product_filter_column {
-  background-color: lightcyan;
-}
-.product_list-grid {
-  background-color: lightgreen;
-} */
-
 /* All - 전체 스타일 */
 button {
   all: unset;
+}
+article {
+  width: 100%;
 }
 /* product_list_content */
 .product_list_section {
@@ -86,6 +67,7 @@ button {
 .product_list_section .list_accordion .list_accordion_head button span {
   font-size: 10px;
   color: var(--gray-300);
+  cursor: pointer;
 }
 /* product_aside_area  */
 .product_list_section .list_accordion .list_accordion_area {
@@ -99,6 +81,7 @@ button {
   align-items: center;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 .product_list_section .list_accordion .list_accordion_area .accordion_btn h4 {
   color: var(--content);
@@ -118,6 +101,7 @@ button {
   color: var(--content);
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .product_list_section .list_accordion .accordion_item_list li .list_item svg {
   margin-right: 8px;
@@ -140,21 +124,21 @@ button {
 .product_list_section
   .list_accordion
   .list_accordion_area
+  .product_list_accordion_add {
+  color: var(--gray-300);
+  margin-bottom: 18px;
+  font-size: var(--font-label-small);
+  cursor: pointer;
+}
+.product_list_section
+  .list_accordion
+  .list_accordion_area
   .product_list_accordion_add
   span {
   width: 4px;
   height: 8px;
   margin-left: 7px;
 }
-.product_list_section
-  .list_accordion
-  .list_accordion_area
-  .product_list_accordion_add {
-  color: var(--gray-300);
-  margin-bottom: 18px;
-  font-size: var(--font-label-small);
-}
-
 /* accordion_list_checkbox */
 .list_item_check {
   display: none;
@@ -243,6 +227,7 @@ button {
   bottom: 17px;
   width: 45px;
   height: 45px;
+  cursor: pointer;
 }
 /* product_list_item_card_info */
 .product_list_section .product_list_grid .product_item_card_info {
@@ -334,5 +319,53 @@ button {
   > del {
   font-size: var(--font-paragraph-small);
   color: var(--gray-400);
+  font-weight: 400;
+}
+/* product_list_page */
+.product_list_section .list_container article .product_list_page {
+  max-width: 232px;
+  margin: 0 auto;
+}
+.product_list_section
+  .list_container
+  article
+  .product_list_page
+  .product_list_page_contents {
+  display: flex;
+  list-style: none;
+  border: 1px solid var(--gray-100);
+  margin-top: 60px;
+}
+.product_list_section
+  .list_container
+  article
+  .product_list_page
+  .product_list_page_contents
+  li {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--gray-100);
+}
+.product_list_section
+  .list_container
+  article
+  .product_list_page
+  .product_list_page_contents
+  li:last-child {
+  border-right: none;
+}
+.product_list_section
+  .list_container
+  article
+  .product_list_page
+  .product_list_page_contents
+  li
+  a {
+  display: inline-block;
+  font-size: var(--font-paragraph-small);
+  color: var(--content);
   font-weight: 400;
 }
