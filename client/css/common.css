@@ -510,6 +510,7 @@ body {
   border-radius: 16px;
   background-color: var(--white);
   box-shadow: 0px 8px 36px rgba(0, 0, 0, 0.2);
+  z-index: 10;
 }
 
 .beauty_popup.off {
