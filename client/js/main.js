@@ -1,5 +1,1 @@
-console.log();
-
-console.log();
-
-console.log();
+import {} from '../js/common/common.js';

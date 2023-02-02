@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마켓칼리</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  </head>
+
+  <body>
+    <div class="top_banner">
+      <div class="top_banner_inner">
+        <span>지금 가입하고 인기상품 100원에 받아가세요!</span>
+        <button aria-label="배너 닫기">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="42"
+            height="42"
+            fill="none"
+          >
+            <path fill="url(#a)" d="M0 0h42v42H0z" />
+            <defs>
+              <pattern
+                id="a"
+                width="1"
+                height="1"
+                patternContentUnits="objectBoundingBox"
+              >
+                <use xlink:href="#b" transform="scale(.0119)" />
+              </pattern>
+              <image
+                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAAXNSR0IArs4c6QAAAh5JREFUeF7t2rFOwzAARdHnkQFmmPk5GJhAfASCCSS+jhl2JBiDIgWpqtriJLeykW5m5zU+eZGdtiUeqEBB0wyLoHAJBBUUFoDjbKigsAAcZ0MFhQXgOBsqKCwAx9lQQWEBOM6GCgoLwHE2VFBYAI6zoYLCAnCcDRUUFoDjbKigsAAcZ0MFhQXgOBsqKCwAx9lQQWEBOK5JQ4dhuElykuS1lPJJzmkYhtMk10m+SynPZHZNVivQ+ySXSd6TPFGoE+Ztkoskb6WUhxoEckwr0LFFvxNHULcwkcwl0E1AxwslAcisJYib5zQDpVB7whzn1BR0LWpvmF2ALkXtEbMb0LmovWJ2BVqL2jNmd6B/ofaO2SXoPtRpa4LuXddukXad33yV3zeprTZ+TOPO6bcrGrVb0I2m3iUZIcdjhH2kXlVpzG4f+d+JTi0VlLjzPvKE4pSxazV3UVoIfGhr5LZpJmoNWM2YmR+LDu9mlZ8DNWcsqlUR1gXoEqAl51R4rB7SHHQNzJpzV8vtCWgKSoAQGSRuM1ASgsxai9sE9BgAx8hcgtsK1J+Rl9ytA98kHfOPDmdJrpJ8lVJeyOuuyWrS0JoL+69jBIXvnKCCwgJwnA0VFBaA42yooLAAHGdDBYUF4DgbKigsAMfZUEFhATjOhgoKC8BxNlRQWACOs6GCwgJwnA0VFBaA42yooLAAHGdDBYUF4DgbKigsAMfZUBj0BzbjFGQqUkXVAAAAAElFTkSuQmCC"
+                id="b"
+                width="84"
+                height="84"
+              />
+            </defs>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <header>
+      <div class="header_top">
+        <section class="header_login">
+          <ul>
+            <li>
+              <a href="../pages/signup/signup.html">회원가입</a>
+            </li>
+            <li aria-hidden="true"></li>
+            <li>
+              <a href="../pages/login/login.html">로그인</a>
+            </li>
+            <li aria-hidden="true"></li>
+            <li><a href="/" aria-label="고객센터">고객센터</a></li>
+          </ul>
+        </section>
+        <section class="header_search">
+          <div class="header_logo_switch">
+            <a href="/" aria-label="Market Karly">
+              <span class="a11yHidden">마켓칼리 로고</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="82"
+                height="42"
+                fill="none"
+              >
+                <path
+                  fill="#5F0080"
+                  d="M62.5.965c1.026-.557 2.466-.718 3.356.107.89.825.676 2.048 0 3.973 0 0-1.505 4.066-3.055 8.262l-.398 1.08c-1.414 3.83-2.762 7.487-2.927 7.963-1.498 4.245 1.967 4.122 4.024-.152 1.159-2.394 2.644-6.357 2.644-6.357.524-1.563.682-2.504.359-2.828-.107-.113.045-.252.18-.323 2.269-1.149 4.63-.072 3.336 3.31l-.054.138c-.387.978-2.68 6.733-2.68 6.733-.676 1.66-.595 3.236.418 3.236.686-.004 1.46-.385 2.304-1.088 1.818-1.504 3.222-4.312 3.727-5.454.23-.508 1.087-2.42 1.766-4.361.236-.665.369-1.36.395-2.065a.443.443 0 0 1 .194-.459 3.578 3.578 0 0 1 1.67-.42 1.805 1.805 0 0 1 1.465.705c.443.598.566 1.579.103 2.808-.12.32-3.775 9.958-3.775 9.958v.026c2.041-1.223 3.87-1.313 4.953-.854l-.003-.013c1.495.647 1.99 2.44.938 3.559-.103.11-.362.084-.362-.09-.094-1.253-2.517-3.495-6.109-1.075l-.145.385-1.068 2.808c-2.62 7.018-5.403 12.136-9.415 11-2.688-.76-2.377-4.607.515-7.79a54.898 54.898 0 0 1 6.49-5.898c.068-.188.13-.35.188-.511.278-.78.491-1.434.792-2.265l.159-.518c-.178.2-.498.573-.712.812-.712.8-2.494 2.757-5.329 2.207l-.234-.052c-2.05-.508-2.608-1.986-2.655-3.277-2.142 2.656-4.351 3.426-5.807 3.39-1.948-.048-3.378-1.514-2.427-4.29 1.058-3.106 5.5-15.332 6.795-19 .485-1.58.666-2.58.184-2.974-.123-.103.052-.265.2-.346Zm8.364 28.778c-1.103.88-5.526 4.53-6.752 7.441-.505 1.197-.376 2.149.488 2.233 1.96.194 4.012-3.818 6.228-9.512l.036-.162ZM16.028 5.352c-.087.332-1.319 3.86-2.701 7.749l-.209.586-.21.589-.215.604c4.691-1.123 13.064-6.57 14.035-10.085.12-.161.29-.22.566-.035.495.33.686 1.155.495 1.918-.764 3.038-6.416 7.341-11.379 9.554.612 1.637 2.682 6.267 4.206 9.111 1.663 3.119 3.42 4.575 6.147 4.737 1.46.085 3.014-.447 3.893-1.22l.148-.14-.013.03c.194-.204.511.077.366.323a6.5 6.5 0 0 1-4.992 2.867c-6.345.427-8.774-3.87-13.304-14.494-.366.126-.809.288-1.255.45-.075.187-2.07 5.642-2.13 5.823-.944 2.87-1.005 4.442-.358 4.895.145.09.074.333-.178.414-2.527.796-4.853-.696-3.559-4.442 1.161-3.316 5.69-16.18 6.914-19.626.427-1.294.197-2.125-.492-2.306C8.506 1.78.877 8.749 1.971 15.184c.19 1.12.98 1.747 1.378 1.663a.134.134 0 0 1 .154.094.133.133 0 0 1 .002.065 1.508 1.508 0 0 1-1.845 1.032C.49 17.782.107 16.527.043 15.88-.601 9.22 6.148 1.23 12.389.58c2.378-.25 4.609.96 3.639 4.772Zm24.04 9.913-.06.207-2.83 8.16c-.304.85-.1 1.737.501 1.902 1.757.482 4.028-2.145 5.131-4.733a67.752 67.752 0 0 0 1.476-3.815c.582-1.643 1.106-3.183.783-3.908-.075-.168.045-.256.223-.35.505-.255 2.226-.825 3.141.068.695.674.609 1.771-.03 3.437l-.096.242.22-.273c2.703-3.3 4.792-4.292 6.563-3.597l.147.062c2.381 1.074 1.146 5.215-2.116 5.48-.2.017-.356-.126-.158-.407.395-.605.356-1.909-.796-2.022-1.152-.113-2.83 1.207-4.038 2.844-1.084 1.45-2.2 3.911-3.322 7.273-.272.818-.143 1.012-.11 1.067a.1.1 0 0 1 0 .094c-.143.272-.965.596-1.76.596-1.625-.007-2.291-.945-1.967-2.437-1.848 1.764-3.711 2.614-5.355 2.466a2.524 2.524 0 0 1-2.236-3.103c-1.426 1.809-3.542 3.268-5.697 3.067-2.155-.2-3.5-1.666-2.802-4.788.59-2.598 3.34-9.11 6.62-11.297 1.5-1 3.166-.822 3.5-1 1.5.5 1.723.952 1.207 2.447C34 13 32.5 14.5 31.157 16.202 29.256 18.188 28.156 21.519 28 22c-.737 2.287.365 3.709 1.41 3.766 1.045.06 2.43-.96 3.42-2.503 1.76-2.524 2.581-5.685 3.377-7.882.204-.56.793-1.881 0-2.434-.217.096-1.415-2.333-1.207-2.447 2-.5 5.951 1.517 5.068 4.765Z"
+                />
+              </svg>
+            </a>
+            <div class="header_switch">
+              <a href="/" aria-label="마켓칼리 페이지 열기">마켓칼리</a>
+              <div class="switch_bar" aria-hidden="true"></div>
+              <a
+                class="header_switch_beauty"
+                href="/"
+                aria-label="뷰티칼리 페이지 열기"
+                >뷰티칼리</a
+              >
+            </div>
+          </div>
+          <div class="header_search_input">
+            <label for="search" class="a11yHidden">검색 입력창</label>
+            <input
+              id="search"
+              type="text"
+              placeholder="검색어를 입력해주세요"
+            />
+            <button aria-label="검색 버튼">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="36"
+                height="36"
+                fill="none"
+              >
+                <path
+                  stroke="#5F0080"
+                  stroke-linecap="round"
+                  stroke-width="1.7"
+                  d="m26.081 26.081-4.12-4.12m-5.494 1.373a6.867 6.867 0 1 0 0-13.734 6.867 6.867 0 0 0 0 13.734v0Z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="header_icon">
+            <button aria-label="배송지 입력 버튼">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="36"
+                height="36"
+                fill="none"
+              >
+                <path
+                  stroke="#333"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  d="M18.006 30S8.7 22.544 8.7 15.306a9.306 9.306 0 0 1 18.612 0c0 7.238-9.306 14.694-9.306 14.694Z"
+                  clip-rule="evenodd"
+                />
+                <path
+                  stroke="#333"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  d="M17.912 17.907a2.784 2.784 0 1 0 0-5.568 2.784 2.784 0 0 0 0 5.568Z"
+                />
+              </svg>
+            </button>
+            <button aria-label="찜한 목록 보기">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="24"
+                fill="none"
+              >
+                <path
+                  stroke="#333"
+                  stroke-linecap="round"
+                  stroke-width="1.7"
+                  d="M24.927 2.893a6.46 6.46 0 0 0-9.139 0l-1.829 1.828-1.827-1.828a6.462 6.462 0 0 0-9.14 9.138L4.82 13.86l8.432 8.434a1 1 0 0 0 1.414 0l8.433-8.434 1.828-1.828a6.46 6.46 0 0 0 0-9.138v-.001Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <button aria-label="장바구니 목록 보기">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="36"
+                height="36"
+                fill="none"
+              >
+                <path
+                  stroke="#333"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  d="m30.844 10.207-2.72 11.57h-15.59l-2.71-11.57h21.02Z"
+                  clip-rule="evenodd"
+                />
+                <path
+                  stroke="#333"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
+                  stroke-width="1.7"
+                  d="M25.684 29.467a2.14 2.14 0 1 0 0-4.28 2.14 2.14 0 0 0 0 4.28ZM14.974 29.467a2.14 2.14 0 1 0 0-4.28 2.14 2.14 0 0 0 0 4.28ZM5.164 6.547h3.8l1.76 7.5"
+                />
+              </svg>
+            </button>
+          </div>
+        </section>
+      </div>
+      <nav class="header_nav">
+        <div class="nav_category">
+          <button class="nav_category_button" aria-label="카테고리 메뉴 열기">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="14"
+              fill="none"
+            >
+              <path
+                fill="#333"
+                fill-rule="evenodd"
+                d="M0 0h16v1.7H0V0Zm0 6.15h16v1.7H0v-1.7Zm0 6.15h16V14H0v-1.7Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <span>카테고리</span>
+          </button>
+          <ul class="category_menu">
+            <li>
+              <img src="../assets/icon/present_icon.jpg" alt="선물하기" /><span
+                >선물하기</span
+              >
+            </li>
+            <li>
+              <img
+                src="../assets/icon/vegetable_icon.png"
+                alt="과일·견과·쌀"
+              /><span>과일·견과·쌀</span>
+            </li>
+            <li>
+              <img
+                src="../assets/icon/shrimp_icon.png"
+                alt="수산·해산·건어물"
+              /><span>수산·해산·건어물</span>
+            </li>
+            <li>
+              <img src="../assets/icon/meat_icon.png" alt="정육·계란" /><span
+                >정육·계란</span
+              >
+            </li>
+            <li>
+              <img
+                src="../assets/icon/dish_icon.png"
+                alt="국·반찬·메인요리"
+              /><span>국·반찬·메인요리</span>
+            </li>
+            <li>
+              <img
+                src="../assets/icon/salad_icon.png"
+                alt="샐러드·간편식"
+              /><span>샐러드·간편식</span>
+            </li>
+            <li>
+              <img src="../assets/icon/oil-min.png" alt="면·양념·오일" /><span
+                >면·양념·오일</span
+              >
+            </li>
+            <li>
+              <img
+                src="../assets/icon/water_icon.png"
+                alt="생수·음료·우유·커피"
+              /><span>생수·음료·우유·커피</span>
+            </li>
+            <li>
+              <img
+                src="../assets/icon/snack_icon.png"
+                alt="간식·과자·떡"
+              /><span>간식·과자·떡</span>
+            </li>
+            <li>
+              <img
+                src="../assets/icon/bread_icon.png"
+                alt="베이커리·치즈·델리"
+              /><span>베이커리·치즈·델리</span>
+            </li>
+            <li>
+              <img src="../assets/icon/drug_icon.png" alt="건강식품" /><span
+                >건강식품</span
+              >
+            </li>
+            <li>
+              <img src="../assets/icon/wine_icon.png" alt="와인" /><span
+                >와인</span
+              >
+            </li>
+            <li>
+              <img src="../assets/icon/beer_icon.png" alt="정통주" /><span
+                >정통주</span
+              >
+            </li>
+            <li>
+              <img
+                src="../assets/icon/living_icon.png"
+                alt="생활용품·리빙·캠핑"
+              /><span>생활용품·리빙·캠핑</span>
+            </li>
+            <li>
+              <img
+                src="../assets/icon/makeup_icon.png"
+                alt="스킨케어·메이크업"
+              /><span>스킨케어·메이크업</span>
+            </li>
+            <li>
+              <img
+                src="../assets/icon/wash_icon.png"
+                alt="헤어·바디·구강"
+              /><span>헤어·바디·구강</span>
+            </li>
+            <li>
+              <img src="../assets/icon/cook_icon.png" alt="주방용품" /><span
+                >주방용품</span
+              >
+            </li>
+            <li>
+              <img
+                src="../assets/icon/washing_machine_icon.png"
+                alt="가전제품"
+              /><span>가전제품</span>
+            </li>
+            <li>
+              <img src="../assets/icon/dog_icon.png" alt="반려동물" /><span
+                >반려동물</span
+              >
+            </li>
+            <li>
+              <img
+                src="../assets/icon/baby_icon.png"
+                alt="베이비·키즈·완구"
+              /><span>베이비·키즈·완구</span>
+            </li>
+            <li>
+              <img
+                src="../assets/icon/airplane_icon.png"
+                alt="여행·티켓"
+              /><span>여행·티켓</span>
+            </li>
+          </ul>
+        </div>
+        <ul class="nav_menu">
+          <li>
+            <a
+              href="../pages/product_list/product_list.html"
+              aria-label="신상품 목록 보기"
+              >신상품</a
+            >
+          </li>
+          <li>
+            <a
+              href="../pages/product_list/product_list.html"
+              aria-label="베스트 목록 보기"
+              >베스트</a
+            >
+          </li>
+          <li>
+            <a
+              href="../pages/product_list/product_list.html"
+              aria-label="알뜰쇼핑 목록 보기"
+              >알뜰쇼핑</a
+            >
+          </li>
+          <li>
+            <a
+              href="../pages/product_list/product_list.html"
+              aria-label="특가/혜택 목록 보기"
+              >특가/혜택</a
+            >
+          </li>
+        </ul>
+        <div class="nav_delivery_notice">
+          <a href="/" aria-label="별이나 낮에 관한 배송 안내 보기">
+            <span><em>샛별·낮</em> 배송안내</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+  </body>
+</html>
