@@ -18,7 +18,6 @@ module.exports = {
   // 산문 래핑 설정
   proseWrap: 'preserve',
 
-  // 객체 속성 key 값에 인용 부호 사용 여부 (ex: { 'key': 'xkieo-xxxx' })
   quoteProps: 'as-needed',
 
   // 세미콜론(;) 사용 여부
@@ -32,7 +31,7 @@ module.exports = {
 
   // 객체 마지막 속성 선언 뒷 부분에 콤마 추가 여부
   trailingComma: 'es5',
-  
+
   // 탭 사용 여부
   useTabs: false,
 };

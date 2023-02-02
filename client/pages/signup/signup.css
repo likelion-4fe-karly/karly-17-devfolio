@@ -1,0 +1,290 @@
+@import url(../../css/a11y.css);
+@import url(../../css/base.css);
+@import url(../../css/color.css);
+@import url(../../css/fonts.css);
+@import url(../../css/common.css);
+@import url(../../css/reset.css);
+
+.signup_container {
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+.signup_container h2 {
+  margin-bottom: 44px;
+  font-size: var(--font-heading-xl);
+  line-height: 35px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: -0.6px;
+  color: var(--content);
+}
+.signup_wrapper {
+  width: 640px;
+  margin: 0px auto;
+}
+.star {
+  color: red;
+}
+.signup_wrapper .essential_check {
+  padding-bottom: 10px;
+  font-size: var(--font-paragraph-small);
+  color: var(--content);
+  line-height: 17px;
+  float: right;
+}
+
+.signProcess_container {
+  border-top: 2px solid var(--content);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.signProcess_container .id_write,
+.password_write,
+.password_confirm,
+.name_container,
+.email_container,
+.phone_container,
+.address_container,
+.gender_container,
+.birth_container,
+.additional_input_container,
+.agree_check_container {
+  display: flex;
+  justify-content: flex-start;
+
+  padding: 10px 10px;
+}
+
+.signProcess_container .id_title,
+.password_title,
+.password_confirm_title,
+.name_title,
+.email_title,
+.phone_title,
+.address_title,
+.gender,
+.birthday,
+.add_input,
+.agree {
+  width: 139px;
+  padding-top: 12px;
+}
+.gender {
+  padding-top: 2px;
+}
+.signProcess_container .id_input,
+.password_input,
+.password_confirm_input,
+.name_input,
+.email_input,
+.phone_input {
+  height: 44px;
+  padding: 0px 11px 1px 15px;
+  border-radius: 4px;
+  border: 1px solid var(--gray-100);
+  font-weight: 400;
+  font-size: var(--font-heading-medium);
+  line-height: 1.5;
+  color: var(--gray-800);
+  outline: none;
+  box-sizing: border-box;
+  /* display: block; */
+  min-width: 330px;
+}
+.signProcess_container .confirm_check {
+  width: 143px;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  background-color: var(--white);
+  border-radius: 3px;
+  margin-left: 8px;
+  font-weight: 600;
+  height: 44px;
+  font-size: 14px;
+}
+
+.address_btn {
+  display: inline;
+  width: 330px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background-color: var(--white);
+  height: 45px;
+  padding: 0px 10px;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.address_explain {
+  margin-left: 150px;
+  font-size: var(--font-paragraph-small);
+  line-height: 18px;
+  color: var(--content);
+}
+.gender_container {
+  padding-top: 45px;
+}
+.gender_container .gender_wrapper {
+  width: 330px;
+}
+.gender_container div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.gender_man,
+.gender_woman,
+.gender_none {
+  width: 30px;
+  display: inline-block;
+  height: 30px;
+  background-image: url(../../assets/select/isSelected=false.png);
+  background-repeat: no-repeat;
+}
+.gender_none {
+  width: 30px;
+  display: inline-block;
+  height: 30px;
+  background-image: url(../../assets/select/isSelected=true.png);
+  background-repeat: no-repeat;
+}
+#man,
+#woman,
+#none {
+  margin-top: 3px;
+  font-size: 14px;
+  margin-left: 6px;
+}
+.birth_container {
+  display: flex;
+}
+.birth_wrapper {
+  height: 45px;
+  width: 330px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gray-200);
+  border-radius: 3px;
+}
+
+.birth_year {
+  text-align: center;
+  font-size: 14px;
+  border: none;
+  width: 46%;
+  margin: 0 0 0 100px;
+  display: block;
+}
+
+.additional_input_container .additional_input_wrapper {
+  width: 330px;
+}
+.additional_input_container div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.additional_input_wrapper div {
+  margin-top: 11px;
+}
+
+.suggestion_id,
+.event {
+  width: 30px;
+  display: inline-block;
+  height: 30px;
+  background-image: url(../../assets/select/isSelected=false.png);
+  background-repeat: no-repeat;
+}
+#recommender,
+#event_name {
+  font-size: 15px;
+  margin-top: 4px;
+}
+.contour {
+  border-bottom: 1px solid var(--gray-800);
+  padding: 10px 0;
+}
+.agree_check_mark {
+  width: 30px;
+  display: inline-block;
+  height: 30px;
+  background-image: url(../../assets/select/isSelected=false.png);
+  background-repeat: no-repeat;
+}
+.check_list_first_type {
+  position: relative;
+  display: flex;
+  align-items: center;
+  vertical-align: top;
+  color: var(--gray-800);
+  font-size: 18px;
+  font-weight: 600;
+}
+.check_list_letter {
+  margin-bottom: 8px;
+}
+.agree_check_container .check_list {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0 8px 0;
+}
+.check_list_explain {
+  width: 100%;
+  font-size: var(--font-paragraph-small);
+  color: var(--gray-500);
+  padding-left: 33px;
+}
+
+.agree_check_container .agree_letter_wrapper {
+  display: flex;
+  padding: 8px 0px;
+  justify-content: space-between;
+  align-items: center;
+}
+.check_list_second_type,
+.check_list_third_type,
+.check_list_fourth_type,
+.check_list_fifth_type {
+  position: relative;
+  display: flex;
+  align-items: center;
+  vertical-align: top;
+  color: var(--gray-800);
+  font-size: 15px;
+}
+.check_list_wrapper a {
+  color: #5f0080;
+  font-size: var(--font-paragraph-small);
+}
+.check_list_wrapper a::after {
+  content: '';
+  width: 6px;
+  height: 12px;
+  float: right;
+  margin: 2px 0 0 1px;
+  background-image: url(../../assets/vector/Vector.png);
+  background-repeat: no-repeat;
+}
+
+.last_line {
+  border-bottom: 1px solid var(--gray-800);
+}
+.signup_btn {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid var(--white);
+  padding: 40px 0px;
+}
+.signup_btn button {
+  padding: 0px 10px;
+  text-align: center;
+  overflow: hidden;
+  width: 340px;
+  height: 54px;
+  border-radius: 4px;
+  color: var(--white);
+  background-color: #5f0080;
+  border: 0px none;
+}
