@@ -83,6 +83,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .header_logo_switch {
@@ -142,7 +143,9 @@ body {
   justify-content: center;
   width: 400px;
   height: 60px;
-  position: relative;
+  position: absolute;
+  top: 11px;
+  left: 330px;
 }
 
 .header_search_input input {

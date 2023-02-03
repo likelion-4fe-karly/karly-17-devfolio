@@ -1,5 +1,4 @@
 import { includeIframeToHTML } from './../../lib/include/includeIframeToHTML.js';
-import { saveStorage } from './../../lib/utils/storage.js';
 
 includeIframeToHTML()
   .then(() => {
