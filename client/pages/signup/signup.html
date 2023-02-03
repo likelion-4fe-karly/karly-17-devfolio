@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../../css/style.css" />
     <script src="/js/main.js" type="module"></script>
     <script src="./signup.js" type="module"></script>
+    <script src="./maxLengthCheck.js" type="module"></script>
     <title>회원가입 - 칼리</title>
   </head>
   <body>
@@ -169,7 +170,6 @@
                   type="number"
                   placeholder="YYYY"
                   maxlength="4"
-                  oninput="maxLengthCheck(this)"
                 />
               </div>
               <span>/</span>
@@ -180,19 +180,12 @@
                   type="number"
                   placeholder="MM"
                   maxlength="2"
-                  oninput="maxLengthCheck(this)"
                 />
               </div>
               <span>/</span>
               <div class="birth_day">
                 <label class="a11yHidden" for="day">일</label>
-                <input
-                  id="day"
-                  type="number"
-                  placeholder="DD"
-                  maxlength="2"
-                  oninput="maxLengthCheck(this)"
-                />
+                <input id="day" type="number" placeholder="DD" maxlength="2" />
               </div>
             </div>
           </div>
@@ -310,13 +303,6 @@
       </div>
     </div>
     <iframe data-include="../../layout/footer.html" frameborder="0"></iframe>
-    <script>
-      function maxLengthCheck(object) {
-        if (object.value.length > object.maxLength) {
-          object.value = object.value.slice(0, object.maxLength);
-        }
-      }
-    </script>
     <!-- 카카오 주소찾기 -->
     <script>
       function findAddr() {
