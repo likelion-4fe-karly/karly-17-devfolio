@@ -273,8 +273,7 @@
   border: 0px none;
 }
 
-[type='radio'],
-[type='checkbox'] {
+[type='radio'] {
   vertical-align: middle;
   appearance: none;
   border: 1px solid var(--gray-200);
@@ -283,7 +282,19 @@
   height: 24px;
 }
 
-[type='radio']:checked,
-[type='checkbox']:checked {
+[type='checkbox'] {
+  vertical-align: middle;
+  appearance: none;
+  background: url(../../assets/no-checked.png) no-repeat 50% 50%;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+
+[type='radio']:checked {
   border: 0.4em solid var(--primary);
+}
+
+[type='checkbox']:checked {
+  background: url(../../assets/check.png) no-repeat 50% 50%;
 }
