@@ -151,17 +151,35 @@
             <div class="birth_wrapper">
               <div class="birth_year">
                 <label class="a11yHidden" for="year">생년</label>
-                <input id="year" type="text" placeholder="YYYY" maxlength="4" />
+                <input
+                  id="year"
+                  type="number"
+                  placeholder="YYYY"
+                  maxlength="4"
+                  oninput="maxLengthCheck(this)"
+                />
               </div>
               <span>/</span>
               <div class="birth_month">
                 <label class="a11yHidden" for="month">월</label>
-                <input id="month" type="text" placeholder="MM" maxlength="2" />
+                <input
+                  id="month"
+                  type="number"
+                  placeholder="MM"
+                  maxlength="2"
+                  oninput="maxLengthCheck(this)"
+                />
               </div>
               <span>/</span>
               <div class="birth_day">
                 <label class="a11yHidden" for="day">일</label>
-                <input id="day" type="text" placeholder="DD" maxlength="2" />
+                <input
+                  id="day"
+                  type="number"
+                  placeholder="DD"
+                  maxlength="2"
+                  oninput="maxLengthCheck(this)"
+                />
               </div>
             </div>
           </div>
@@ -279,5 +297,12 @@
       </div>
     </div>
     <iframe data-include="../../layout/footer.html" frameborder="0"></iframe>
+    <script>
+      function maxLengthCheck(object) {
+        if (object.value.length > object.maxLength) {
+          object.value = object.value.slice(0, object.maxLength);
+        }
+      }
+    </script>
   </body>
 </html>
