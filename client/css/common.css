@@ -72,8 +72,16 @@ body {
   font-size: var(--font-label-small);
 }
 
-.header_login li:first-child {
+.sign_up_link {
   color: var(--primary);
+}
+
+.userName {
+  cursor: pointer;
+}
+
+.newbar {
+  margin-left: 8px;
 }
 
 .header_search {
@@ -510,6 +518,7 @@ body {
 
 .beauty_popup {
   display: block;
+  display: none;
   position: absolute;
   top: 297px;
   left: calc(50% - 440px / 2);
