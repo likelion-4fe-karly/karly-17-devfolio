@@ -149,13 +149,20 @@
             <span class="birthday">생년월일</span>
 
             <div class="birth_wrapper">
-              <label for="birth" class="a11yHidden">생일</label>
-              <input
-                id="birth"
-                type="text"
-                placeholder="YYYY   /   MM   /   DD"
-                class="birth_year"
-              />
+              <div class="birth_year">
+                <label class="a11yHidden" for="year">생년</label>
+                <input id="year" type="text" placeholder="YYYY" maxlength="4" />
+              </div>
+              <span>/</span>
+              <div class="birth_month">
+                <label class="a11yHidden" for="month">월</label>
+                <input id="month" type="text" placeholder="MM" maxlength="2" />
+              </div>
+              <span>/</span>
+              <div class="birth_day">
+                <label class="a11yHidden" for="day">일</label>
+                <input id="day" type="text" placeholder="DD" maxlength="2" />
+              </div>
             </div>
           </div>
 

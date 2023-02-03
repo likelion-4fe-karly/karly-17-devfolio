@@ -145,17 +145,38 @@
   width: 330px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border: 1px solid var(--gray-200);
   border-radius: 3px;
 }
 
-.birth_year {
-  text-align: center;
+.birth_year,
+.birth_month,
+.birth_day {
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.birth_year input,
+.birth_month input,
+.birth_day input {
+  width: 90%;
   font-size: 14px;
   border: none;
-  width: 46%;
-  margin: 0 0 0 100px;
-  display: block;
+  outline: none;
+  text-align: center;
+}
+
+.birth_year input::placeholder,
+.birth_month input::placeholder,
+.birth_day input::placeholder {
+  color: var(--gray-400);
+}
+
+.birth_wrapper span {
+  color: var(--gray-400);
 }
 
 .additional_input_container .additional_input_wrapper {
