@@ -109,6 +109,7 @@
   overflow: hidden;
   border-radius: 4px;
 }
+
 .address_explain {
   margin-left: 150px;
   font-size: var(--font-paragraph-small);

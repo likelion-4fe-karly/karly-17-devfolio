@@ -21,19 +21,24 @@ agreeCheck.forEach((node) => {
     node.classList.toggle('on');
     if (node.classList.contains('on')) {
       node.setAttribute('checked', true);
+      if (
+        agreeCheck[0].checked &&
+        agreeCheck[1].checked &&
+        agreeCheck[2].checked &&
+        agreeCheck[3].checked
+      ) {
+        agreeCheckAll.checked = true;
+      }
     } else {
       node.setAttribute('checked', false);
+      if (
+        !agreeCheck[0].checked ||
+        !agreeCheck[1].checked ||
+        !agreeCheck[2].checked ||
+        !agreeCheck[3].checked
+      ) {
+        agreeCheckAll.checked = false;
+      }
     }
   });
 });
-
-if (
-  agreeCheck[0].checked &&
-  agreeCheck[1].checked &&
-  agreeCheck[2].checked &&
-  agreeCheck[3].checked
-) {
-  agreeCheckAll.checked = true;
-} else {
-  agreeCheckAll.checked = false;
-}
