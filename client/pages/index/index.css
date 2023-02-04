@@ -234,3 +234,15 @@ a:hover {
   background-size: 8px 4px;
   transform: rotate(180deg);
 }
+
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.swiper-button-next.swiper-button-disabled {
+  opacity: 0;
+  cursor: auto;
+  pointer-events: none;
+}

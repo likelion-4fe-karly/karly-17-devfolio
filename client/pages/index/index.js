@@ -30,9 +30,9 @@ const swiper1 = new Swiper('.index_visual_swiper', {
 });
 
 /* 이 상품 어때? */
-const swiper2 = new Swiper('.product', {
+const swiper2 = new Swiper('.first .product', {
   autoplay: false,
-  // loop: true,
+  loop: false,
   speed: 1000,
   parallax: true,
   pagination: {},
@@ -61,7 +61,7 @@ const swiper2 = new Swiper('.product', {
 /*  놓치면 후회할 가격 */
 const swiper4 = new Swiper('.second .price', {
   autoplay: false,
-  // loop: true,
+  loop: false,
   speed: 1000,
   parallax: true,
   pagination: {},
