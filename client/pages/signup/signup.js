@@ -1,3 +1,7 @@
+import { generateRandomString } from './randomString.js';
+
+generateRandomString;
+
 const id = document.getElementById('id');
 const password = document.getElementById('pw');
 const checkPw = document.getElementById('confirmpw');
@@ -189,14 +193,33 @@ phone.addEventListener('keyup', phoneHandler);
 //버튼 클릭 시 로컬 스토리지 저장
 function signupHandler(e) {
   e.preventDefault();
-  const currentId = id.value;
-  const currentPassword = password.value;
-  const currentemail = email.value;
-  localStorage.setItem('id', currentId);
-  localStorage.setItem('password', currentPassword);
-  localStorage.setItem('email', currentemail);
+  const currentUid = generateRandomString(10);
+  // console.log(currentUid);
+
+  // const currentId = id.value;
+  // const currentPassword = password.value;
+  // const currentemail = email.value;
+  // localStorage.setItem('id', currentId);
+  // localStorage.setItem('password', currentPassword);
+  // localStorage.setItem('email', currentemail);
+  // localStorage.setItem('Uid', currentUid);
 
   window.location = '../../pages/login/login.html';
+
+  fetch('http://localhost:3000/user', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      id: id.value,
+      password: password.value,
+      email: email.value,
+      uid: currentUid,
+    }),
+  })
+    .then((response) => console.log(response.json()))
+    .then((data) => console.log(data));
 }
 
 Congratulations.addEventListener('click', signupHandler);
