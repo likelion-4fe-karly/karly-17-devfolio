@@ -50,3 +50,32 @@ const swiper3 = new Swiper('.recent_product_swiper', {
   loop: true,
   speed: 1000,
 });
+
+// ! 장바구니 POP UP 영역
+const cartPopUpContainer = document.querySelector('.cart_popup_container');
+const cartButton = document.querySelectorAll('.recommend_swiper_item_cart');
+
+const cartHandler = () => {
+  console.log('크릭');
+  cartPopUpContainer.classList.add('on');
+};
+
+const cartContainerHandler = (e) => {
+  const button = e.target.closest('button');
+
+  if (!button) return;
+
+  if (button.classList.contains('cart_popup_cancel')) {
+    cartPopUpContainer.classList.remove('on');
+  }
+
+  if (button.classList.contains('cart_popup_save')) {
+    cartPopUpContainer.classList.remove('on');
+  }
+};
+
+cartButton.forEach((button) => {
+  button.addEventListener('click', cartHandler);
+});
+
+cartPopUpContainer.addEventListener('click', cartContainerHandler);

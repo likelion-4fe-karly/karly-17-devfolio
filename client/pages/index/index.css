@@ -109,23 +109,19 @@ a:hover {
 
 .index_recommend_product ul li {
   width: 250px;
+  position: relative;
 }
 
 .index_recommend_product ul li .index_recommend_product_swiper_item {
   display: block;
   cursor: pointer;
-  position: relative;
 }
 
 .index_recommend_product ul li .index_recommend_product_swiper_item img {
   margin-bottom: 16px;
 }
 
-.index_recommend_product
-  ul
-  li
-  .index_recommend_product_swiper_item
-  .recommend_swiper_item_cart {
+.index_recommend_product ul li .recommend_swiper_item_cart {
   display: block;
   position: absolute;
   right: 17px;
@@ -138,6 +134,7 @@ a:hover {
   border: none;
   padding: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .index_recommend_product

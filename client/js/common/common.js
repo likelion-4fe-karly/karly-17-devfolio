@@ -98,31 +98,6 @@ includeIframeToHTML()
 
     neverWatch.addEventListener('click', noTodayHandler);
     close.addEventListener('click', closeHandler);
-
-    // ! 장바구니 POP UP 영역
-    const cartPopUpContainer = document.querySelector('.cart_popup_container');
-    const cartButton = document.querySelector('.cart_button');
-
-    const cartHandler = () => {
-      cartPopUpContainer.classList.add('on');
-    };
-
-    const cartContainerHandler = (e) => {
-      const button = e.target.closest('button');
-
-      if (!button) return;
-
-      if (button.classList.contains('cart_popup_cancel')) {
-        cartPopUpContainer.classList.remove('on');
-      }
-
-      if (button.classList.contains('cart_popup_save')) {
-        cartPopUpContainer.classList.remove('on');
-      }
-    };
-
-    cartButton.addEventListener('click', cartHandler);
-    cartPopUpContainer.addEventListener('click', cartContainerHandler);
   })
   .catch(() => {
     console.error('실패');
