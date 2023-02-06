@@ -68,8 +68,9 @@ article {
   border: none;
   padding: 3px;
   font-size: var(--font-label-small);
-  color: var(--gray-300);
-  cursor: pointer;
+  color: var(--gray-100);
+  font-weight: 600;
+  /* cursor: pointer; */
 }
 /* product_aside_area  */
 .product_list_section .list_accordion .list_accordion_area {
@@ -151,6 +152,7 @@ article {
 .list_item_check:checked + svg g path:first-child {
   stroke: var(--primary);
 }
+
 /* accordion animation */
 .accordion_item_list {
   max-height: 0;
