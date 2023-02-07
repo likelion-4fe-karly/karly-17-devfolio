@@ -1,15 +1,34 @@
 export function includeIframeToHTML(selector = 'iframe[data-include]') {
-  return new Promise((resolve, reject) => {
-    Array.from(document.querySelectorAll(selector)).forEach((iframe) => {
+  const iframes = Array.from(document.querySelectorAll(selector));
+
+  generateFakeContainer(iframes);
+
+  return new Promise((resolve) => {
+    iframes.forEach((iframe) => {
       iframe.src = iframe.dataset.include;
+      iframe.hidden = true;
+
       iframe.addEventListener('load', ({ target }) => {
-        target.insertAdjacentHTML(
+        const fakeContainer = target.nextElementSibling;
+        fakeContainer.insertAdjacentHTML(
           'afterend',
           (target.contentDocument.body || target.contentDocument).innerHTML
         );
         target.remove();
+        fakeContainer.remove();
+
         setTimeout(resolve, 100);
       });
     });
+  });
+}
+
+function generateFakeContainer(iframes) {
+  iframes.forEach((iframe) => {
+    let height = iframe.dataset.height;
+    iframe.insertAdjacentHTML(
+      'afterend',
+      `<div style="height: ${height}"></div>`
+    );
   });
 }
