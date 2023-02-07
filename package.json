@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "dev": "live-server client",
-    "api": "json-server server/db/data.json"
+    "api": "json-server server/db/user.json"
   },
   "keywords": [
     "html",
