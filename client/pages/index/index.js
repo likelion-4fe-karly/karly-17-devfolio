@@ -1,33 +1,65 @@
-// import { getNode } from '../../lib/index.js';
+import { insertLast } from '/lib/dom/insert.js';
+
+insertLast;
+window.onload = function () {
+  fetch('http://localhost:3000/products')
+    .then((res) => res.json())
+    .then((json) => {
+      let html = '';
+
+      // const swiperWrapper = document.querySelector('.swiper-wrapper');
+
+      json.forEach((image) => {
+        // const slide = document.createElement('div');
+        // slide.classList.add('swiper-slide');
+        // const img = document.createElement('img');
+        // img.src = image.src;
+        // img.alt = image.id;
+        // slide.appendChild(img);
+        // swiperWrapper.appendChild(slide);
+
+        html += /* html */ `
+        <div class="swiper-slide">
+          <img src="/assets/${image.image.banner}" alt="${image.image.alt}" />
+        </div>
+        `;
+      });
+
+      insertLast('.swiper-wrapper-banner', html);
+    });
+
+  const swiper1 = new Swiper('.index_visual_swiper', {
+    autoplay: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+    },
+    loop: true,
+    speed: 1000,
+    parallax: true,
+    a11y: {
+      prevSlideMessage: '이전 슬라이드',
+      nextSlideMessage: '다음 슬라이드',
+      slideLabelMessage:
+        '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
+    },
+    navigation: {
+      prevEl: '.index_visual .swiper-button-prev',
+      nextEl: '.index_visual .swiper-button-next',
+    },
+  });
+};
 
 /* global Swiper */
+let swiperPrev = document.querySelector(
+  '.index_recommend_product .swiper-button-prev'
+);
 
 /* 메인 배너 */
-const swiper1 = new Swiper('.index_visual_swiper', {
-  autoplay: true,
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'fraction',
-  },
-  loop: true,
-  speed: 1000,
-  parallax: true,
-  a11y: {
-    prevSlideMessage: '이전 슬라이드',
-    nextSlideMessage: '다음 슬라이드',
-    slideLabelMessage:
-      '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
-  },
-  navigation: {
-    prevEl: '.index_visual_swiper .swiper-button-prev',
-    nextEl: '.index_visual_swiper .swiper-button-next',
-  },
-});
-
-/* 이 상품 어때? & 놓치면 후회할 가격 */
-const swiper2 = new Swiper('.index_recommend_product_swiper', {
+/* 이 상품 어때? */
+const swiper2 = new Swiper('.first .product', {
   autoplay: false,
-  loop: true,
+  loop: false,
   speed: 1000,
   parallax: true,
   pagination: {},
@@ -38,8 +70,84 @@ const swiper2 = new Swiper('.index_recommend_product_swiper', {
       '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
   },
   navigation: {
-    prevEl: '.index_recommend_product_swiper .swiper-button-prev',
-    nextEl: '.index_recommend_product_swiper .swiper-button-next',
+    prevEl: '.first .swiper-button-prev',
+    nextEl: '.first .swiper-button-next',
+  },
+  on: {
+    activeIndexChange: function () {
+      if (this.realIndex === 0) {
+        swiperPrev.classList.add('swiper-button-disabled');
+      } else {
+        swiperPrev.classList.remove('swiper-button-disabled');
+      }
+    },
+  },
+});
+
+// 이 상품 어때요
+// TODO 비동기 통신 뿌리기
+fetch('http://localhost:3000/products')
+  .then((res) => res.json())
+  .then((json) => {
+    let html = '';
+
+    console.log(json);
+    json.forEach((product) => {
+      html += /*html*/ `
+      <ul>
+        <li>
+          <a
+            class="index_recommend_product_swiper_item"
+            href="/pages/product_detail/product_detail.html"
+          >
+          <img
+            src="/assets/${product.image.view}"
+            alt="${product.image.alt}"
+          />
+          <p class="recommend_swiper_item_title">
+            ${product.name}
+          </p>
+          <p class="recommend_swiper_item_price">${product.price}원</p>
+          </a>
+          <div class="recommend_swiper_item_cart" tabindex="0">
+            <img
+              src="/assets/index/icon_cart.png"
+              alt="장바구니 버튼"
+            />
+          </div>
+      </li>
+    </ul>
+    `;
+    });
+
+    insertLast('.swiper-slide', html);
+  });
+
+/*  놓치면 후회할 가격 */
+const swiper4 = new Swiper('.second .price', {
+  autoplay: false,
+  loop: false,
+  speed: 1000,
+  parallax: true,
+  pagination: {},
+  a11y: {
+    prevSlideMessage: '이전 슬라이드',
+    nextSlideMessage: '다음 슬라이드',
+    slideLabelMessage:
+      '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
+  },
+  navigation: {
+    prevEl: '.second .swiper-button-prev',
+    nextEl: '.second .swiper-button-next',
+  },
+  on: {
+    activeIndexChange: function () {
+      if (this.realIndex === 0) {
+        swiperPrev.classList.add('swiper-button-disabled');
+      } else {
+        swiperPrev.classList.remove('swiper-button-disabled');
+      }
+    },
   },
 });
 

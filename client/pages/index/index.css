@@ -42,14 +42,14 @@ a:hover {
 .index_recommend_product .swiper-button-next {
   background: url(../../assets/index/arrow2.png) no-repeat;
   background-size: 100%;
-  top: 40%;
+  top: 33%;
   right: -29px;
 }
 
 .index_recommend_product .swiper-button-prev {
   background: url(../../assets/index/arrow2.png) no-repeat;
   background-size: 100%;
-  top: 40%;
+  top: 33%;
   left: -29px;
   transform: rotate(180deg);
 }
@@ -303,6 +303,17 @@ a:hover {
   transform: rotate(180deg);
 }
 
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.swiper-button-next.swiper-button-disabled {
+  opacity: 0;
+  cursor: auto;
+  pointer-events: none;
+}
 /* 뷰티 플랫폼 POP UP  */
 
 .beauty_popup {

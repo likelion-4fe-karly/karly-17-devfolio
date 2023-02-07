@@ -61,6 +61,12 @@ body {
   display: block;
   padding: 8px;
 }
+.logout,
+.userName {
+  display: block;
+  padding: 8px;
+  cursor: pointer;
+}
 
 .header_login ul li:nth-child(2),
 .header_login ul li:nth-child(4) {
