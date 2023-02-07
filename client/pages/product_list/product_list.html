@@ -1,0 +1,4223 @@
+<!DOCTYPE html>
+<html lang="KR-ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product_list</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+    />
+    <script type="text/javascript" defer src="product_list.js"></script>
+    <script src="/js/main.js" type="module"></script>
+  </head>
+  <body>
+    <iframe data-include="/layout/header.html" frameborder="0"></iframe>
+    <section class="product_list_section">
+      <h3>베스트</h3>
+      <div class="list_container">
+        <aside class="list_accordion">
+          <div class="list_accordion_head">
+            <span>필터</span>
+            <input
+              tabindex="0"
+              type="button"
+              id="target_btn"
+              value="초기화"
+              onclick="listCheckbox()"
+            />
+          </div>
+          <div class="accordion_area_all">
+            <div class="list_accordion_area">
+              <button class="btn_toggle accordion_btn">
+                <h4 tabindex="0">카테고리</h4>
+                <div>
+                  <svg
+                    width="10"
+                    height="6"
+                    viewBox="0 0 10 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="accordion_arrow"
+                  >
+                    <path
+                      d="M9 5L5 1L1 5"
+                      stroke="#999999"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                </div>
+              </button>
+              <ul class="accordion_item_list">
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_01-1"
+                      tabindex="0"
+                      data-key="type"
+                      data-value="salad"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_01-1"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>샐러드 ・ 간편식</span
+                      ><span class="list_item_count">65</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_01-2"
+                      tabindex="0"
+                      data-key="type"
+                      data-value="sidedish"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_01-2"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>국 ・ 반찬 ・ 메인요리</span
+                      ><span class="list_item_count">52</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_01-3"
+                      tabindex="0"
+                      data-key="type"
+                      data-value="meat"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_01-3"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>정육 ・ 계란</span
+                      ><span class="list_item_count">41</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_01-4"
+                      tabindex="0"
+                      data-key="type"
+                      data-value="fruit"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_01-4"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>과일 ・ 견과 ・ 쌀</span
+                      ><span class="list_item_count">30</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_01-5"
+                      tabindex="0"
+                      data-key="type"
+                      data-value="snack"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_01-5"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>간식 ・ 과자 ・ 떡</span
+                      ><span class="list_item_count">18</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_01-6"
+                      tabindex="0"
+                      data-key="type"
+                      data-value="drink"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_01-6"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>생수 ・ 음료 ・ 우유 ・ 커피</span
+                      ><span class="list_item_count">17</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_01-7"
+                      tabindex="0"
+                      data-key="type"
+                      data-value="fish"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_01-7"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>수산 ・ 해산 ・ 건어물</span
+                      ><span class="list_item_count">16</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_01-8"
+                      tabindex="0"
+                      data-key="type"
+                      data-value="bread"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_01-8"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>베이커리 ・ 치즈 ・ 델리</span
+                      ><span class="list_item_count">13</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_01-9"
+                      tabindex="0"
+                      data-key="type"
+                      data-value="health"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_01-9"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>건강식품</span
+                      ><span class="list_item_count">10</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_01-10"
+                      tabindex="0"
+                      data-key="type"
+                      data-value=
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_01-10"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>생활용품 ・ 리빙 ・ 캠핑</span
+                      ><span class="list_item_count">10</span></label
+                    >
+                  </a>
+                </li>
+                <button class="product_list_accordion_add">
+                  카테고리 더보기
+                  <span tabindex="0">
+                    <svg
+                      width="6"
+                      height="10"
+                      viewBox="0 0 6 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 1L5 5L1 9"
+                        stroke="#999999"
+                        stroke-width="1.2"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </ul>
+            </div>
+            <div class="list_accordion_area">
+              <button class="btn_toggle accordion_btn">
+                <h4 tabindex="0">브랜드</h4>
+                <div>
+                  <svg
+                    width="10"
+                    height="6"
+                    viewBox="0 0 10 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="accordion_arrow"
+                  >
+                    <path
+                      d="M9 5L5 1L1 5"
+                      stroke="#999999"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                </div>
+              </button>
+              <ul class="accordion_item_list">
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_02-1"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_02-1"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>감자밭</span
+                      ><span class="list_item_count">1</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_02-2"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_02-2"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>강남면옥</span
+                      ><span class="list_item_count">1</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_02-3"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_02-3"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>경남제약</span
+                      ><span class="list_item_count">1</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_02-4"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_02-4"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>경복궁</span
+                      ><span class="list_item_count">1</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_02-5"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_02-5"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>고래사</span
+                      ><span class="list_item_count">1</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_02-6"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_02-6"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>고메공방</span
+                      ><span class="list_item_count">1</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_02-7"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_02-7"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>고온어다이어트</span
+                      ><span class="list_item_count">1</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_02-8"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_02-8"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>도쿄마블</span
+                      ><span class="list_item_count">1</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_02-9"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_02-9"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>그레놀라 하우스</span
+                      ><span class="list_item_count">1</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_02-10"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_02-10"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>그리츠 시그니처 램</span
+                      ><span class="list_item_count">1</span></label
+                    >
+                  </a>
+                </li>
+                <button class="product_list_accordion_add">
+                  카테고리 더보기
+                  <span tabindex="0">
+                    <svg
+                      width="6"
+                      height="10"
+                      viewBox="0 0 6 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 1L5 5L1 9"
+                        stroke="#999999"
+                        stroke-width="1.2"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </ul>
+            </div>
+            <div class="list_accordion_area">
+              <button class="btn_toggle accordion_btn">
+                <h4 tabindex="0">가격</h4>
+                <div>
+                  <svg
+                    width="10"
+                    height="6"
+                    viewBox="0 0 10 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="accordion_arrow"
+                  >
+                    <path
+                      d="M9 5L5 1L1 5"
+                      stroke="#999999"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                </div>
+              </button>
+              <ul class="accordion_item_list">
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_03-1"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_03-1"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>샐러드 ・ 간편식</span
+                      ><span class="list_item_count">65</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_03-2"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_03-2"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>국 ・ 반찬 ・ 메인요리</span
+                      ><span class="list_item_count">52</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_03-3"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_03-3"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>정육 ・ 계란</span
+                      ><span class="list_item_count">41</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_03-4"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_03-4"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>과일 ・ 견과 ・ 쌀</span
+                      ><span class="list_item_count">30</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_03-5"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_03-5"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>간식 ・ 과자 ・ 떡</span
+                      ><span class="list_item_count">18</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_03-6"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_03-6"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>생수 ・ 음료 ・ 우유 ・ 커피</span
+                      ><span class="list_item_count">17</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_03-7"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_03-7"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>수산 ・ 해산 ・ 건어물</span
+                      ><span class="list_item_count">16</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_03-8"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_03-8"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>베이커리 ・ 치즈 ・ 델리</span
+                      ><span class="list_item_count">13</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_03-9"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_03-9"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>건강식품</span
+                      ><span class="list_item_count">10</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_03-10"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_03-10"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>생활용품 ・ 리빙 ・ 캠핑</span
+                      ><span class="list_item_count">10</span></label
+                    >
+                  </a>
+                </li>
+                <button class="product_list_accordion_add">
+                  카테고리 더보기
+                  <span tabindex="0">
+                    <svg
+                      width="6"
+                      height="10"
+                      viewBox="0 0 6 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 1L5 5L1 9"
+                        stroke="#999999"
+                        stroke-width="1.2"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </ul>
+            </div>
+            <div class="list_accordion_area">
+              <button class="btn_toggle accordion_btn">
+                <h4 tabindex="0">혜택</h4>
+                <div>
+                  <svg
+                    width="10"
+                    height="6"
+                    viewBox="0 0 10 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="accordion_arrow"
+                  >
+                    <path
+                      d="M9 5L5 1L1 5"
+                      stroke="#999999"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                </div>
+              </button>
+              <ul class="accordion_item_list">
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_04-1"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_04-1"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>샐러드 ・ 간편식</span
+                      ><span class="list_item_count">65</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_04-2"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_04-2"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>국 ・ 반찬 ・ 메인요리</span
+                      ><span class="list_item_count">52</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_04-3"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_04-3"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>정육 ・ 계란</span
+                      ><span class="list_item_count">41</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_04-4"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_04-4"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>과일 ・ 견과 ・ 쌀</span
+                      ><span class="list_item_count">30</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_04-5"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_04-5"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>간식 ・ 과자 ・ 떡</span
+                      ><span class="list_item_count">18</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_04-6"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_04-6"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>생수 ・ 음료 ・ 우유 ・ 커피</span
+                      ><span class="list_item_count">17</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_04-7"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_04-7"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>수산 ・ 해산 ・ 건어물</span
+                      ><span class="list_item_count">16</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_04-8"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_04-8"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>베이커리 ・ 치즈 ・ 델리</span
+                      ><span class="list_item_count">13</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_04-9"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_04-9"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>건강식품</span
+                      ><span class="list_item_count">10</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_04-10"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_04-10"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>생활용품 ・ 리빙 ・ 캠핑</span
+                      ><span class="list_item_count">10</span></label
+                    >
+                  </a>
+                </li>
+                <button class="product_list_accordion_add">
+                  카테고리 더보기
+                  <span tabindex="0">
+                    <svg
+                      width="6"
+                      height="10"
+                      viewBox="0 0 6 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 1L5 5L1 9"
+                        stroke="#999999"
+                        stroke-width="1.2"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </ul>
+            </div>
+            <div class="list_accordion_area">
+              <button class="btn_toggle accordion_btn">
+                <h4 tabindex="0">유형</h4>
+                <div>
+                  <svg
+                    width="10"
+                    height="6"
+                    viewBox="0 0 10 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="accordion_arrow"
+                  >
+                    <path
+                      d="M9 5L5 1L1 5"
+                      stroke="#999999"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                </div>
+              </button>
+              <ul class="accordion_item_list">
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_05-1"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_05-1"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>샐러드 ・ 간편식</span
+                      ><span class="list_item_count">65</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_05-2"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_05-2"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>국 ・ 반찬 ・ 메인요리</span
+                      ><span class="list_item_count">52</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_05-3"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_05-3"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>정육 ・ 계란</span
+                      ><span class="list_item_count">41</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_05-4"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_05-4"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>과일 ・ 견과 ・ 쌀</span
+                      ><span class="list_item_count">30</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_05-5"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_05-5"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>간식 ・ 과자 ・ 떡</span
+                      ><span class="list_item_count">18</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_05-6"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_05-6"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>생수 ・ 음료 ・ 우유 ・ 커피</span
+                      ><span class="list_item_count">17</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_05-7"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_05-7"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>수산 ・ 해산 ・ 건어물</span
+                      ><span class="list_item_count">16</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_05-8"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_05-8"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>베이커리 ・ 치즈 ・ 델리</span
+                      ><span class="list_item_count">13</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_05-9"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_05-9"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>건강식품</span
+                      ><span class="list_item_count">10</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_05-10"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_05-10"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>생활용품 ・ 리빙 ・ 캠핑</span
+                      ><span class="list_item_count">10</span></label
+                    >
+                  </a>
+                </li>
+                <button class="product_list_accordion_add">
+                  카테고리 더보기
+                  <span tabindex="0">
+                    <svg
+                      width="6"
+                      height="10"
+                      viewBox="0 0 6 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 1L5 5L1 9"
+                        stroke="#999999"
+                        stroke-width="1.2"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </ul>
+            </div>
+            <div class="list_accordion_area">
+              <button class="btn_toggle accordion_btn">
+                <h4 tabindex="0">특정상품 제외</h4>
+                <div>
+                  <svg
+                    width="10"
+                    height="6"
+                    viewBox="0 0 10 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="accordion_arrow"
+                  >
+                    <path
+                      d="M9 5L5 1L1 5"
+                      stroke="#999999"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                </div>
+              </button>
+              <ul class="accordion_item_list">
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_06-1"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_06-1"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>샐러드 ・ 간편식</span
+                      ><span class="list_item_count">65</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_06-2"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_06-2"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>국 ・ 반찬 ・ 메인요리</span
+                      ><span class="list_item_count">52</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_06-3"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_06-3"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>정육 ・ 계란</span
+                      ><span class="list_item_count">41</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_06-4"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_06-4"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>과일 ・ 견과 ・ 쌀</span
+                      ><span class="list_item_count">30</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_06-5"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_06-5"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>간식 ・ 과자 ・ 떡</span
+                      ><span class="list_item_count">18</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_06-6"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_06-6"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>생수 ・ 음료 ・ 우유 ・ 커피</span
+                      ><span class="list_item_count">17</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_06-7"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_06-7"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>수산 ・ 해산 ・ 건어물</span
+                      ><span class="list_item_count">16</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_06-8"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_06-8"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>베이커리 ・ 치즈 ・ 델리</span
+                      ><span class="list_item_count">13</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_06-9"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_06-9"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>건강식품</span
+                      ><span class="list_item_count">10</span></label
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <label
+                      class="list_item"
+                      for="list_item_checkbox_06-10"
+                      tabindex="0"
+                    >
+                      <input
+                        type="checkbox"
+                        name="productListItem"
+                        id="list_item_checkbox_06-10"
+                        class="list_item_check"
+                        onclick="btnActive()"
+                      />
+                      <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_761_2180)">
+                          <path
+                            d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z"
+                            stroke="#C4C4C4"
+                          />
+                          <path
+                            d="M7 12.667L10.385 16L18 8.5"
+                            stroke="#C4C4C4"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_761_2180">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>생활용품 ・ 리빙 ・ 캠핑</span
+                      ><span class="list_item_count">10</span></label
+                    >
+                  </a>
+                </li>
+                <button class="product_list_accordion_add">
+                  카테고리 더보기
+                  <span tabindex="0">
+                    <svg
+                      width="6"
+                      height="10"
+                      viewBox="0 0 6 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 1L5 5L1 9"
+                        stroke="#999999"
+                        stroke-width="1.2"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </ul>
+            </div>
+          </div>
+        </aside>
+        <article>
+          <div class="product_filter_column">
+            <div>총 284건</div>
+            <ul>
+              <li>
+                <a tabindex="0">추천순</a>
+                <span
+                  ><svg
+                    width="14"
+                    height="20"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.9932 0.700195C8.73506 0.700195 10.3116 1.40557 11.4528 2.54565C12.5943 3.68594 13.3002 5.26111 13.3002 7.0002C13.3002 8.73928 12.5943 10.3145 11.4528 11.4547C10.3116 12.5948 8.73506 13.3002 6.9932 13.3002C5.25512 13.3002 3.68233 12.595 2.54387 11.4554C1.40457 10.315 0.700195 8.73952 0.700195 7.0002C0.700195 5.26087 1.40457 3.68541 2.54387 2.54497C3.68233 1.40537 5.25512 0.700195 6.9932 0.700195Z"
+                      stroke="#ccc"
+                      stroke-width="1.4"
+                    ></path>
+                    <path
+                      d="M4.5 5.21081H5.77027C5.81351 4.55135 6.26216 4.12973 6.95946 4.12973C7.64054 4.12973 8.09459 4.53514 8.09459 5.0973C8.09459 5.58784 7.90383 5.86944 7.35576 6.22524L7.1973 6.32432C6.45135 6.76216 6.13784 7.24865 6.18649 8.05946L6.19189 8.42703H7.44595V8.11892C7.44595 7.58378 7.64595 7.30811 8.35405 6.89189C9.08919 6.45405 9.5 5.87568 9.5 5.04865C9.5 3.85405 8.51081 3 7.02973 3C5.42432 3 4.54324 3.92973 4.5 5.21081ZM6.87838 11.0054C6.33784 11.0054 5.98108 10.6649 5.98108 10.1459C5.98108 9.62162 6.33784 9.28108 6.87838 9.28108C7.42973 9.28108 7.77568 9.62162 7.77568 10.1459C7.77568 10.6649 7.42973 11.0054 6.87838 11.0054Z"
+                      fill="#ccc"
+                    ></path></svg
+                ></span>
+              </li>
+              <li><a tabindex="0">신상품순</a></li>
+              <li><a tabindex="0">판매량순</a></li>
+              <li><a tabindex="0">혜택순</a></li>
+              <li><a tabindex="0">낮은 가격순</a></li>
+              <li><a tabindex="0">높은 가격순</a></li>
+            </ul>
+          </div>
+          <div class="product_list_grid">
+            <!-- <div class="product_item" tabindex="0">
+              <a>
+                <div class="product_item_img_box">
+                  <img
+                    src="/assets/tangtang/detail_view.jpg"
+                    alt="탱탱쫄면 이미지"
+                  />
+                  <button
+                    type="button"
+                    alt="장바구니 버튼"
+                    aria-label="product_item_cart"
+                    class="product_item_cart"
+                    tabindex="0"
+                    onClick="location.href='../product_detail/product_detail.html'"
+                  >
+                    <svg
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.5"
+                        d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45Z"
+                        fill="#2A0038"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M31.4897 17.29L29.3197 26.52H16.8997L14.7397 17.29H31.4897Z"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M27.3797 32.94C28.3186 32.94 29.0797 32.1789 29.0797 31.24C29.0797 30.3011 28.3186 29.54 27.3797 29.54C26.4408 29.54 25.6797 30.3011 25.6797 31.24C25.6797 32.1789 26.4408 32.94 27.3797 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18.8499 32.94C19.7888 32.94 20.5499 32.1789 20.5499 31.24C20.5499 30.3011 19.7888 29.54 18.8499 29.54C17.911 29.54 17.1499 30.3011 17.1499 31.24C17.1499 32.1789 17.911 32.94 18.8499 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.0298 14.38H14.0498L15.4598 20.36"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product_item_card_info">
+                  <div class="item_info_delivery">샛별배송</div>
+                  <div class="item_info_name">[풀무원] 탱탱쫄면 (4개입)</div>
+                  <div class="item_price_sale">
+                    <span>4,980</span><span>원</span>
+                  </div>
+                  <div class="item_info_coment">
+                    튀기지 않아 부담없는 매콤함
+                  </div>
+                  <div class="item_badge_group">
+                    <span class="badge_only">Karly Only</span>
+                    <span>한정수량</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="product_item" tabindex="0">
+              <a>
+                <div class="product_item_img_box">
+                  <img
+                    src="/assets/suncream_view.jpg"
+                    alt="죠르디 시카 자석 선쿠션 이미지"
+                  />
+                  <button
+                    type="button"
+                    alt="장바구니 버튼"
+                    aria-label="product_item_cart"
+                    class="product_item_cart"
+                    tabindex="0"
+                    onClick="location.href='../product_detail/product_detail.html'"
+                  >
+                    <svg
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.5"
+                        d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45Z"
+                        fill="#2A0038"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M31.4897 17.29L29.3197 26.52H16.8997L14.7397 17.29H31.4897Z"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M27.3797 32.94C28.3186 32.94 29.0797 32.1789 29.0797 31.24C29.0797 30.3011 28.3186 29.54 27.3797 29.54C26.4408 29.54 25.6797 30.3011 25.6797 31.24C25.6797 32.1789 26.4408 32.94 27.3797 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18.8499 32.94C19.7888 32.94 20.5499 32.1789 20.5499 31.24C20.5499 30.3011 19.7888 29.54 18.8499 29.54C17.911 29.54 17.1499 30.3011 17.1499 31.24C17.1499 32.1789 17.911 32.94 18.8499 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.0298 14.38H14.0498L15.4598 20.36"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product_item_card_info">
+                  <div class="item_info_delivery">샛별배송</div>
+                  <div class="item_info_name">
+                    [온더바디] 죠르디 시카 자석 선쿠션
+                  </div>
+                  <div class="item_price_sale">
+                    <span>32,500</span><span>원</span>
+                  </div>
+                  <div class="item_info_coment">
+                    끈적임 없이 보송한 무기자차 선쿠션
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="product_item" tabindex="0">
+              <a>
+                <div class="product_item_img_box">
+                  <img
+                    src="/assets/detergent/detergent_view.jpg"
+                    alt="베이비 세탁세제 이미지"
+                  />
+                  <button
+                    type="button"
+                    alt="장바구니 버튼"
+                    aria-label="product_item_cart"
+                    class="product_item_cart"
+                    tabindex="0"
+                    onClick="location.href='../product_detail/product_detail.html'"
+                  >
+                    <svg
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.5"
+                        d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45Z"
+                        fill="#2A0038"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M31.4897 17.29L29.3197 26.52H16.8997L14.7397 17.29H31.4897Z"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M27.3797 32.94C28.3186 32.94 29.0797 32.1789 29.0797 31.24C29.0797 30.3011 28.3186 29.54 27.3797 29.54C26.4408 29.54 25.6797 30.3011 25.6797 31.24C25.6797 32.1789 26.4408 32.94 27.3797 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18.8499 32.94C19.7888 32.94 20.5499 32.1789 20.5499 31.24C20.5499 30.3011 19.7888 29.54 18.8499 29.54C17.911 29.54 17.1499 30.3011 17.1499 31.24C17.1499 32.1789 17.911 32.94 18.8499 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.0298 14.38H14.0498L15.4598 20.36"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product_item_card_info">
+                  <div class="item_info_delivery">샛별배송</div>
+                  <div class="item_info_name">[프로쉬] 베이비 세탁세제</div>
+                  <div class="item_price_sale">
+                    <span class="item_price_rate">24%</span><span>18,900</span
+                    ><span>원</span>
+                    <div><del>24,900원</del></div>
+                  </div>
+
+                  <div class="item_info_coment">
+                    성분을 꼼꼼히 따져 골라 더욱 편안한
+                  </div>
+                  <div class="item_badge_group">
+                    <span class="badge_only">Karly Only</span>
+                    <span>한정수량</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="product_item" tabindex="0">
+              <a>
+                <div class="product_item_img_box">
+                  <img
+                    src="/assets/tangtang/detail_view.jpg"
+                    alt="탱탱쫄면 이미지"
+                  />
+                  <button
+                    type="button"
+                    alt="장바구니 버튼"
+                    aria-label="product_item_cart"
+                    class="product_item_cart"
+                    tabindex="0"
+                    onClick="location.href='../product_detail/product_detail.html'"
+                  >
+                    <svg
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.5"
+                        d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45Z"
+                        fill="#2A0038"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M31.4897 17.29L29.3197 26.52H16.8997L14.7397 17.29H31.4897Z"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M27.3797 32.94C28.3186 32.94 29.0797 32.1789 29.0797 31.24C29.0797 30.3011 28.3186 29.54 27.3797 29.54C26.4408 29.54 25.6797 30.3011 25.6797 31.24C25.6797 32.1789 26.4408 32.94 27.3797 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18.8499 32.94C19.7888 32.94 20.5499 32.1789 20.5499 31.24C20.5499 30.3011 19.7888 29.54 18.8499 29.54C17.911 29.54 17.1499 30.3011 17.1499 31.24C17.1499 32.1789 17.911 32.94 18.8499 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.0298 14.38H14.0498L15.4598 20.36"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product_item_card_info">
+                  <div class="item_info_delivery">샛별배송</div>
+                  <div class="item_info_name">[풀무원] 탱탱쫄면 (4개입)</div>
+                  <div class="item_price_sale">
+                    <span>4,980</span><span>원</span>
+                  </div>
+                  <div class="item_info_coment">
+                    튀기지 않아 부담없는 매콤함
+                  </div>
+                  <div class="item_badge_group">
+                    <span class="badge_only">Karly Only</span>
+                    <span>한정수량</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="product_item" tabindex="0">
+              <a>
+                <div class="product_item_img_box">
+                  <img
+                    src="/assets/suncream_view.jpg"
+                    alt="죠르디 시카 자석 선쿠션 이미지"
+                  />
+                  <button
+                    type="button"
+                    alt="장바구니 버튼"
+                    aria-label="product_item_cart"
+                    class="product_item_cart"
+                    tabindex="0"
+                    onClick="location.href='../product_detail/product_detail.html'"
+                  >
+                    <svg
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.5"
+                        d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45Z"
+                        fill="#2A0038"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M31.4897 17.29L29.3197 26.52H16.8997L14.7397 17.29H31.4897Z"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M27.3797 32.94C28.3186 32.94 29.0797 32.1789 29.0797 31.24C29.0797 30.3011 28.3186 29.54 27.3797 29.54C26.4408 29.54 25.6797 30.3011 25.6797 31.24C25.6797 32.1789 26.4408 32.94 27.3797 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18.8499 32.94C19.7888 32.94 20.5499 32.1789 20.5499 31.24C20.5499 30.3011 19.7888 29.54 18.8499 29.54C17.911 29.54 17.1499 30.3011 17.1499 31.24C17.1499 32.1789 17.911 32.94 18.8499 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.0298 14.38H14.0498L15.4598 20.36"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product_item_card_info">
+                  <div class="item_info_delivery">샛별배송</div>
+                  <div class="item_info_name">
+                    [온더바디] 죠르디 시카 자석 선쿠션
+                  </div>
+                  <div class="item_price_sale">
+                    <span>32,500</span><span>원</span>
+                  </div>
+                  <div class="item_info_coment">
+                    끈적임 없이 보송한 무기자차 선쿠션
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="product_item" tabindex="0">
+              <a>
+                <div class="product_item_img_box">
+                  <img
+                    src="/assets/detergent/detergent_view.jpg"
+                    alt="베이비 세탁세제 이미지"
+                  />
+                  <button
+                    type="button"
+                    alt="장바구니 버튼"
+                    aria-label="product_item_cart"
+                    class="product_item_cart"
+                    tabindex="0"
+                    onClick="location.href='../product_detail/product_detail.html'"
+                  >
+                    <svg
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.5"
+                        d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45Z"
+                        fill="#2A0038"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M31.4897 17.29L29.3197 26.52H16.8997L14.7397 17.29H31.4897Z"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M27.3797 32.94C28.3186 32.94 29.0797 32.1789 29.0797 31.24C29.0797 30.3011 28.3186 29.54 27.3797 29.54C26.4408 29.54 25.6797 30.3011 25.6797 31.24C25.6797 32.1789 26.4408 32.94 27.3797 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18.8499 32.94C19.7888 32.94 20.5499 32.1789 20.5499 31.24C20.5499 30.3011 19.7888 29.54 18.8499 29.54C17.911 29.54 17.1499 30.3011 17.1499 31.24C17.1499 32.1789 17.911 32.94 18.8499 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.0298 14.38H14.0498L15.4598 20.36"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product_item_card_info">
+                  <div class="item_info_delivery">샛별배송</div>
+                  <div class="item_info_name">[프로쉬] 베이비 세탁세제</div>
+                  <div class="item_price_sale">
+                    <span class="item_price_rate">24%</span><span>18,900</span
+                    ><span>원</span>
+                    <div><del>24,900원</del></div>
+                  </div>
+
+                  <div class="item_info_coment">
+                    성분을 꼼꼼히 따져 골라 더욱 편안한
+                  </div>
+                  <div class="item_badge_group">
+                    <span class="badge_only">Karly Only</span>
+                    <span>한정수량</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="product_item" tabindex="0">
+              <a>
+                <div class="product_item_img_box">
+                  <img
+                    src="/assets/tangtang/detail_view.jpg"
+                    alt="탱탱쫄면 이미지"
+                  />
+                  <button
+                    type="button"
+                    alt="장바구니 버튼"
+                    aria-label="product_item_cart"
+                    class="product_item_cart"
+                    tabindex="0"
+                    onClick="location.href='../product_detail/product_detail.html'"
+                  >
+                    <svg
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.5"
+                        d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45Z"
+                        fill="#2A0038"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M31.4897 17.29L29.3197 26.52H16.8997L14.7397 17.29H31.4897Z"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M27.3797 32.94C28.3186 32.94 29.0797 32.1789 29.0797 31.24C29.0797 30.3011 28.3186 29.54 27.3797 29.54C26.4408 29.54 25.6797 30.3011 25.6797 31.24C25.6797 32.1789 26.4408 32.94 27.3797 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18.8499 32.94C19.7888 32.94 20.5499 32.1789 20.5499 31.24C20.5499 30.3011 19.7888 29.54 18.8499 29.54C17.911 29.54 17.1499 30.3011 17.1499 31.24C17.1499 32.1789 17.911 32.94 18.8499 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.0298 14.38H14.0498L15.4598 20.36"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product_item_card_info">
+                  <div class="item_info_delivery">샛별배송</div>
+                  <div class="item_info_name">[풀무원] 탱탱쫄면 (4개입)</div>
+                  <div class="item_price_sale">
+                    <span>4,980</span><span>원</span>
+                  </div>
+                  <div class="item_info_coment">
+                    튀기지 않아 부담없는 매콤함
+                  </div>
+                  <div class="item_badge_group">
+                    <span class="badge_only">Karly Only</span>
+                    <span>한정수량</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="product_item" tabindex="0">
+              <a>
+                <div class="product_item_img_box">
+                  <img
+                    src="/assets/suncream_view.jpg"
+                    alt="죠르디 시카 자석 선쿠션 이미지"
+                  />
+                  <button
+                    type="button"
+                    alt="장바구니 버튼"
+                    aria-label="product_item_cart"
+                    aria-label="product_item_cart"
+                    class="product_item_cart"
+                    tabindex="0"
+                    onClick="location.href='../product_detail/product_detail.html'"
+                  >
+                    <svg
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.5"
+                        d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45Z"
+                        fill="#2A0038"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M31.4897 17.29L29.3197 26.52H16.8997L14.7397 17.29H31.4897Z"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M27.3797 32.94C28.3186 32.94 29.0797 32.1789 29.0797 31.24C29.0797 30.3011 28.3186 29.54 27.3797 29.54C26.4408 29.54 25.6797 30.3011 25.6797 31.24C25.6797 32.1789 26.4408 32.94 27.3797 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18.8499 32.94C19.7888 32.94 20.5499 32.1789 20.5499 31.24C20.5499 30.3011 19.7888 29.54 18.8499 29.54C17.911 29.54 17.1499 30.3011 17.1499 31.24C17.1499 32.1789 17.911 32.94 18.8499 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.0298 14.38H14.0498L15.4598 20.36"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product_item_card_info">
+                  <div class="item_info_delivery">샛별배송</div>
+                  <div class="item_info_name">
+                    [온더바디] 죠르디 시카 자석 선쿠션
+                  </div>
+                  <div class="item_price_sale">
+                    <span>32,500</span><span>원</span>
+                  </div>
+                  <div class="item_info_coment">
+                    끈적임 없이 보송한 무기자차 선쿠션
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="product_item" tabindex="0">
+              <a>
+                <div class="product_item_img_box">
+                  <img
+                    src="/assets/detergent/detergent_view.jpg"
+                    alt="베이비 세탁세제 이미지"
+                  />
+                  <button
+                    type="button"
+                    alt="장바구니 버튼"
+                    aria-label="product_item_cart"
+                    aria-label="product_item_cart"
+                    class="product_item_cart"
+                    tabindex="0"
+                    onClick="location.href='../product_detail/product_detail.html'"
+                  >
+                    <svg
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.5"
+                        d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45Z"
+                        fill="#2A0038"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M31.4897 17.29L29.3197 26.52H16.8997L14.7397 17.29H31.4897Z"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M27.3797 32.94C28.3186 32.94 29.0797 32.1789 29.0797 31.24C29.0797 30.3011 28.3186 29.54 27.3797 29.54C26.4408 29.54 25.6797 30.3011 25.6797 31.24C25.6797 32.1789 26.4408 32.94 27.3797 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18.8499 32.94C19.7888 32.94 20.5499 32.1789 20.5499 31.24C20.5499 30.3011 19.7888 29.54 18.8499 29.54C17.911 29.54 17.1499 30.3011 17.1499 31.24C17.1499 32.1789 17.911 32.94 18.8499 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.0298 14.38H14.0498L15.4598 20.36"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product_item_card_info">
+                  <div class="item_info_delivery">샛별배송</div>
+                  <div class="item_info_name">[프로쉬] 베이비 세탁세제</div>
+                  <div class="item_price_sale">
+                    <span class="item_price_rate">24%</span><span>18,900</span
+                    ><span>원</span>
+                    <div><del>24,900원</del></div>
+                  </div>
+
+                  <div class="item_info_coment">
+                    성분을 꼼꼼히 따져 골라 더욱 편안한
+                  </div>
+                  <div class="item_badge_group">
+                    <span class="badge_only">Karly Only</span>
+                    <span>한정수량</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="product_item" tabindex="0">
+              <a>
+                <div class="product_item_img_box">
+                  <img
+                    src="/assets/tangtang/detail_view.jpg"
+                    alt="탱탱쫄면 이미지"
+                  />
+                  <button
+                    type="button"
+                    alt="장바구니 버튼"
+                    aria-label="product_item_cart"
+                    class="product_item_cart"
+                    tabindex="0"
+                    onClick="location.href='../product_detail/product_detail.html'"
+                  >
+                    <svg
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.5"
+                        d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45Z"
+                        fill="#2A0038"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M31.4897 17.29L29.3197 26.52H16.8997L14.7397 17.29H31.4897Z"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M27.3797 32.94C28.3186 32.94 29.0797 32.1789 29.0797 31.24C29.0797 30.3011 28.3186 29.54 27.3797 29.54C26.4408 29.54 25.6797 30.3011 25.6797 31.24C25.6797 32.1789 26.4408 32.94 27.3797 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18.8499 32.94C19.7888 32.94 20.5499 32.1789 20.5499 31.24C20.5499 30.3011 19.7888 29.54 18.8499 29.54C17.911 29.54 17.1499 30.3011 17.1499 31.24C17.1499 32.1789 17.911 32.94 18.8499 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.0298 14.38H14.0498L15.4598 20.36"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product_item_card_info">
+                  <div class="item_info_delivery">샛별배송</div>
+                  <div class="item_info_name">[풀무원] 탱탱쫄면 (4개입)</div>
+                  <div class="item_price_sale">
+                    <span>4,980</span><span>원</span>
+                  </div>
+                  <div class="item_info_coment">
+                    튀기지 않아 부담없는 매콤함
+                  </div>
+                  <div class="item_badge_group">
+                    <span class="badge_only">Karly Only</span>
+                    <span>한정수량</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="product_item" tabindex="0">
+              <a>
+                <div class="product_item_img_box">
+                  <img
+                    src="/assets/suncream.jpg"
+                    alt="죠르디 시카 자석 선쿠션 이미지"
+                  />
+                  <button
+                    type="button"
+                    alt="장바구니 버튼"
+                    aria-label="product_item_cart"
+                    class="product_item_cart"
+                    tabindex="0"
+                    onClick="location.href='../product_detail/product_detail.html'"
+                  >
+                    <svg
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.5"
+                        d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45Z"
+                        fill="#2A0038"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M31.4897 17.29L29.3197 26.52H16.8997L14.7397 17.29H31.4897Z"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M27.3797 32.94C28.3186 32.94 29.0797 32.1789 29.0797 31.24C29.0797 30.3011 28.3186 29.54 27.3797 29.54C26.4408 29.54 25.6797 30.3011 25.6797 31.24C25.6797 32.1789 26.4408 32.94 27.3797 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18.8499 32.94C19.7888 32.94 20.5499 32.1789 20.5499 31.24C20.5499 30.3011 19.7888 29.54 18.8499 29.54C17.911 29.54 17.1499 30.3011 17.1499 31.24C17.1499 32.1789 17.911 32.94 18.8499 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.0298 14.38H14.0498L15.4598 20.36"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product_item_card_info">
+                  <div class="item_info_delivery">샛별배송</div>
+                  <div class="item_info_name">
+                    [온더바디] 죠르디 시카 자석 선쿠션
+                  </div>
+                  <div class="item_price_sale">
+                    <span>32,500</span><span>원</span>
+                  </div>
+                  <div class="item_info_coment">
+                    끈적임 없이 보송한 무기자차 선쿠션
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="product_item" tabindex="0">
+              <a>
+                <div class="product_item_img_box">
+                  <img
+                    src="/assets/detergent/detergent_view.jpg"
+                    alt="베이비 세탁세제 이미지"
+                  />
+                  <button
+                    type="button"
+                    alt="장바구니 버튼"
+                    aria-label="product_item_cart"
+                    class="product_item_cart"
+                    tabindex="0"
+                    onClick="location.href='../product_detail/product_detail.html'"
+                  >
+                    <svg
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.5"
+                        d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45Z"
+                        fill="#2A0038"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M31.4897 17.29L29.3197 26.52H16.8997L14.7397 17.29H31.4897Z"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M27.3797 32.94C28.3186 32.94 29.0797 32.1789 29.0797 31.24C29.0797 30.3011 28.3186 29.54 27.3797 29.54C26.4408 29.54 25.6797 30.3011 25.6797 31.24C25.6797 32.1789 26.4408 32.94 27.3797 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18.8499 32.94C19.7888 32.94 20.5499 32.1789 20.5499 31.24C20.5499 30.3011 19.7888 29.54 18.8499 29.54C17.911 29.54 17.1499 30.3011 17.1499 31.24C17.1499 32.1789 17.911 32.94 18.8499 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.0298 14.38H14.0498L15.4598 20.36"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product_item_card_info">
+                  <div class="item_info_delivery">샛별배송</div>
+                  <div class="item_info_name">[프로쉬] 베이비 세탁세제</div>
+                  <div class="item_price_sale">
+                    <span class="item_price_rate">24%</span><span>18,900</span
+                    ><span>원</span>
+                    <div><del>24,900원</del></div>
+                  </div>
+
+                  <div class="item_info_coment">
+                    성분을 꼼꼼히 따져 골라 더욱 편안한
+                  </div>
+                  <div class="item_badge_group">
+                    <span class="badge_only">Karly Only</span>
+                    <span>한정수량</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="product_item" tabindex="0">
+              <a>
+                <div class="product_item_img_box">
+                  <img
+                    src="/assets/tangtang/detail_view.jpg"
+                    alt="탱탱쫄면 이미지"
+                  />
+                  <button
+                    type="button"
+                    alt="장바구니 버튼"
+                    aria-label="product_item_cart"
+                    class="product_item_cart"
+                    tabindex="0"
+                    onClick="location.href='../product_detail/product_detail.html'"
+                  >
+                    <svg
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.5"
+                        d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45Z"
+                        fill="#2A0038"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M31.4897 17.29L29.3197 26.52H16.8997L14.7397 17.29H31.4897Z"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M27.3797 32.94C28.3186 32.94 29.0797 32.1789 29.0797 31.24C29.0797 30.3011 28.3186 29.54 27.3797 29.54C26.4408 29.54 25.6797 30.3011 25.6797 31.24C25.6797 32.1789 26.4408 32.94 27.3797 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18.8499 32.94C19.7888 32.94 20.5499 32.1789 20.5499 31.24C20.5499 30.3011 19.7888 29.54 18.8499 29.54C17.911 29.54 17.1499 30.3011 17.1499 31.24C17.1499 32.1789 17.911 32.94 18.8499 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.0298 14.38H14.0498L15.4598 20.36"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product_item_card_info">
+                  <div class="item_info_delivery">샛별배송</div>
+                  <div class="item_info_name">[풀무원] 탱탱쫄면 (4개입)</div>
+                  <div class="item_price_sale">
+                    <span>4,980</span><span>원</span>
+                  </div>
+                  <div class="item_info_coment">
+                    튀기지 않아 부담없는 매콤함
+                  </div>
+                  <div class="item_badge_group">
+                    <span class="badge_only">Karly Only</span>
+                    <span>한정수량</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="product_item" tabindex="0">
+              <a>
+                <div class="product_item_img_box">
+                  <img
+                    src="/assets/suncream_view.jpg"
+                    alt="죠르디 시카 자석 선쿠션 이미지"
+                  />
+                  <button
+                    type="button"
+                    alt="장바구니 버튼"
+                    aria-label="product_item_cart"
+                    class="product_item_cart"
+                    tabindex="0"
+                    onClick="location.href='../product_detail/product_detail.html'"
+                  >
+                    <svg
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.5"
+                        d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45Z"
+                        fill="#2A0038"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M31.4897 17.29L29.3197 26.52H16.8997L14.7397 17.29H31.4897Z"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M27.3797 32.94C28.3186 32.94 29.0797 32.1789 29.0797 31.24C29.0797 30.3011 28.3186 29.54 27.3797 29.54C26.4408 29.54 25.6797 30.3011 25.6797 31.24C25.6797 32.1789 26.4408 32.94 27.3797 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18.8499 32.94C19.7888 32.94 20.5499 32.1789 20.5499 31.24C20.5499 30.3011 19.7888 29.54 18.8499 29.54C17.911 29.54 17.1499 30.3011 17.1499 31.24C17.1499 32.1789 17.911 32.94 18.8499 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.0298 14.38H14.0498L15.4598 20.36"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product_item_card_info">
+                  <div class="item_info_delivery">샛별배송</div>
+                  <div class="item_info_name">
+                    [온더바디] 죠르디 시카 자석 선쿠션
+                  </div>
+                  <div class="item_price_sale">
+                    <span>32,500</span><span>원</span>
+                  </div>
+                  <div class="item_info_coment">
+                    끈적임 없이 보송한 무기자차 선쿠션
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="product_item" tabindex="0">
+              <a>
+                <div class="product_item_img_box">
+                  <img
+                    src="/assets/detergent/detergent_view.jpg"
+                    alt="베이비 세탁세제 이미지"
+                  />
+                  <button
+                    type="button"
+                    alt="장바구니 버튼"
+                    aria-label="product_item_cart"
+                    class="product_item_cart"
+                    tabindex="0"
+                    onClick="location.href='../product_detail/product_detail.html'"
+                  >
+                    <svg
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.5"
+                        d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45Z"
+                        fill="#2A0038"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M31.4897 17.29L29.3197 26.52H16.8997L14.7397 17.29H31.4897Z"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M27.3797 32.94C28.3186 32.94 29.0797 32.1789 29.0797 31.24C29.0797 30.3011 28.3186 29.54 27.3797 29.54C26.4408 29.54 25.6797 30.3011 25.6797 31.24C25.6797 32.1789 26.4408 32.94 27.3797 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18.8499 32.94C19.7888 32.94 20.5499 32.1789 20.5499 31.24C20.5499 30.3011 19.7888 29.54 18.8499 29.54C17.911 29.54 17.1499 30.3011 17.1499 31.24C17.1499 32.1789 17.911 32.94 18.8499 32.94Z"
+                        stroke="white"
+                        stroke-width="1.2"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.0298 14.38H14.0498L15.4598 20.36"
+                        stroke="white"
+                        stroke-width="1.4"
+                        stroke-linecap="square"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product_item_card_info">
+                  <div class="item_info_delivery">샛별배송</div>
+                  <div class="item_info_name">[프로쉬] 베이비 세탁세제</div>
+                  <div class="item_price_sale">
+                    <span class="item_price_rate">24%</span><span>18,900</span
+                    ><span>원</span>
+                    <div><del>24,900원</del></div>
+                  </div>
+
+                  <div class="item_info_coment">
+                    성분을 꼼꼼히 따져 골라 더욱 편안한
+                  </div>
+                  <div class="item_badge_group">
+                    <span class="badge_only">Karly Only</span>
+                    <span>한정수량</span>
+                  </div>
+                </div>
+              </a>
+            </div> -->
+          </div>
+          <div class="product_list_page">
+            <ul class="product_list_page_contents">
+              <li>
+                <a tabindex="0"
+                  ><img
+                    src="/assets/end_left_btn.png"
+                    alt="왼쪽 끝 화살표 아이콘"
+                /></a>
+              </li>
+              <li>
+                <a tabindex="0"
+                  ><img src="/assets/left_btn.png" alt="왼쪽 화살표 아이콘"
+                /></a>
+              </li>
+              <li><a tabindex="0">1</a></li>
+              <li><a tabindex="0">2</a></li>
+              <li><a tabindex="0">3</a></li>
+              <li>
+                <a tabindex="0"
+                  ><img src="/assets/right_btn.png" alt="오른쪽 화살표 아이콘"
+                /></a>
+              </li>
+              <li>
+                <a tabindex="0"
+                  ><img
+                    src="/assets/end_right_btn.png"
+                    alt="오른쪽 끝 화살표 아이콘"
+                /></a>
+              </li>
+            </ul>
+            <!-- <div class="product_list_page_buttons"></div> -->
+          </div>
+        </article>
+      </div>
+    </section>
+    <iframe data-include="/layout/footer.html" frameborder="0"></iframe>
+  </body>
+</html>

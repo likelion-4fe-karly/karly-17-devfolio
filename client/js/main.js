@@ -1,1 +1,2 @@
-안녕하세요
+import {} from '../js/common/common.js';
+import {} from '../pages/login/logOut.js';
