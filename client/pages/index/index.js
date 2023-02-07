@@ -43,10 +43,13 @@ const swiper2 = new Swiper('.index_recommend_product_swiper', {
   },
 });
 
-/* 이 상품 어때? & 놓치면 후회할 가격 */
-const swiper3 = new Swiper('.recent_product_swiper', {
+/* 최근 본 상품 */
+const swiper3 = new Swiper('.recent_product .swiper', {
   direction: 'vertical',
-  autoplay: false,
-  loop: true,
-  speed: 1000,
+  slidesPerView: 3,
+  spaceBetween: 30,
+  navigation: {
+    prevEl: '.recent_product .swiper-button-prev',
+    nextEl: '.recent_product .swiper-button-next',
+  },
 });

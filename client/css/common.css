@@ -39,6 +39,7 @@ body {
 .header {
   width: 1050px;
   margin: 0 auto;
+  position: relative;
 }
 
 .header_top {
@@ -295,6 +296,71 @@ body {
   color: var(--primary);
 }
 
+/* 장바구니 모달 */
+.bubble {
+  width: 254px;
+  height: 100px;
+  border: 1px solid var(--gray-200);
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: absolute;
+  right: -3px;
+  top: 114px;
+  z-index: 5;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.bubble::after {
+  border-color: var(--white) transparent;
+  border-style: solid;
+  border-width: 0 9px 12px 9px;
+  content: '';
+  display: block;
+  right: 4%;
+  position: absolute;
+  top: -12px;
+  width: 0;
+  z-index: 1;
+}
+
+.bubble::before {
+  border-color: var(--gray-200) transparent;
+  border-style: solid;
+  border-width: 0 9px 12px 9px;
+  content: '';
+  display: block;
+  right: 4%;
+  position: absolute;
+  top: -13px;
+  width: 0;
+  z-index: 0;
+}
+
+.bubble img {
+  width: 46px;
+  margin-right: 20px;
+}
+
+.bubble div {
+  display: flex;
+  flex-flow: column;
+}
+
+.bubble div p:first-child {
+  font-size: var(--font-label-small);
+  color: var(--gray-300);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.bubble div p:last-child {
+  font-size: var(--font-label-small);
+  color: var(--content);
+  font-weight: 400;
+}
 /* footer 영역 */
 .footer {
   display: flex;
@@ -491,6 +557,7 @@ body {
   width: 100%;
   text-align: center;
   color: var(--gray-500);
+  box-sizing: border-box;
 }
 
 .footer_bottom p {
