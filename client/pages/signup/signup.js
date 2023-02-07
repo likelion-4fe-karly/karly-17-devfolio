@@ -57,30 +57,39 @@ function idHandler(e) {
 id.addEventListener('keyup', idHandler);
 
 function checkHandler(e) {
-  const getterId = localStorage.getItem('id');
+  fetch('http://localhost:3000/user')
+    //이부분이 promise 형태다 그럼 then이나 async await로 처리
 
-  //console.log(id.value);
-  if (id.value === getterId) {
-    alert('이미 추가되어있는 아이디입니다.');
-    id.value = null;
-  } else if (id.value == '') {
-    alert('6자 이상 16자 이하 영문 혹은 영문과 숫자를 조합하세요');
-  } else if (
-    phonenumber.test(id.value) ||
-    korean.test(id.value) ||
-    (id.value.length > 0 && id.value.length < 6) ||
-    koreaAndNumber.test(id.value) ||
-    EnAndkorean.test(id.value)
-  ) {
-    alert('양식에 맞지 않아요!!!!');
-    id.value = null;
-  } else {
-    alert('사용가능한 ID입니다.');
-    confirmButton.style.color = 'rgb(221, 221, 221)';
-    confirmButton.style.border = ' 1px solid rgb(221, 221, 221)';
-    confirmButton.setAttribute('disabled', '');
-    id.setAttribute('disabled', '');
-  }
+    .then((response) => response.json())
+    .then((data) => {
+      const filterData = data.filter(
+        //객체 1개씩
+        (obj) => obj.id === id.value
+      );
+      console.log(filterData);
+      //console.log(id.value);
+      if (filterData.length == 1) {
+        alert('이미 추가되어있는 아이디입니다.');
+        id.value = null;
+      } else if (id.value == '') {
+        alert('6자 이상 16자 이하 영문 혹은 영문과 숫자를 조합하세요');
+      } else if (
+        phonenumber.test(id.value) ||
+        korean.test(id.value) ||
+        (id.value.length > 0 && id.value.length < 6) ||
+        koreaAndNumber.test(id.value) ||
+        EnAndkorean.test(id.value)
+      ) {
+        alert('양식에 맞지 않아요!!!!');
+        id.value = null;
+      } else {
+        alert('사용가능한 ID입니다.');
+        confirmButton.style.color = 'rgb(221, 221, 221)';
+        confirmButton.style.border = ' 1px solid rgb(221, 221, 221)';
+        confirmButton.setAttribute('disabled', '');
+        id.setAttribute('disabled', '');
+      }
+    });
 }
 
 confirmButton.addEventListener('click', checkHandler);
@@ -89,7 +98,7 @@ function pwHandler(e) {
   const errorPw = document.querySelector('.error_pw');
   const noneErrorPw = document.querySelector('.none_error_pw');
   const target = e.target.value;
-  console.log(target.length);
+  console.log(password.value);
 
   if (target.length > 0 && target.length < 10) {
     noneErrorPw.style.display = 'none';
@@ -155,24 +164,31 @@ function emailHandler(e) {
 email.addEventListener('keyup', emailHandler);
 
 function EmailCheckHandler(e) {
-  const getterEmail = localStorage.getItem('email');
+  fetch('http://localhost:3000/user')
+    //이부분이 promise 형태다 그럼 then이나 async await로 처리
 
-  //console.log(id.value);
-  if (email.value === getterEmail) {
-    alert('이미 추가되어있는 이메일입니다.');
-    email.value = null;
-  } else if (email.value.length == 0) {
-    alert('이메일을 적어주세요.');
-  } else if (email.value.includes('.com') == false) {
-    alert('이메일 형식으로 입력해주세요.');
-    email.value = null;
-  } else {
-    alert('사용가능한 이메일 입니다.');
-    emailConfirmButton.style.color = 'rgb(221, 221, 221)';
-    emailConfirmButton.style.border = ' 1px solid rgb(221, 221, 221)';
-    emailConfirmButton.setAttribute('disabled', '');
-    email.setAttribute('disabled', '');
-  }
+    .then((response) => response.json())
+    .then((data) => {
+      const filterData = data.filter(
+        //객체 1개씩
+        (obj) => obj.email == email.value
+      );
+      if (filterData.length == 1) {
+        alert('이미 추가되어있는 이메일입니다.');
+        email.value = null;
+      } else if (email.value.length == 0) {
+        alert('이메일을 적어주세요.');
+      } else if (email.value.includes('.com') == false) {
+        alert('이메일 형식으로 입력해주세요.');
+        email.value = null;
+      } else {
+        alert('사용가능한 이메일 입니다.');
+        emailConfirmButton.style.color = 'rgb(221, 221, 221)';
+        emailConfirmButton.style.border = ' 1px solid rgb(221, 221, 221)';
+        emailConfirmButton.setAttribute('disabled', '');
+        email.setAttribute('disabled', '');
+      }
+    });
 }
 
 emailConfirmButton.addEventListener('click', EmailCheckHandler);
@@ -194,17 +210,6 @@ phone.addEventListener('keyup', phoneHandler);
 function signupHandler(e) {
   e.preventDefault();
   const currentUid = generateRandomString(10);
-  // console.log(currentUid);
-
-  // const currentId = id.value;
-  // const currentPassword = password.value;
-  // const currentemail = email.value;
-  // localStorage.setItem('id', currentId);
-  // localStorage.setItem('password', currentPassword);
-  // localStorage.setItem('email', currentemail);
-  // localStorage.setItem('Uid', currentUid);
-
-  window.location = '../../pages/login/login.html';
 
   fetch('http://localhost:3000/user', {
     method: 'POST',
@@ -216,10 +221,12 @@ function signupHandler(e) {
       password: password.value,
       email: email.value,
       uid: currentUid,
+      name: name.value,
     }),
   })
     .then((response) => console.log(response.json()))
     .then((data) => console.log(data));
+  window.location = '../../index.html';
 }
 
 Congratulations.addEventListener('click', signupHandler);
@@ -234,6 +241,7 @@ function joinHandler() {
     Congratulations.setAttribute('abled', 'abled');
   } else if (
     id.value == '' ||
+    password.value !== checkPw.value ||
     password.value == 0 ||
     name.value == '' ||
     email.value == '' ||
