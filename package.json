@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-prettier": "^4.2.1"
+    "eslint-plugin-prettier": "^4.2.1",
+    "swiper": "^8.4.6"
   }
 }
