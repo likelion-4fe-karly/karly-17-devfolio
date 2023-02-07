@@ -33,12 +33,17 @@ article {
   width: 220px;
   margin-right: 47px;
   flex-shrink: 0;
-}
-.product_list_section .list_accordion > div {
   position: sticky;
-  top: 20px;
-  overflow-y: auto;
+  max-height: calc(100vh - 120px);
+  top: 80px;
+  overflow: hidden scroll;
+  /* scrollbar-width: none; */
+  /* overflow-y: auto; */
 }
+.product_list_section .list_accordion::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
 /* .product_list_section .list_accordion .accordion_area_all {
   overflow-y: auto;
 } */
@@ -51,16 +56,21 @@ article {
   border-bottom: 1px solid var(--gray-100);
   background-color: var(--white);
   z-index: 10;
+  line-height: 20px;
 }
 .product_list_section .list_accordion .list_accordion_head span {
   font-size: var(--font-label-medium);
   color: var(--content);
   font-weight: 600;
 }
-.product_list_section .list_accordion .list_accordion_head button span {
-  font-size: 10px;
-  color: var(--gray-300);
-  cursor: pointer;
+.product_list_section .list_accordion .list_accordion_head input {
+  background-color: var(--white);
+  border: none;
+  padding: 3px;
+  font-size: var(--font-label-small);
+  color: var(--gray-100);
+  font-weight: 600;
+  /* cursor: pointer; */
 }
 /* product_aside_area  */
 .product_list_section .list_accordion .list_accordion_area {
@@ -142,6 +152,7 @@ article {
 .list_item_check:checked + svg g path:first-child {
   stroke: var(--primary);
 }
+
 /* accordion animation */
 .accordion_item_list {
   max-height: 0;
@@ -190,6 +201,7 @@ article {
 }
 .product_list_section .product_filter_column ul li:last-child:after {
   content: '';
+  margin-right: 0;
 }
 /* product_list_grid */
 .product_list_section .list_container .product_list_grid {

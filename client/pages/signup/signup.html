@@ -21,7 +21,7 @@
     <title>회원가입 - 칼리</title>
   </head>
   <body>
-    <iframe data-include="../../layout/header.html" frameborder="0"></iframe>
+    <iframe data-include="/layout/header.html" frameborder="0"></iframe>
     <div class="signup_container">
       <h2>회원가입</h2>
       <div class="signup_wrapper">
@@ -294,19 +294,6 @@
         </form>
       </div>
     </div>
-    <iframe data-include="../../layout/footer.html" frameborder="0"></iframe>
-    <!-- 카카오 주소찾기 -->
-    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-    <script>
-      function findAddr() {
-        new daum.Postcode({
-          oncomplete: function (data) {
-            //선택시 입력값 세팅
-            document.getElementById('main_address').value = data.address; // 주소 넣기
-            document.querySelector('input[name=address_detail]').focus(); //상세입력 포커싱
-          },
-        }).open();
-      }
-    </script>
+    <iframe data-include="/layout/footer.html" frameborder="0"></iframe>
   </body>
 </html>
