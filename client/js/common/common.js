@@ -63,5 +63,5 @@ includeIframeToHTML()
     logoutPage.addEventListener('click', logoutPageHandler);
   })
   .catch(() => {
-    console.error('실패');
+    // console.error('실패');
   });
