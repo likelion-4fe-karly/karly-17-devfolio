@@ -322,8 +322,8 @@ article {
   .item_price_sale
   div
   > del {
-  font-size: var(--font-paragraph-small);
-  color: var(--gray-400);
+  font-size: var(--font-paragraph-medium);
+  color: var(--gray-300);
   font-weight: 400;
 }
 /* product_list_page */
