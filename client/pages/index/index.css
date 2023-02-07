@@ -303,6 +303,17 @@ a:hover {
   transform: rotate(180deg);
 }
 
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.swiper-button-next.swiper-button-disabled {
+  opacity: 0;
+  cursor: auto;
+  pointer-events: none;
+  
 /* 뷰티 플랫폼 POP UP  */
 
 .beauty_popup {
