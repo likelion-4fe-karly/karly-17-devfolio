@@ -5,23 +5,19 @@ import { insertFirst, saveStorage, loadStorage } from '../../lib/index.js';
 //이벤트 위임해서 여러개에 넣기..
 //배열에 중복 src 담기는 것 제거(validation 추가)
 //빈배열에 담은 걸 localStorage에 담기
-// let memoItem = localStorage.getItem('item');
-// memoItem = memoItem.split(',');
-let item = [];
-let memoItem = Array.from(localStorage.getItem('item'));
-memoItem = memoItem.slice(1, -1);
-memoItem = memoItem.join('');
-memoItem = memoItem.split(',');
 
-console.log(memoItem);
+let item = [];
+
+let memoItem = JSON.parse(localStorage.item);
 
 const divElement = document.querySelector('.index_recommend_product_swiper');
 const recElement = document.querySelector('.recent_swiper_wrapper');
 
 divElement.addEventListener('click', (e) => {
   e.preventDefault();
-  // item = item.concat(memoItem);
+  item = item.concat(memoItem);
   let targetImg = event.target.closest('img');
+
   const imgSrc = targetImg.getAttribute('src');
 
   item.unshift(imgSrc);
