@@ -7,7 +7,20 @@
     <meta name="description" content="풀무원의 튀기지않아 매콤한 탱탱쫄면">
 		<title>Document</title>
 		<link rel="stylesheet" href="../../css/style.css" />
-		<script src="../../js/main.js" type="module"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />		
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+    />		
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/pages/index/index.js" type="module" defer></script>
+    <script src="/js/main.js" type="module"></script>		
+		<script></script>
   </head>
   <body>
 		<iframe data-include="../../layout/header.html" frameborder="0"></iframe>
@@ -205,6 +218,60 @@
 				</div>
       </div>
     </div>
+		<div class="recent">
+			<div class="recent_product">
+				<!-- Swiper -->
+				<div class="swiper-button-next"></div>
+				<p>최근 본 상품</p>
+				<div class="swiper mySwiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="">
+								<img src="/assets/index/jjigae.jpg" alt="된장찌개 키트" />
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="">
+								<img src="/assets/index/jjigae.jpg" alt="된장찌개 키트" />
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="">
+								<img src="/assets/index/gompyo.jpg" alt="곰표 옥수수" />
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="">
+								<img src="/assets/index/porklib.jpeg" alt="폭립" />
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="">
+								<img src="/assets/index/jjigae.jpg" alt="된장찌개 키트" />
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="">
+								<img src="/assets/index/jjigae.jpg" alt="된장찌개 키트" />
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="">
+								<img src="/assets/index/gompyo.jpg" alt="곰표 옥수수" />
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="">
+								<img src="/assets/index/porklib.jpeg" alt="폭립" />
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-button-prev"></div>
+				<!-- <a class="recent_product_arrow_up"></a>
+				<a class="recent_product_arrow_down"></a> -->
+			</div>
+		</div>		
 		<iframe data-include="../../layout/footer.html" frameborder="0"></iframe>
   </body>
 </html>
