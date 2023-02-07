@@ -15,13 +15,13 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
     />
     <link rel="stylesheet" href="../../css/style.css" />
-    <script src="../../js/main.js" type="module"></script>
+    <script src="/js/main.js" type="module"></script>
+    <script src="./maxLengthCheck.js" type="module"></script>
     <script src="./signup.js" type="module"></script>
-
     <title>회원가입 - 칼리</title>
   </head>
   <body>
-    <iframe data-include="../../layout/header.html" frameborder="0"></iframe>
+    <iframe data-include="/layout/header.html" frameborder="0"></iframe>
     <div class="signup_container">
       <h2>회원가입</h2>
       <div class="signup_wrapper">
@@ -150,7 +150,12 @@
               >주소
               <span class="star">*</span>
             </span>
-            <button class="address_btn">주소 검색</button>
+            <input
+              class="address_btn"
+              type="button"
+              value="주소 검색"
+              onclick="findAddr()"
+            />
           </div>
           <span class="address_explain"
             >배송지에 따라 상품 정보가 달라질 수 있습니다.</span
@@ -319,6 +324,6 @@
         </form>
       </div>
     </div>
-    <iframe data-include="../../layout/footer.html" frameborder="0"></iframe>
+    <iframe data-include="/layout/footer.html" frameborder="0"></iframe>
   </body>
 </html>
