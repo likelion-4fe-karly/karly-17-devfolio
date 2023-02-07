@@ -28,7 +28,7 @@
   </head>
 
   <body>
-    <iframe data-include="./layout/header.html" frameborder="0"></iframe>
+    <iframe data-include="/layout/header.html" data-height="247px"></iframe>
     <div class="index">
       <div class="index_visual">
         <!-- Swiper -->
@@ -305,9 +305,49 @@
           <!-- <a class="recent_product_arrow_up"></a>
           <a class="recent_product_arrow_down"></a> -->
         </div>
+      </section>
+    <!-- 뷰티 플랫폼 POP UP -->
+    <div class="beauty_popup">
+      <img src="/assets/jenny.png" alt="뷰티 플랫폼 이미지" />
+      <div class="beauty_popup_button_list">
+        <button class="beauty_popup_never_watch">오늘 하루 안 보기</button>
+        <button class="beauty_popup_close">닫기</button>
       </div>
     </div>
-
-    <iframe data-include="./layout/footer.html" frameborder="0"></iframe>
+    <!-- 장바구니 POP UP -->
+    <div class="cart_popup_container">
+      <div class="cart_popup">
+        <div class="cart_popup_info">
+          <span>[풀무원] 탱탱쫄면 (4개입)</span>
+          <div class="cart_popup_price_of_count">
+            <span>4,980원</span>
+            <div class="cart_popup_count">
+              <button class="cart_minus">
+                <img src="/assets/minus.png" alt="1 감소" />
+              </button>
+              <span>1</span>
+              <button class="cart_plus">
+                <img src="/assets/plus.png" alt="1 증가" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="cart_popup_total">
+          <div class="cart_popup_price">
+            <span>합계</span>
+            <span>4,980원</span>
+          </div>
+          <div class="cart_popup_point">
+            <span>적립</span>
+            <span>구매 시 5원 적립</span>
+          </div>
+        </div>
+        <div class="cart_popup_buttons">
+          <button class="cart_popup_cancel">취소</button>
+          <button class="cart_popup_save">장바구니 담기</button>
+        </div>
+      </div>
+    </div>
+    <iframe data-include="/layout/footer.html" data-height="681px"></iframe>
   </body>
 </html>
