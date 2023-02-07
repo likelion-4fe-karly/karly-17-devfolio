@@ -1,18 +1,61 @@
 // const { forEach } = require('lodash');
 
 //json 파일 불러오기
-function loadProducts() {
-  return fetch('http://127.0.0.1:5500/server/db/product_data.json')
-    .then((response) => response.json())
-    .then((json) => json.products);
-}
-loadProducts()
+fetch('http://localhost:3000/products')
+  .then((response) => {
+    return response.json();
+  })
   .then((products) => {
-    console.log(products);
+    products.forEach((product) => {
+      const markup = `
+      <a>
+        <div class="product_item_img_box">
+          <img
+            src="/assets/${product.image.view}"
+            alt="${product.alt}"
+          />
+        </div>
+        <div class="product_item_card_info">
+                  <div class="item_info_delivery">샛별배송</div>
+                  <div class="item_info_name">${product.name}</div>
+                  <div class="item_price_sale">
+                    <span class="item_price_rate">${product.saleRatio}</span>
+                    <span>${product.price}</span><span>원</span>
+                    <div>
+                      <del>${product.salePrice}<span>원</span></del>
+                    </div>
+                  </div>
+                  <div class="item_info_coment">
+                    ${product.description}
+                  </div>
+                </div>
+              </a>`;
+
+      document
+        .querySelector('div.product_list_grid')
+        .insertAdjacentHTML('beforeend', markup);
+
+      function ratioValue(data) {
+        let saleRatioValue = [];
+        for (let key in data) {
+          saleRatioValue.push(data[key]['slaeRatio']);
+        }
+        return saleRatioValue;
+      }
+      for (var key in products) {
+        console.log('key:', key);
+        console.log('valuie : ', products[key]);
+        products.filter(
+          (product) =>
+            product.saleRatio == 'undefined' || product.saleRatio == 'Null'
+        );
+        document.getElementByClass('item_price_rate').style.display = 'none';
+      }
+    });
   })
   .catch(() => {
-    console.error('상품리스트 조회를 실패하였습니다.');
-    alert('상품리스트 조회를 실패하였습니다.');
+    console.error('상품리스트 조회에 실패하였습니다.');
+    alert('상품리스트 조회에 실패하였습니다.');
   });
 
 // accordion 만들기
