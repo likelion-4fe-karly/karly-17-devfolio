@@ -13,13 +13,13 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
     />
-    <link rel="stylesheet" href="../../css/style.css" />
-    <script src="../../js/main.js" type="module"></script>
-
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/main.js" type="module"></script>
+    <script src="./login.js" defer></script>
     <title>로그인 칼리</title>
   </head>
   <body>
-    <iframe data-include="../../layout/header.html" frameborder="0"></iframe>
+    <iframe data-include="/layout/header.html" frameborder="0"></iframe>
     <div class="login_wrapper">
       <h2>로그인</h2>
       <form class="form_container">
@@ -35,6 +35,7 @@
           id="pw"
           type="password"
           placeholder="비밀번호를 입력해주세요."
+          autocomplete="on"
           class="password_form_tag"
         />
 
@@ -50,6 +51,6 @@
         </div>
       </form>
     </div>
-    <iframe data-include="../../layout/footer.html" frameborder="0"></iframe>
+    <iframe data-include="/layout/footer.html" frameborder="0"></iframe>
   </body>
 </html>
