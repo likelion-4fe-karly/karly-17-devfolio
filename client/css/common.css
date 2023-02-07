@@ -1,9 +1,3 @@
-@import url(./reset.css);
-@import url(./a11y.css);
-@import url(./fonts.css);
-@import url(./color.css);
-@import url(./base.css);
-
 html,
 body {
   width: 100%;
@@ -42,7 +36,7 @@ body {
 /* header 영역  - 선영 */
 
 /* header 중 Top 영역 */
-header {
+.header {
   width: 1050px;
   margin: 0 auto;
 }
@@ -302,7 +296,7 @@ header {
 }
 
 /* footer 영역 */
-footer {
+.footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -516,6 +510,7 @@ footer {
   border-radius: 16px;
   background-color: var(--white);
   box-shadow: 0px 8px 36px rgba(0, 0, 0, 0.2);
+  z-index: 10;
 }
 
 .beauty_popup.off {
