@@ -19,7 +19,6 @@ const divElement = document.querySelector('.index_recommend_product_swiper');
 const recElement = document.querySelector('.recent_swiper_wrapper');
 
 divElement.addEventListener('click', (e) => {
-  // console.log('?');
   e.preventDefault();
   // item = item.concat(memoItem);
   let targetImg = event.target.closest('img');
