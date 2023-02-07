@@ -75,7 +75,7 @@
   margin: 0 auto;
 }
 .button_container .login_button {
-  width: 100%;
+  text-align: center;
   height: 54px;
   padding: 0 11px 1px 15px;
   border-radius: 4px;
@@ -89,7 +89,7 @@
   cursor: pointer;
 }
 .button_container .initiate_button {
-  width: 100%;
+  text-align: center;
   height: 54px;
   padding: 0 11px 1px 15px;
   border-radius: 4px;

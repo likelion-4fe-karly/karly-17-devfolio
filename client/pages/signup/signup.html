@@ -15,9 +15,13 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
     />
     <link rel="stylesheet" href="../../css/style.css" />
+    <script src="../../js/main.js" type="module"></script>
+    <script src="./signup.js" type="module"></script>
+
     <title>회원가입 - 칼리</title>
   </head>
   <body>
+    <iframe data-include="../../layout/header.html" frameborder="0"></iframe>
     <div class="signup_container">
       <h2>회원가입</h2>
       <div class="signup_wrapper">
@@ -34,11 +38,15 @@
             <label for="id" class="a11yHidden">아이디</label>
             <input
               id="id"
+              maxlength="17"
               type="text"
               placeholder="아이디를 입력해주세요"
               class="id_input"
             />
-            <button class="confirm_check">중복확인</button>
+            <input type="button" value="중복확인" class="confirm_check" />
+          </div>
+          <div class="error_id">
+            6자 이상 16자 이하의 영문 혹은 영문과 숫자를 조합하세요
           </div>
 
           <div class="password_write">
@@ -49,10 +57,15 @@
             <label for="pw" class="a11yHidden">비밀번호</label>
             <input
               id="pw"
+              maxlength="17"
               type="password"
               placeholder="비밀번호를 입력해주세요"
               class="password_input"
             />
+          </div>
+          <div class="error_pw">최소 10자 이상 입력해주세요.</div>
+          <div class="none_error_pw">
+            영문/숫자/특수문자(공백제외)만 허용하며, 2개 이상 조합해주세요.
           </div>
 
           <div class="password_confirm">
@@ -63,10 +76,15 @@
             <label for="confirmpw" class="a11yHidden">비밀번호확인</label>
             <input
               id="confirmpw"
+              maxlength="17"
               type="password"
               placeholder="비밀번호를 한번 더 입력해주세요"
               class="password_confirm_input"
             />
+          </div>
+          <div class="error_confirm_pw">동일하게 좀 입력해라!</div>
+          <div class="none_error_confirm_pw">
+            비밀번호를 한번 더 입력해 주세요.
           </div>
 
           <div class="name_container">
@@ -82,6 +100,7 @@
               class="name_input"
             />
           </div>
+          <div class="error_name">이름을 입력해주세요.</div>
 
           <div class="email_container">
             <span class="email_title"
@@ -95,8 +114,10 @@
               placeholder="예: marketkurly@kurly.com"
               class="email_input"
             />
-            <button class="confirm_check">중복확인</button>
+            <input type="button" value="중복확인" class="email_confirm_check" />
           </div>
+          <div class="error_email">이메일 형식 좀 맟혀라!</div>
+          <div class="error_none_email">이메일을 입력해주세요.</div>
 
           <div class="phone_container">
             <span class="phone_title"
@@ -107,11 +128,22 @@
             <input
               id="phone"
               type="text"
+              maxlength="11"
               placeholder="숫자만 입력해주세요."
               class="phone_input"
             />
-            <button class="confirm_check">인증번호 받기</button>
+
+            <label for="certification" class="a11yHidden">휴대폰</label>
+            <input
+              id="certification"
+              type="button"
+              disabled
+              value="인증번호 받기"
+              placeholder="숫자만 입력해주세요."
+              class="phone_confirm_check"
+            />
           </div>
+          <div class="error_phone">휴대폰 번호를 입력해주세요.</div>
 
           <div class="address_container">
             <span class="address_title"
@@ -127,18 +159,18 @@
           <div class="gender_container">
             <span class="gender">성별</span>
             <div class="gender_wrapper">
-              <div>
-                <span class="gender_man"></span>
-                <span id="man">남자</span>
-              </div>
-              <div>
-                <span class="gender_woman"> </span>
-                <span id="woman">여자</span>
-              </div>
-              <div>
-                <span class="gender_none"> </span>
-                <span id="none">선택안함</span>
-              </div>
+              <label class="gender_man">
+                <input type="radio" name="contact" value="man" checked />
+                <span>남자</span>
+              </label>
+              <label class="gender_woman">
+                <input type="radio" name="contact" value="woman" checked />
+                <span>여자</span>
+              </label>
+              <label class="gender_none">
+                <input type="radio" name="contact" value="no_choice" checked />
+                <span>선택안함</span>
+              </label>
             </div>
           </div>
 
@@ -146,27 +178,54 @@
             <span class="birthday">생년월일</span>
 
             <div class="birth_wrapper">
-              <label for="birth" class="a11yHidden">생일</label>
-              <input
-                id="birth"
-                type="text"
-                placeholder="YYYY   /   MM   /   DD"
-                class="birth_year"
-              />
+              <div class="birth_year">
+                <label class="a11yHidden" for="year">생년</label>
+                <input
+                  id="year"
+                  type="number"
+                  placeholder="YYYY"
+                  maxlength="4"
+                />
+              </div>
+              <span>/</span>
+              <div class="birth_month">
+                <label class="a11yHidden" for="month">월</label>
+                <input
+                  id="month"
+                  type="number"
+                  placeholder="MM"
+                  maxlength="2"
+                />
+              </div>
+              <span>/</span>
+              <div class="birth_day">
+                <label class="a11yHidden" for="day">일</label>
+                <input id="day" type="number" placeholder="DD" maxlength="2" />
+              </div>
             </div>
           </div>
 
           <div class="additional_input_container">
             <span class="add_input">추가입력 사항</span>
             <div class="additional_input_wrapper">
-              <div>
-                <span class="suggestion_id"></span>
-                <span id="recommender">친구초대 추천인 아이디</span>
-              </div>
-              <div>
-                <span class="event"> </span>
-                <span id="event_name">참여 이벤트명</span>
-              </div>
+              <label class="suggestion_id">
+                <input
+                  type="radio"
+                  name="contact2"
+                  value="friend_recommend_id"
+                  checked
+                />
+                <span>친구초대 추천인 아이디</span>
+              </label>
+              <label class="event">
+                <input
+                  type="radio"
+                  name="contact2"
+                  value="event_name"
+                  checked
+                />
+                <span>참여 이벤트명</span>
+              </label>
             </div>
           </div>
 
@@ -176,10 +235,16 @@
             <span class="agree">이용약관동의 <span class="star">*</span></span>
             <div class="check_list_wrapper">
               <div class="check_list">
-                <div class="check_list_first_type">
-                  <span class="agree_check_mark"></span>
+                <label for="all_agree" class="check_list_first_type">
+                  <input
+                    id="all_agree"
+                    class="agree_check_mark"
+                    type="checkbox"
+                    name="all_agree"
+                    value="event_name"
+                  />
                   <span class="check_list_letter">전체 동의합니다.</span>
-                </div>
+                </label>
                 <span class="check_list_explain"
                   >선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를
                   이용 할 수 있습니다.</span
@@ -187,40 +252,58 @@
               </div>
 
               <div class="agree_letter_wrapper">
-                <div class="check_list_second_type">
-                  <span class="agree_check_mark"></span>
-                  <span class="check_list_letter">이용약관 동의 (필수)</span>
-                </div>
+                <label for="agree1" class="check_list_second_type">
+                  <input
+                    id="agree1"
+                    class="agree_check_mark"
+                    type="checkbox"
+                    name="agree"
+                    value="1"
+                  />
+                  <span>이용약관 동의 (필수)</span>
+                </label>
                 <a href="/">약관보기</a>
               </div>
 
               <div class="agree_letter_wrapper">
-                <div class="check_list_third_type">
-                  <span class="agree_check_mark"></span>
-                  <span class="check_list_letter"
-                    >개인정보 수집 이용 동의 (필수)</span
-                  >
-                </div>
+                <label for="agree2" class="check_list_third_type">
+                  <input
+                    id="agree2"
+                    class="agree_check_mark"
+                    type="checkbox"
+                    name="agree"
+                    value="2"
+                  />
+                  <span>개인정보 수집 이용 동의 (필수)</span>
+                </label>
                 <a href="/">약관보기</a>
               </div>
 
               <div class="agree_letter_wrapper">
-                <div class="check_list_fourth_type">
-                  <span class="agree_check_mark"></span>
-                  <span class="check_list_letter"
-                    >무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택)</span
-                  >
-                </div>
+                <label for="agree3" class="check_list_fourth_type">
+                  <input
+                    id="agree3"
+                    class="agree_check_mark"
+                    type="checkbox"
+                    name="agree"
+                    value="3"
+                  />
+                  <span>무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택)</span>
+                </label>
                 <a href="/">약관보기</a>
               </div>
 
               <div class="agree_letter_wrapper">
-                <div class="check_list_fifth_type">
-                  <span class="agree_check_mark"></span>
-                  <span class="check_list_letter"
-                    >본인은 만 14세 이상입니다. (필수)</span
-                  >
-                </div>
+                <label for="agree4" class="check_list_fifth_type">
+                  <input
+                    id="agree4"
+                    class="agree_check_mark"
+                    type="checkbox"
+                    name="agree"
+                    value="4"
+                  />
+                  <span>본인은 만 14세 이상입니다. (필수)</span>
+                </label>
                 <a href="/">약관보기</a>
               </div>
             </div>
@@ -229,10 +312,13 @@
           <div class="last_line"></div>
 
           <div class="signup_btn">
-            <button>가입하기</button>
+            <button class="congratulations" disabled="disabled">
+              가입하기
+            </button>
           </div>
         </form>
       </div>
     </div>
+    <iframe data-include="../../layout/footer.html" frameborder="0"></iframe>
   </body>
 </html>

@@ -1,10 +1,3 @@
-@import url(../../css/a11y.css);
-@import url(../../css/base.css);
-@import url(../../css/color.css);
-@import url(../../css/fonts.css);
-@import url(../../css/common.css);
-@import url(../../css/reset.css);
-
 .signup_container {
   margin-top: 80px;
   margin-bottom: 60px;
@@ -92,7 +85,8 @@
   /* display: block; */
   min-width: 330px;
 }
-.signProcess_container .confirm_check {
+.signProcess_container .confirm_check,
+.email_confirm_check {
   width: 143px;
   color: var(--primary);
   border: 1px solid var(--primary);
@@ -102,10 +96,27 @@
   font-weight: 600;
   height: 44px;
   font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+}
+.phone_confirm_check {
+  width: 143px;
+  color: rgb(221, 221, 221);
+  border: 1px solid rgb(221, 221, 221);
+  background-color: var(--white);
+  border-radius: 3px;
+  margin-left: 8px;
+  font-weight: 600;
+  height: 44px;
+  font-size: 14px;
+  text-align: center;
+  display: block;
 }
 
 .address_btn {
   display: inline;
+  cursor: pointer;
   width: 330px;
   border: 1px solid var(--primary);
   color: var(--primary);
@@ -127,35 +138,23 @@
 }
 .gender_container .gender_wrapper {
   width: 330px;
-}
-.gender_container div {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
 }
+
 .gender_man,
 .gender_woman,
 .gender_none {
-  width: 30px;
-  display: inline-block;
-  height: 30px;
-  background-image: url(../../assets/select/isSelected=false.png);
-  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-.gender_none {
-  width: 30px;
-  display: inline-block;
-  height: 30px;
-  background-image: url(../../assets/select/isSelected=true.png);
-  background-repeat: no-repeat;
+
+.gender_wrapper input {
+  border: 1px solid #c4c4c4;
 }
-#man,
-#woman,
-#none {
-  margin-top: 3px;
-  font-size: 14px;
-  margin-left: 6px;
-}
+
 .birth_container {
   display: flex;
 }
@@ -164,44 +163,68 @@
   width: 330px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border: 1px solid var(--gray-200);
   border-radius: 3px;
 }
 
-.birth_year {
-  text-align: center;
+.birth_year,
+.birth_month,
+.birth_day {
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.birth_year input,
+.birth_month input,
+.birth_day input {
+  width: 90%;
   font-size: 14px;
   border: none;
-  width: 46%;
-  margin: 0 0 0 100px;
-  display: block;
+  outline: none;
+  text-align: center;
+}
+
+.birth_year input::placeholder,
+.birth_month input::placeholder,
+.birth_day input::placeholder {
+  color: var(--gray-400);
+}
+
+.birth_wrapper span {
+  color: var(--gray-300);
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 .additional_input_container .additional_input_wrapper {
-  width: 330px;
-}
-.additional_input_container div {
+  width: 333px;
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
+  justify-content: space-between;
 }
-.additional_input_wrapper div {
+
+.additional_input_wrapper label {
   margin-top: 11px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
 }
 
 .suggestion_id,
 .event {
-  width: 30px;
   display: inline-block;
   height: 30px;
-  background-image: url(../../assets/select/isSelected=false.png);
   background-repeat: no-repeat;
 }
-#recommender,
-#event_name {
-  font-size: 15px;
-  margin-top: 4px;
-}
+
 .contour {
   border-bottom: 1px solid var(--gray-800);
   padding: 10px 0;
@@ -209,8 +232,8 @@
 .agree_check_mark {
   width: 30px;
   display: inline-block;
+
   height: 30px;
-  background-image: url(../../assets/select/isSelected=false.png);
   background-repeat: no-repeat;
 }
 .check_list_first_type {
@@ -222,9 +245,7 @@
   font-size: 18px;
   font-weight: 600;
 }
-.check_list_letter {
-  margin-bottom: 8px;
-}
+
 .agree_check_container .check_list {
   display: flex;
   flex-direction: column;
@@ -243,6 +264,11 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.check_list_first_type {
+  gap: 8px;
+}
+
 .check_list_second_type,
 .check_list_third_type,
 .check_list_fourth_type,
@@ -250,24 +276,52 @@
   position: relative;
   display: flex;
   align-items: center;
+  gap: 8px;
   vertical-align: top;
   color: var(--gray-800);
   font-size: 15px;
 }
+
 .check_list_wrapper a {
   color: #5f0080;
   font-size: var(--font-paragraph-small);
 }
+
 .check_list_wrapper a::after {
   content: '';
   width: 6px;
   height: 12px;
   float: right;
-  margin: 2px 0 0 1px;
+  margin: 0 0 0 4px;
   background-image: url(../../assets/vector/Vector.png);
   background-repeat: no-repeat;
 }
 
+[type='radio'] {
+  vertical-align: middle;
+  appearance: none;
+  border: 1px solid var(--gray-200);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+
+[type='checkbox'] {
+  vertical-align: middle;
+  appearance: none;
+  background: url(../../assets/no-checked.png) no-repeat 50% 50%;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+
+[type='radio']:checked {
+  border: 0.4em solid var(--primary);
+}
+
+[type='checkbox']:checked {
+  background: url(../../assets/check.png) no-repeat 50% 50%;
+}
 .last_line {
   border-bottom: 1px solid var(--gray-800);
 }
@@ -277,14 +331,30 @@
   border-top: 1px solid var(--white);
   padding: 40px 0px;
 }
-.signup_btn button {
+.congratulations {
   padding: 0px 10px;
   text-align: center;
   overflow: hidden;
   width: 340px;
   height: 54px;
   border-radius: 4px;
-  color: var(--white);
-  background-color: #5f0080;
-  border: 0px none;
+  border: 1px solid rgb(221, 221, 221);
+  color: rgb(221, 221, 221);
+}
+.error_pw,
+.none_error_pw,
+.error_confirm_pw,
+.error_id,
+.none_error_confirm_pw,
+.error_email,
+.error_none_email,
+.error_name,
+.error_phone {
+  font-size: 13px;
+  color: rgb(240, 63, 64);
+  margin-top: -4px;
+  display: flex;
+  margin-left: 149px;
+  padding: 0 0 10px 0;
+  display: none;
 }
