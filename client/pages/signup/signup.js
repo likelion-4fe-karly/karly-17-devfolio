@@ -1,4 +1,3 @@
-
 import { generateRandomString } from './randomString.js';
 
 generateRandomString;

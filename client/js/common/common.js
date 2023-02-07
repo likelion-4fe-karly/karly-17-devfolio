@@ -1,5 +1,4 @@
 import { includeIframeToHTML } from './../../lib/include/includeIframeToHTML.js';
-import { saveStorage } from './../../lib/utils/storage.js';
 import { getNode, insertFirst } from './../../lib/index.js';
 
 includeIframeToHTML()
@@ -17,7 +16,7 @@ includeIframeToHTML()
     };
 
     body.addEventListener('click', bodyHandler);
-    
+
     //로그인 기능
     const userName = localStorage.getItem('name');
     const signUpLink = document.querySelector('.sign_up_link');
@@ -64,5 +63,5 @@ includeIframeToHTML()
     logoutPage.addEventListener('click', logoutPageHandler);
   })
   .catch(() => {
-    console.error('실패');
+    // console.error('실패');
   });
