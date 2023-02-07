@@ -150,6 +150,10 @@ a:hover {
   width: 100%;
 }
 
+.recommend_swiper_item_title {
+  margin-bottom: 8px;
+}
+
 .recommend_product_swiper_item {
   font-size: var(--font-paragraph-medium);
   color: var(--content);
@@ -229,4 +233,16 @@ a:hover {
   background: url(../../assets/index/small_arrow.png) center center no-repeat;
   background-size: 8px 4px;
   transform: rotate(180deg);
+}
+
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.swiper-button-next.swiper-button-disabled {
+  opacity: 0;
+  cursor: auto;
+  pointer-events: none;
 }

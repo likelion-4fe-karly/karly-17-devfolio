@@ -17,6 +17,7 @@ module.exports = {
 
   // 산문 래핑 설정
   proseWrap: 'preserve',
+
   quoteProps: 'as-needed',
 
   // 세미콜론(;) 사용 여부
