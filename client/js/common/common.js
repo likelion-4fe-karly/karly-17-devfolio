@@ -8,6 +8,19 @@ import {
 
 includeIframeToHTML()
   .then(() => {
+    /* 최근 본 상품 */
+    /* global Swiper */
+    const recent_swiper = new Swiper('.recent_product .swiper', {
+      direction: 'vertical',
+      slidesPerView: 3,
+      spaceBetween: 10,
+      innerHeight: 51,
+      navigation: {
+        prevEl: '.recent_product .swiper-button-prev',
+        nextEl: '.recent_product .swiper-button-next',
+      },
+    });
+
     const productWrapper = document.querySelector('.recent_swiper_wrapper');
     const recommendProductItem = document.querySelectorAll(
       '.index_recommend_product_swiper_wrapper ul'
@@ -21,40 +34,40 @@ includeIframeToHTML()
     const productItemHandler = (event) => {
       const aElement = event.target.closest('a');
 
-      const cartElement = event.target.closest('div');
+      // const cartElement = event.target.closest('div');
 
-      // 카트 팝업 노드
-      const cartPopUpContainer = document.querySelector(
-        '.cart_popup_container'
-      );
+      // // 카트 팝업 노드
+      // const cartPopUpContainer = document.querySelector(
+      //   '.cart_popup_container'
+      // );
 
-      // 카트 버튼
-      const cartButton = document.querySelectorAll('.regret_swiper_item_cart');
+      // // 카트 버튼
+      // const cartButton = document.querySelectorAll('.regret_swiper_item_cart');
 
-      const cartHandler = () => {
-        cartPopUpContainer.classList.add('on');
-      };
+      // const cartHandler = () => {
+      //   cartPopUpContainer.classList.add('on');
+      // };
 
-      const cartContainerHandler = (e) => {
-        const button = e.target.closest('button');
+      // const cartContainerHandler = (e) => {
+      //   const button = e.target.closest('button');
 
-        if (!button) return;
+      //   if (!button) return;
 
-        if (button.classList.contains('cart_popup_cancel')) {
-          cartPopUpContainer.classList.remove('on');
-        }
+      //   if (button.classList.contains('cart_popup_cancel')) {
+      //     cartPopUpContainer.classList.remove('on');
+      //   }
 
-        if (button.classList.contains('cart_popup_save')) {
-          cartPopUpContainer.classList.remove('on');
-        }
-      };
+      //   if (button.classList.contains('cart_popup_save')) {
+      //     cartPopUpContainer.classList.remove('on');
+      //   }
+      // };
 
-      cartButton.forEach((button) => {
-        button.addEventListener('click', cartHandler);
-      });
+      // cartButton.forEach((button) => {
+      //   button.addEventListener('click', cartHandler);
+      // });
 
-      cartPopUpContainer.addEventListener('click', cartContainerHandler);
-      cartElement.addEventListener('click', cartHandler);
+      // cartPopUpContainer.addEventListener('click', cartContainerHandler);
+      // cartElement.addEventListener('click', cartHandler);
 
       if (!aElement) return;
 
@@ -102,9 +115,11 @@ includeIframeToHTML()
     let currentMarkUp = '';
     memoItem.forEach((item) => {
       currentMarkUp += /* html */ `
-    <a href="${item.aLink}">
-      <img src="${item.imgSrc}" alt="${item.imgAlt}" />
-    </a>
+      <div class="swiper-slide">
+        <a href="${item.aLink}">
+          <img src="${item.imgSrc}" alt="${item.imgAlt}" />
+        </a>
+      </div>
     `;
     });
 

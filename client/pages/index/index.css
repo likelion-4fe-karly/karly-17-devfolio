@@ -79,37 +79,6 @@ a:hover {
   transform: rotate(180deg);
 }
 
-.recent_product .swiper-button-prev {
-  background: url(../../assets/index/small_arrow.png) no-repeat;
-  background-size: 100%;
-  top: 40%;
-  left: -29px;
-  transform: rotate(180deg);
-  width: 8px;
-  height: 4px;
-}
-
-.recent_product .swiper-button-next {
-  background: url(../../assets/index/small_arrow.png) no-repeat;
-  background-size: 100%;
-  width: 8px;
-  height: 14px;
-  position: unset;
-  display: block;
-  padding-bottom: 15px;
-}
-
-.recent_product .swiper-button-prev {
-  background: url(../../assets/index/small_arrow.png) no-repeat;
-  background-size: 100%;
-  width: 8px;
-  height: 14px;
-  position: unset;
-  display: block;
-  padding-bottom: 15px;
-  transform: rotate(180deg);
-}
-
 /*  메인 배너  */
 .index {
   position: relative;
