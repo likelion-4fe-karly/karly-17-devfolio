@@ -12,15 +12,18 @@ includeIframeToHTML()
     /* global Swiper */
     const recent_swiper = new Swiper('.recent_product .swiper', {
       direction: 'vertical',
+      autoHeight: false,
       slidesPerView: 3,
+      slidesOffsetAfter: 50,
       spaceBetween: 10,
-      innerHeight: 51,
+      stretch: 0,
       navigation: {
         prevEl: '.recent_product .swiper-button-prev',
         nextEl: '.recent_product .swiper-button-next',
       },
     });
 
+    let item = [];
     const productWrapper = document.querySelector('.recent_swiper_wrapper');
     const recommendProductItem = document.querySelectorAll(
       '.index_recommend_product_swiper_wrapper ul'
@@ -29,7 +32,9 @@ includeIframeToHTML()
       '.index_regret_product_swiper_wrapper ul'
     );
 
-    let memoItem = JSON.parse(localStorage.getItem('item'));
+    let memoItem = localStorage.getItem('item')
+      ? JSON.parse(localStorage.getItem('item'))
+      : [];
 
     const productItemHandler = (event) => {
       const aElement = event.target.closest('a');
@@ -40,7 +45,6 @@ includeIframeToHTML()
       const imgSrc = aElement.children[0].src;
       const imgAlt = aElement.children[0].alt;
 
-      // 배열 앞에 넣기
       memoItem.unshift({ aLink, imgSrc, imgAlt });
 
       // 배열 내 객체 중복 제거
