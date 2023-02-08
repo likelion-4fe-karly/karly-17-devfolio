@@ -1,4 +1,3 @@
-
 const idInputTag = document.querySelector('.id_form_tag');
 const passwordInputTag = document.querySelector('.password_form_tag');
 const loginButton = document.querySelector('.login_button');

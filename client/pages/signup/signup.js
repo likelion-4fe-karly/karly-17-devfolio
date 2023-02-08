@@ -1,7 +1,4 @@
-
 import { generateRandomString } from './randomString.js';
-
-generateRandomString;
 
 const id = document.getElementById('id');
 const password = document.getElementById('pw');
@@ -37,6 +34,14 @@ function idHandler(e) {
   id.setAttribute('value', id.value);
   console.log(id.value);
   //console.log(numberAndEn.test(id.value));
+
+  console.log(id.value.length);
+
+  console.log(password.value.length);
+
+  console.log(checkPw.value.length);
+
+  console.log(phone.value.length);
 
   if (
     (id.value.length > 0 && id.value.length < 6) ||
@@ -120,6 +125,10 @@ function pwConfirmHandler(e) {
   );
   const asd = e.target.value;
   console.log(asd);
+
+  console.log(password.value);
+
+  console.log(checkPw.value);
 
   if (password.value !== checkPw.value) {
     none_error_confirm_pw.style.display = 'none';
@@ -207,57 +216,6 @@ function phoneHandler(e) {
 }
 phone.addEventListener('keyup', phoneHandler);
 
-//버튼 클릭 시 로컬 스토리지 저장
-function signupHandler(e) {
-  e.preventDefault();
-  const currentUid = generateRandomString(10);
-
-  fetch('http://localhost:3000/user', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      id: id.value,
-      password: password.value,
-      email: email.value,
-      uid: currentUid,
-      name: name.value,
-    }),
-  })
-    .then((response) => console.log(response.json()))
-    .then((data) => console.log(data));
-  window.location = '../../index.html';
-}
-
-Congratulations.addEventListener('click', signupHandler);
-
-const signupContairer = document.querySelector('.signup_wrapper');
-function joinHandler() {
-  if (id.value && password.value && name.value && email.value && phone.value) {
-    Congratulations.style.color = 'var(--primary)';
-    Congratulations.style.cursor = 'pointer';
-    Congratulations.style.border = ' 1px solid var(--primary)';
-    Congratulations.removeAttribute('disabled', 'disabled');
-    Congratulations.setAttribute('abled', 'abled');
-  } else if (
-    id.value == '' ||
-    password.value !== checkPw.value ||
-    password.value == 0 ||
-    name.value == '' ||
-    email.value == '' ||
-    phone.value == ''
-  ) {
-    Congratulations.removeAttribute('style');
-    Congratulations.style.color = 'rgb(221, 221, 221)';
-    Congratulations.style.border = ' 1px solid rgb(221, 221, 221)';
-    Congratulations.removeAttribute('abled', 'abled');
-    Congratulations.setAttribute('disabled', 'disabled');
-  }
-}
-
-signupContairer.addEventListener('keyup', joinHandler);
-
 const agreeCheckAll = document.querySelector('input[name=all_agree]');
 let agreeCheck = document.querySelectorAll('input[name=agree]');
 
@@ -265,6 +223,7 @@ agreeCheckAll.addEventListener('click', (e) => {
   agreeCheckAll.classList.toggle('active');
 
   agreeCheck.forEach((check) => {
+    console.log(check);
     if (agreeCheckAll.classList.contains('active')) {
       check.setAttribute('checked', true);
     } else {
@@ -300,3 +259,61 @@ agreeCheck.forEach((node) => {
     }
   });
 });
+
+//버튼 클릭 시 로컬 스토리지 저장
+function signupHandler(e) {
+  e.preventDefault();
+  const currentUid = generateRandomString(10);
+
+  fetch('http://localhost:3000/user', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      id: id.value,
+      password: password.value,
+      email: email.value,
+      uid: currentUid,
+      name: name.value,
+    }),
+  })
+    .then((response) => console.log(response.json()))
+    .then((data) => console.log(data));
+  window.location = '../../index.html';
+}
+
+Congratulations.addEventListener('click', signupHandler);
+
+const signupContairer = document.querySelector('.signup_wrapper');
+function joinHandler() {
+  if (
+    id.value.length > 6 &&
+    password.value.length > 10 &&
+    checkPw.value.length > 10 &&
+    name.value &&
+    email.value.includes('.com') == true &&
+    phone.value.length > 9
+  ) {
+    Congratulations.style.color = 'var(--primary)';
+    Congratulations.style.cursor = 'pointer';
+    Congratulations.style.border = ' 1px solid var(--primary)';
+    Congratulations.removeAttribute('disabled', 'disabled');
+    Congratulations.setAttribute('abled', 'abled');
+  } else if (
+    id.value == '' ||
+    password.value == 0 ||
+    name.value == '' ||
+    password.value.length !== checkPw.value.length ||
+    email.value.includes('.com') == false ||
+    phone.value == ''
+  ) {
+    Congratulations.removeAttribute('style');
+    Congratulations.style.color = 'rgb(221, 221, 221)';
+    Congratulations.style.border = ' 1px solid rgb(221, 221, 221)';
+    Congratulations.removeAttribute('abled', 'abled');
+    Congratulations.setAttribute('disabled', 'disabled');
+  }
+}
+
+signupContairer.addEventListener('keyup', joinHandler);

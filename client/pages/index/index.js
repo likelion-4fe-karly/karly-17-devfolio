@@ -1,20 +1,33 @@
-// import { getNode } from '../../lib/index.js';
+import { insertLast } from '/lib/dom/insert.js';
 
+insertLast;
 window.onload = function () {
-  fetch('http://localhost:3000/images')
+  fetch('http://localhost:3000/products')
     .then((res) => res.json())
-    .then((images) => {
-      const swiperWrapper = document.querySelector('.swiper-wrapper');
-      images.forEach((image) => {
-        const slide = document.createElement('div');
-        slide.classList.add('swiper-slide');
-        const img = document.createElement('img');
-        img.src = image.src;
-        img.alt = image.id;
-        slide.appendChild(img);
-        swiperWrapper.appendChild(slide);
+    .then((json) => {
+      let html = '';
+
+      // const swiperWrapper = document.querySelector('.swiper-wrapper');
+
+      json.forEach((image) => {
+        // const slide = document.createElement('div');
+        // slide.classList.add('swiper-slide');
+        // const img = document.createElement('img');
+        // img.src = image.src;
+        // img.alt = image.id;
+        // slide.appendChild(img);
+        // swiperWrapper.appendChild(slide);
+
+        html += /* html */ `
+        <div class="swiper-slide">
+          <img src="/assets/${image.image.banner}" alt="${image.image.alt}" />
+        </div>
+        `;
       });
+
+      insertLast('.swiper-wrapper-banner', html);
     });
+
   const swiper1 = new Swiper('.index_visual_swiper', {
     autoplay: true,
     pagination: {
@@ -43,7 +56,6 @@ let swiperPrev = document.querySelector(
 );
 
 /* 메인 배너 */
-
 /* 이 상품 어때? */
 const swiper2 = new Swiper('.first .product', {
   autoplay: false,
@@ -71,6 +83,45 @@ const swiper2 = new Swiper('.first .product', {
     },
   },
 });
+
+// 이 상품 어때요
+// TODO 비동기 통신 뿌리기
+fetch('http://localhost:3000/products')
+  .then((res) => res.json())
+  .then((json) => {
+    let html = '';
+
+    console.log(json);
+    json.forEach((product) => {
+      html += /*html*/ `
+      <ul>
+        <li>
+          <a
+            class="index_recommend_product_swiper_item"
+            href="/pages/product_detail/product_detail.html"
+          >
+          <img
+            src="/assets/${product.image.view}"
+            alt="${product.image.alt}"
+          />
+          <p class="recommend_swiper_item_title">
+            ${product.name}
+          </p>
+          <p class="recommend_swiper_item_price">${product.price}원</p>
+          </a>
+          <div class="recommend_swiper_item_cart" tabindex="0">
+            <img
+              src="/assets/index/icon_cart.png"
+              alt="장바구니 버튼"
+            />
+          </div>
+      </li>
+    </ul>
+    `;
+    });
+
+    insertLast('.swiper-slide', html);
+  });
 
 /*  놓치면 후회할 가격 */
 const swiper4 = new Swiper('.second .price', {
@@ -163,14 +214,64 @@ const cartPopUpContainer = document.querySelector('.cart_popup_container');
 const cartButton = document.querySelectorAll('.recommend_swiper_item_cart');
 
 const cartHandler = () => {
-  console.log('크릭');
+  //클래스에 on 추가
   cartPopUpContainer.classList.add('on');
+
+  fetch('http://localhost:3000/products')
+    //이부분이 promise 형태다 그럼 then이나 async await로 처리
+
+    .then((response) => response.json())
+    .then((data) => {
+      const nameData = data.map((obj) => obj.name);
+      const priceData = data.map((obj) => obj.price);
+
+      console.log(nameData);
+      console.log(priceData);
+      let html = '';
+
+      for (let i = 0; i < 4; i++) {
+        html +=
+          /* html */
+          `
+      <div class="cart_popup">
+      <div class="cart_popup_info">
+        <span>${nameData[i]}</span>
+        <div class="cart_popup_price_of_count">
+          <span>${priceData[i]}원</span>
+          <div class="cart_popup_count">
+            <button class="cart_minus">
+              <img src="/assets/minus.png" alt="1 감소" />
+            </button>
+            <span>1</span>
+            <button class="cart_plus">
+              <img src="/assets/plus.png" alt="1 증가" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="cart_popup_total">
+        <div class="cart_popup_price">
+          <span>합계</span>
+          <span>4,980원</span>
+        </div>
+        <div class="cart_popup_point">
+          <span>적립</span>
+          <span>구매 시 5원 적립</span>
+        </div>
+      </div>
+      <div class="cart_popup_buttons">
+        <button class="cart_popup_cancel">취소</button>
+        <button class="cart_popup_save">장바구니 담기</button>
+      </div>
+    </div>`;
+
+        insertLast('.cart_popup_container', html);
+      }
+    });
 };
 
 const cartContainerHandler = (e) => {
   const button = e.target.closest('button');
-
-  if (!button) return;
 
   if (button.classList.contains('cart_popup_cancel')) {
     cartPopUpContainer.classList.remove('on');
