@@ -85,7 +85,8 @@
   /* display: block; */
   min-width: 330px;
 }
-.signProcess_container .confirm_check {
+.signProcess_container .confirm_check,
+.email_confirm_check {
   width: 143px;
   color: var(--primary);
   border: 1px solid var(--primary);
@@ -95,10 +96,27 @@
   font-weight: 600;
   height: 44px;
   font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+}
+.phone_confirm_check {
+  width: 143px;
+  color: rgb(221, 221, 221);
+  border: 1px solid rgb(221, 221, 221);
+  background-color: var(--white);
+  border-radius: 3px;
+  margin-left: 8px;
+  font-weight: 600;
+  height: 44px;
+  font-size: 14px;
+  text-align: center;
+  display: block;
 }
 
 .address_btn {
   display: inline;
+  cursor: pointer;
   width: 330px;
   border: 1px solid var(--primary);
   color: var(--primary);
@@ -109,7 +127,6 @@
   overflow: hidden;
   border-radius: 4px;
 }
-
 .address_explain {
   margin-left: 150px;
   font-size: var(--font-paragraph-small);
@@ -132,6 +149,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
 }
 
 .gender_wrapper input {
@@ -199,6 +217,7 @@ input[type='number']::-webkit-inner-spin-button {
   justify-content: space-between;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
 }
 
 .suggestion_id,
@@ -215,6 +234,7 @@ input[type='number']::-webkit-inner-spin-button {
 .agree_check_mark {
   width: 30px;
   display: inline-block;
+
   height: 30px;
   background-repeat: no-repeat;
 }
@@ -249,6 +269,7 @@ input[type='number']::-webkit-inner-spin-button {
 
 .check_list_first_type {
   gap: 8px;
+  cursor: pointer;
 }
 
 .check_list_second_type,
@@ -262,6 +283,7 @@ input[type='number']::-webkit-inner-spin-button {
   vertical-align: top;
   color: var(--gray-800);
   font-size: 15px;
+  cursor: pointer;
 }
 
 .check_list_wrapper a {
@@ -277,27 +299,6 @@ input[type='number']::-webkit-inner-spin-button {
   margin: 0 0 0 4px;
   background-image: url(../../assets/vector/Vector.png);
   background-repeat: no-repeat;
-}
-
-.last_line {
-  border-bottom: 1px solid var(--gray-800);
-}
-.signup_btn {
-  display: flex;
-  justify-content: center;
-  border-top: 1px solid var(--white);
-  padding: 40px 0px;
-}
-.signup_btn button {
-  padding: 0px 10px;
-  text-align: center;
-  overflow: hidden;
-  width: 340px;
-  height: 54px;
-  border-radius: 4px;
-  color: var(--white);
-  background-color: var(--primary);
-  border: 0px none;
 }
 
 [type='radio'] {
@@ -324,4 +325,40 @@ input[type='number']::-webkit-inner-spin-button {
 
 [type='checkbox']:checked {
   background: url(../../assets/check.png) no-repeat 50% 50%;
+}
+.last_line {
+  border-bottom: 1px solid var(--gray-800);
+}
+.signup_btn {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid var(--white);
+  padding: 40px 0px;
+}
+.congratulations {
+  padding: 0px 10px;
+  text-align: center;
+  overflow: hidden;
+  width: 340px;
+  height: 54px;
+  border-radius: 4px;
+  border: 1px solid rgb(221, 221, 221);
+  color: rgb(221, 221, 221);
+}
+.error_pw,
+.none_error_pw,
+.error_confirm_pw,
+.error_id,
+.none_error_confirm_pw,
+.error_email,
+.error_none_email,
+.error_name,
+.error_phone {
+  font-size: 13px;
+  color: rgb(240, 63, 64);
+  margin-top: -4px;
+  display: flex;
+  margin-left: 149px;
+  padding: 0 0 10px 0;
+  display: none;
 }
