@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="./css/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="/pages/index/index.js" type="module"></script>
-    <script src="/pages/index/index2.js" type="module"></script>
     <script src="/js/main.js" type="module"></script>
   </head>
 
@@ -71,18 +70,9 @@
           </div>
         </div>
       </section>
-      <div class="recent">
-        <div class="recent_product">
-          <!-- Swiper -->
-          <div class="swiper-button-next"></div>
-          <p>최근 본 상품</p>
-          <div class="swiper recent_product_swiper">
-            <div class="swiper-wrapper recent_swiper_wrapper"></div>
-          </div>
-          <div class="swiper-button-prev"></div>
-        </div>
-      </div>
+      <iframe data-include="/layout/recent.html"></iframe>
     </div>
+    <!-- 최근 본 상품 -->
     <iframe data-include="/layout/footer.html" data-height="681px"></iframe>
     <!-- 뷰티 플랫폼 POP UP -->
     <div class="beauty_popup">

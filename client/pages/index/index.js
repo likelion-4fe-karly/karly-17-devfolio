@@ -158,6 +158,7 @@ fetch('http://localhost:3000/products')
               </a>
               <div class="recommend_swiper_item_cart" tabindex="0">
                 <img
+                  class="recommend_swiper_item_cart_image"
                   src="/assets/index/icon_cart.png"
                   alt="장바구니 버튼"
                 />
@@ -352,10 +353,10 @@ close.addEventListener('click', closeHandler);
 
 // ! 장바구니 POP UP 영역
 const cartPopUpContainer = document.querySelector('.cart_popup_container');
-const cartButton = document.querySelectorAll('.recommend_swiper_item_cart');
+const cartButton = document.querySelectorAll('.regret_swiper_item_cart');
 
 const cartHandler = () => {
-  console.log('크릭');
+  console.log('클릭');
   cartPopUpContainer.classList.add('on');
 };
 
