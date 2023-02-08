@@ -393,6 +393,7 @@ body {
   bottom: 15px;
   z-index: 20;
 }
+
 .recent_product {
   position: sticky;
   z-index: 10;
@@ -430,12 +431,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.recent .recent_product .swiper-slide.swiper-slide-active {
-  width: 40px;
-  height: 51px;
-  margin-bottom: 0;
 }
 
 .recent_product .swiper-button-prev {
