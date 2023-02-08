@@ -372,3 +372,80 @@ const closeHandler = () => {
 
 neverWatch.addEventListener('click', noTodayHandler);
 close.addEventListener('click', closeHandler);
+// ! 장바구니 POP UP 영역
+const cartPopUpContainer = document.querySelector('.cart_popup_container');
+const cartButton = document.querySelectorAll('.regret_swiper_item_cart');
+
+const cartHandler = () => {
+  cartPopUpContainer.classList.add('on');
+
+  fetch('http://localhost:3000/products')
+    //이부분이 promise 형태다 그럼 then이나 async await로 처리
+
+    .then((response) => response.json())
+    .then((data) => {
+      const nameData = data.map((obj) => obj.name);
+      const priceData = data.map((obj) => obj.price);
+
+      console.log(nameData);
+      console.log(priceData);
+      let html = '';
+
+      for (let i = 0; i < 4; i++) {
+        html +=
+          /* html */
+          `
+      <div class="cart_popup">
+      <div class="cart_popup_info">
+        <span>${nameData[i]}</span>
+        <div class="cart_popup_price_of_count">
+          <span>${priceData[i]}원</span>
+          <div class="cart_popup_count">
+            <button class="cart_minus">
+              <img src="/assets/minus.png" alt="1 감소" />
+            </button>
+            <span>1</span>
+            <button class="cart_plus">
+              <img src="/assets/plus.png" alt="1 증가" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="cart_popup_total">
+        <div class="cart_popup_price">
+          <span>합계</span>
+          <span>4,980원</span>
+        </div>
+        <div class="cart_popup_point">
+          <span>적립</span>
+          <span>구매 시 5원 적립</span>
+        </div>
+      </div>
+      <div class="cart_popup_buttons">
+        <button class="cart_popup_cancel">취소</button>
+        <button class="cart_popup_save">장바구니 담기</button>
+      </div>
+    </div>`;
+
+        insertLast('.cart_popup_container', html);
+      }
+    });
+};
+
+const cartContainerHandler = (e) => {
+  const button = e.target.closest('button');
+
+  if (button.classList.contains('cart_popup_cancel')) {
+    cartPopUpContainer.classList.remove('on');
+  }
+
+  if (button.classList.contains('cart_popup_save')) {
+    cartPopUpContainer.classList.remove('on');
+  }
+};
+
+cartButton.forEach((button) => {
+  button.addEventListener('click', cartHandler);
+});
+
+cartPopUpContainer.addEventListener('click', cartContainerHandler);
