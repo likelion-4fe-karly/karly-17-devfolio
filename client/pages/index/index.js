@@ -200,34 +200,6 @@ const regret_swiper = new Swiper('.index_regret_product_swiper', {
   },
 });
 
-/*  놓치면 후회할 가격 */
-// const recent_swiper = new Swiper('.recent_product', {
-//   autoplay: false,
-//   loop: false,
-//   speed: 1000,
-//   parallax: true,
-//   pagination: {},
-//   a11y: {
-//     prevSlideMessage: '이전 슬라이드',
-//     nextSlideMessage: '다음 슬라이드',
-//     slideLabelMessage:
-//       '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
-//   },
-//   navigation: {
-//     prevEl: '.swiper_regret_cover .swiper-button-prev',
-//     nextEl: '.swiper_regret_cover .swiper-button-next',
-//   },
-//   on: {
-//     activeIndexChange: function () {
-//       if (this.realIndex === 0) {
-//         swiperPrev.classList.add('swiper-button-disabled');
-//       } else {
-//         swiperPrev.classList.remove('swiper-button-disabled');
-//       }
-//     },
-//   },
-// });
-
 // 놓치면 후회할 가격
 // TODO 비동기 통신 뿌리기
 fetch('http://localhost:3000/products')
@@ -306,12 +278,12 @@ fetch('http://localhost:3000/products')
               </div>
               <p class="regret_swiper_item_price">${price}</p>
               </a>
-              <div class="regret_swiper_item_cart" tabindex="0">
+              <button class="regret_swiper_item_cart" tabindex="0">
                 <img
                   src="/assets/index/icon_cart.png"
                   alt="장바구니 버튼"
                 />
-              </div>
+              </button>
           </li>
         `;
       });

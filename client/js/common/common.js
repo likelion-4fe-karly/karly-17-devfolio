@@ -34,41 +34,6 @@ includeIframeToHTML()
     const productItemHandler = (event) => {
       const aElement = event.target.closest('a');
 
-      // const cartElement = event.target.closest('div');
-
-      // // 카트 팝업 노드
-      // const cartPopUpContainer = document.querySelector(
-      //   '.cart_popup_container'
-      // );
-
-      // // 카트 버튼
-      // const cartButton = document.querySelectorAll('.regret_swiper_item_cart');
-
-      // const cartHandler = () => {
-      //   cartPopUpContainer.classList.add('on');
-      // };
-
-      // const cartContainerHandler = (e) => {
-      //   const button = e.target.closest('button');
-
-      //   if (!button) return;
-
-      //   if (button.classList.contains('cart_popup_cancel')) {
-      //     cartPopUpContainer.classList.remove('on');
-      //   }
-
-      //   if (button.classList.contains('cart_popup_save')) {
-      //     cartPopUpContainer.classList.remove('on');
-      //   }
-      // };
-
-      // cartButton.forEach((button) => {
-      //   button.addEventListener('click', cartHandler);
-      // });
-
-      // cartPopUpContainer.addEventListener('click', cartContainerHandler);
-      // cartElement.addEventListener('click', cartHandler);
-
       if (!aElement) return;
 
       const aLink = aElement.href;
