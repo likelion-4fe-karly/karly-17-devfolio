@@ -77,7 +77,7 @@ article {
   border: none;
   padding: 3px;
   font-size: var(--font-label-small);
-  color: var(--gray-800);
+  color: var(--gray-200);
   font-weight: 600;
   /* cursor: pointer; */
 }
