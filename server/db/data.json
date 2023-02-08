@@ -130,7 +130,6 @@
       "name": "[안정현의 솜씨와 정성] 약식",
       "description": "큼직한 밤과 밥 알갱이의 어울림",
       "price": 6000,
-
       "image": {
         "thumbnail": "shortform/thumbnail.jpg",
         "view": "shortform/detail_view.jpg",
@@ -171,67 +170,17 @@
       "uid": "dnwkdksowAKQW"
     },
     {
-      "id": "qweqwe123",
-      "password": "zxcasdqwe123",
-      "email": "ㅂㅈㄷ123@naver.com",
-      "uid": "jeDhBBXTKS"
-    },
-    {
-      "id": "asd12341",
-      "password": "qqqqqqqqqq123",
-      "email": "ㅂㅈㄷ@naver.com",
-      "uid": "qbBnoFMKLq"
-    },
-    {
-      "id": "444sdsdsd444444444444",
-      "password": "qqqqqqqqqq123444444444444",
-      "email": "ㅂㅈ444444444ㄷ@naver.com",
-      "uid": "qbBnoFM444444444Lq"
-    },
-    {
-      "id": "sdas",
-      "password": "qweqweqwe123",
-      "email": "sd@naver.com",
-      "uid": "XwSKJEsoWa"
-    },
-    {
-      "id": "kikiki1234",
-      "password": "qweqweqwe123",
-      "email": "qwe@naver.com",
-      "uid": "jDLjMXTTNN"
-    },
-    {
-      "id": "dlrudgh1111",
-      "password": "qweqweqwe123",
-      "email": "asd@naver.com",
-      "uid": "SiWipgaiQf"
-    },
-    {
-      "id": "pworer1234",
-      "password": "qweqweasdasd",
-      "email": "ㅋㅌㅊ@naver.com",
-      "uid": "BNhzjIgoIZ",
-      "name": "오개홍"
-    },
-    {
-      "id": "nawqw1234",
-      "password": "qweqweqweqwe",
-      "email": "ㅋㅋㅋ@naver.com",
-      "uid": "kGulBpkNQp",
-      "name": "이갱호"
-    },
-    {
-      "id": "ㅁㄴㅇ",
-      "password": "asd",
-      "email": "sd",
-      "uid": "VYIEIbYmqB",
-      "name": "sd"
-    },
-    {
       "id": "kyoungho1230",
       "password": "dnfxmfk00@",
       "email": "kyoungho123@naver.com",
       "uid": "KXhaytmblf",
+      "name": "이경호"
+    },
+    {
+      "id": "asd1230",
+      "password": "qweqwe123123",
+      "email": "qwe@naver.com",
+      "uid": "AlJfIJZpGe",
       "name": "이경호"
     }
   ],
