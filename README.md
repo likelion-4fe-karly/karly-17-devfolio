@@ -1,7 +1,7 @@
 # ☑️프로젝트 요약 
 ## 💡멋쟁이사자처럼 17조 프로젝트 입니다.
 
-![12](https://user-images.githubusercontent.com/65242726/217400137-8685dffb-c79d-4a0d-b2e3-ec68f6956a65.PNG)
+![banner](https://user-images.githubusercontent.com/69451362/217458510-badb93bc-d741-4f43-950e-e233b0f06b08.jpg)
 
 
 ## ⌛1. 제작 기간 & 팀원 소개
