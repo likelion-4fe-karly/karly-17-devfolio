@@ -63,12 +63,21 @@ article {
   color: var(--content);
   font-weight: 600;
 }
-.product_list_section .list_accordion .list_accordion_head input {
+.product_list_section .list_accordion .list_accordion_head input:disavled {
   background-color: var(--white);
   border: none;
   padding: 3px;
   font-size: var(--font-label-small);
   color: var(--gray-100);
+  font-weight: 600;
+  /* cursor: pointer; */
+}
+.product_list_section .list_accordion .list_accordion_head input {
+  background-color: var(--white);
+  border: none;
+  padding: 3px;
+  font-size: var(--font-label-small);
+  color: var(--gray-200);
   font-weight: 600;
   /* cursor: pointer; */
 }
@@ -210,7 +219,7 @@ article {
   gap: 31px 18px;
   width: 100%;
 }
-.product_list_section .list_container .product_list_grid .product_item {
+.product_list_section .list_container .product_list_grid a {
   height: 538px;
 }
 /* product_list_item_image_box */
