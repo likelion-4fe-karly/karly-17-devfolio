@@ -11,6 +11,7 @@ html {
   justify-content: center;
   padding: 4px 4px 96px;
   gap: 4px;
+  position: relative;
 }
 
 .product_detail_container {

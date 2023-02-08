@@ -391,7 +391,7 @@ body {
   top: 446px;
   right: 20px;
   bottom: 15px;
-  z-index: 1;
+  z-index: 20;
 }
 .recent_product {
   position: sticky;
@@ -399,7 +399,7 @@ body {
   background: #fff;
   border: 1px solid #c4c4c4;
   box-sizing: border-box;
-  padding: 15px 8px;
+  padding: 8px;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -407,6 +407,7 @@ body {
   width: 80px;
   top: 49%;
   right: 0;
+  justify-content: space-between;
 }
 
 .recent_product p {
@@ -425,39 +426,37 @@ body {
   height: 51px;
 }
 
-.recent_product .recent_product_arrow_up {
-  display: block;
-  width: 18px;
-  height: 18px;
-  background: url(../../assets/index/small_arrow.png) center center no-repeat;
-  background-size: 8px 4px;
-}
-
 .recent_swiper_wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.recent_product .recent_product_arrow_down {
+.recent .recent_product .swiper-slide.swiper-slide-active {
+  width: 40px;
+  height: 51px;
+  margin-bottom: 0;
+}
+
+.recent_product .swiper-button-prev {
+  background: url(../../assets/index/small_arrow.png) no-repeat;
+  background-size: 100%;
+  width: 8px;
+  height: 14px;
+  position: unset;
   display: block;
-  width: 18px;
-  height: 18px;
-  background: url(../../assets/index/small_arrow.png) center center no-repeat;
-  background-size: 8px 4px;
+  padding-bottom: 2px;
+}
+
+.recent_product .swiper-button-next {
+  background: url(../../assets/index/small_arrow.png) no-repeat;
+  background-size: 100%;
+  width: 8px;
+  height: 14px;
+  position: unset;
+  display: block;
+  padding-top: 2px;
   transform: rotate(180deg);
-}
-
-.swiper-button-prev.swiper-button-disabled {
-  opacity: 0;
-  cursor: auto;
-  pointer-events: none;
-}
-
-.swiper-button-next.swiper-button-disabled {
-  opacity: 0;
-  cursor: auto;
-  pointer-events: none;
 }
 
 /* footer 영역 */
