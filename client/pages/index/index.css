@@ -39,6 +39,18 @@ a:hover {
   display: none;
 }
 
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.swiper-button-next.swiper-button-disabled {
+  opacity: 0;
+  cursor: auto;
+  pointer-events: none;
+}
+
 .index_recommend_product .swiper-button-next,
 .index_recommend_product .swiper-button-prev {
   position: absolute;

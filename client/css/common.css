@@ -448,18 +448,6 @@ body {
   transform: rotate(180deg);
 }
 
-.swiper-button-prev.swiper-button-disabled {
-  opacity: 0;
-  cursor: auto;
-  pointer-events: none;
-}
-
-.swiper-button-next.swiper-button-disabled {
-  opacity: 0;
-  cursor: auto;
-  pointer-events: none;
-}
-
 /* footer 영역 */
 .footer {
   display: flex;
