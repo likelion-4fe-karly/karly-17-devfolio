@@ -38,5 +38,5 @@
 ### 클라이언트 : npm run dev
 
 
-## ❗6. 에러 및 이슈 확인
+## ❗5. 에러 및 이슈 확인
 https://github.com/likelion-4fe-karly/karly-17-devfolio/issues
