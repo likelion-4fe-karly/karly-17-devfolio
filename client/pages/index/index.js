@@ -127,14 +127,9 @@ fetch('http://localhost:3000/products')
 
         // 할인 하지 않을 때,
         if (product.saleRatio === 0) {
-          saleRatio = '';
-          salePrice = price + '원';
-          price = '';
+          salePrice = price;
         } else {
           saleRatio *= 100;
-          saleRatio += '%';
-          salePrice += '원';
-          price += '원';
         }
 
         liHtml += /* html */ `
@@ -151,10 +146,20 @@ fetch('http://localhost:3000/products')
                 ${product.name}
               </p>
               <div class="recommend_swiper_item_discount">
-                <p class="recommend_swiper_item_sale_ratio">${saleRatio}</p>
-                <p class="recommend_swiper_item_sale_price">${salePrice}</p>
+              ${
+                saleRatio === 0
+                  ? ``
+                  : `<p class="recommend_swiper_item_sale_ratio">${saleRatio}%</p>`
+              }
+                <p class="recommend_swiper_item_sale_price">${salePrice}원</p>
               </div>
-              <p class="recommend_swiper_item_price">${price}</p>
+              ${
+                saleRatio === 0
+                  ? ``
+                  : `
+                <p class="recommend_swiper_item_price">${price}원</p>
+                `
+              }
               </a>
               <div class="recommend_swiper_item_cart" tabindex="0">
                 <img
@@ -249,14 +254,9 @@ fetch('http://localhost:3000/products')
 
         // 할인 하지 않을 때,
         if (product.saleRatio === 0) {
-          saleRatio = '';
-          salePrice = price + '원';
-          price = '';
+          salePrice = price;
         } else {
           saleRatio *= 100;
-          saleRatio += '%';
-          salePrice += '원';
-          price += '원';
         }
 
         liHtml += /* html */ `
@@ -273,10 +273,20 @@ fetch('http://localhost:3000/products')
                 ${product.name}
               </p>
               <div class="regret_swiper_item_discount">
-                <p class="regret_swiper_item_sale_ratio">${saleRatio}</p>
-                <p class="regret_swiper_item_sale_price">${salePrice}</p>
+              ${
+                saleRatio === 0
+                  ? ``
+                  : `<p class="regret_swiper_item_sale_ratio">${saleRatio}%</p>`
+              }
+                <p class="regret_swiper_item_sale_price">${salePrice}원</p>
               </div>
-              <p class="regret_swiper_item_price">${price}</p>
+              ${
+                saleRatio === 0
+                  ? ``
+                  : `
+                <p class="regret_swiper_item_price">${price}원</p>
+                `
+              }
               </a>
               <button class="regret_swiper_item_cart" tabindex="0">
                 <img

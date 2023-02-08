@@ -231,6 +231,11 @@ a:hover {
   color: var(--gray-400);
 }
 
+.regret_swiper_item_sale_ratio,
+.recommend_swiper_item_sale_ratio {
+  padding-right: 8px;
+}
+
 .swiper_cover {
   position: relative;
 }
