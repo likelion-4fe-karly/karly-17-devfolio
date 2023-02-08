@@ -272,34 +272,25 @@ fetch('http://localhost:3000/products')
             }
           });
 
-          // 업데이트 함수
-          const updatePrice = (result, price, count) => {
-            console.log(price);
-            console.log(count);
-            return (result.textContent = price * count);
+          cartPopUpContainer.classList.add('on');
+
+          // 장바구니 팝업 클릭 했을 때
+          const cartContainerHandler = (event) => {
+            const button = event.target.closest('button');
+
+            if (!button) return;
+
+            if (button.classList.contains('cart_popup_cancel')) {
+              cartPopUpContainer.classList.remove('on');
+            }
+            if (button.classList.contains('cart_popup_save')) {
+              cartPopUpContainer.classList.remove('on');
+            }
           };
 
-          productCount.addEventListener('change', updatePrice);
-          totalPrice.addEventListener('change', updatePrice);
-
-          cartPopUpContainer.classList.add('on');
+          cartPopUpContainer.addEventListener('click', cartContainerHandler);
         }
       });
-
-      // 장바구니 팝업 클릭 했을 때
-      const cartContainerHandler = (event) => {
-        const button = event.target.closest('button');
-
-        if (!button) return;
-
-        if (button.classList.contains('cart_popup_cancel')) {
-          cartPopUpContainer.classList.remove('on');
-        }
-        if (button.classList.contains('cart_popup_save')) {
-          cartPopUpContainer.classList.remove('on');
-        }
-      };
-      cartPopUpContainer.addEventListener('click', cartContainerHandler);
     };
 
     cartButton.forEach((button) => {
