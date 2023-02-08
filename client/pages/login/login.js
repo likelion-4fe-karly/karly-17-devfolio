@@ -1,35 +1,51 @@
-const {
-  localStorage: storage,
-  JSON: { stringify: serialize, parse: deserialize },
-} = globalThis;
+const idInputTag = document.querySelector('.id_form_tag');
+const passwordInputTag = document.querySelector('.password_form_tag');
+const loginButton = document.querySelector('.login_button');
 
-// storage.setItem('isLogin', true)
-storage.setItem('userId', 'like');
-storage.setItem('userPwd', 'lion');
-storage.setItem('userName', '멋사4기');
+function LoginIdHandler() {
+  idInputTag.setAttribute('value', idInputTag.value);
+}
 
-const formContainer = document.querySelector('.form_container');
+idInputTag.addEventListener('keyup', LoginIdHandler);
 
-const Handler = (e) => {
-  const button = e.target.closest('button');
+function LoginPasswordHandler() {
+  passwordInputTag.setAttribute('value', passwordInputTag.value);
+}
+passwordInputTag.addEventListener('keyup', LoginPasswordHandler);
 
-  if (!button) return;
+function LoginButtonHandler(e) {
+  e.preventDefault();
+  fetch('http://localhost:3000/user')
+    //이부분이 promise 형태다 그럼 then이나 async await로 처리
 
-  if (button.classList.contains('login_button')) {
-    const userId = document.querySelector('.id_form_tag');
-    const userPwd = document.querySelector('.password_form_tag');
+    .then((response) => response.json())
+    .then((data) => {
+      const filterData = data.filter(
+        //객체 1개씩
+        (obj) =>
+          obj.id === idInputTag.value && obj.password === passwordInputTag.value
+      );
+      console.log(filterData);
 
-    if (
-      storage.getItem('userId') === userId.value &&
-      storage.getItem('userPwd') === userPwd.value
-    ) {
-      storage.setItem('isLogin', true);
+      if (filterData.length === 0) {
+        alert('일치하지 않습니다.');
+        idInputTag.value = null;
+        passwordInputTag.value = null;
+        return;
+      }
 
-      window.location = '../../../index.html';
-    } else {
-      alert('아이디 또는 비밀번호가 틀립니다.');
-    }
-  }
+      successLogin(filterData);
+    });
+}
+
+const successLogin = (filterData) => {
+  console.log(filterData);
+  console.log(filterData[0].uid);
+  localStorage.setItem('uid', JSON.stringify(filterData[0].uid));
+  localStorage.setItem('name', filterData[0].name);
+  alert('환영합니다.');
+
+  window.location = '../../index.html';
 };
 
-formContainer.addEventListener('click', Handler);
+loginButton.addEventListener('click', LoginButtonHandler);
