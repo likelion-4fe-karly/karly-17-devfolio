@@ -18,8 +18,6 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
     />		
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="/pages/index/index.js" type="module"></script>
-    <script src="/pages/index/index2.js" type="module"></script>
     <script src="/js/main.js" type="module"></script>		
   </head>
   <body>
@@ -215,19 +213,8 @@
 		</div>
       </div>
     </div>
-	<div class="recent">
-		<div class="recent_product">
-			<!-- Swiper -->
-			<div class="swiper-button-next"></div>
-				<p>최근 본 상품</p>
-				<div class="swiper mySwiper">
-					<div class="swiper-wrapper"></div>
-				</div>
-				<div class="swiper-button-prev"></div>
-				<!-- <a class="recent_product_arrow_up"></a>
-				<a class="recent_product_arrow_down"></a> -->
-		</div>
-	</div>		
+	<!-- 최근 본 상품 -->
+    <iframe data-include="/layout/recent.html" data-height="681px"></iframe>
 	<iframe data-include="/layout/footer.html" frameborder="0"></iframe>
   </body>
 </html>
