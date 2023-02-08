@@ -12,9 +12,11 @@ includeIframeToHTML()
     /* global Swiper */
     const recent_swiper = new Swiper('.recent_product .swiper', {
       direction: 'vertical',
+      autoHeight: false,
       slidesPerView: 3,
+      slidesOffsetAfter: 50,
       spaceBetween: 10,
-      innerHeight: 51,
+      stretch: 0,
       navigation: {
         prevEl: '.recent_product .swiper-button-prev',
         nextEl: '.recent_product .swiper-button-next',

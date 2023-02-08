@@ -420,6 +420,7 @@ body {
 
 .recent_product a {
   display: block;
+  /* height: 51px !important; */
 }
 
 .recent_product img {
@@ -430,7 +431,16 @@ body {
 .recent_swiper_wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+}
+
+.recent_product_swiper {
+  height: 129px;
+}
+
+.recent_product .swiper-slide {
+  /* height: 51px !important;
+  margin-bottom: 4px !important; */
 }
 
 .recent_product .swiper-button-prev {
