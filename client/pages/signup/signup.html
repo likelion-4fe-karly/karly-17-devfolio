@@ -38,15 +38,11 @@
             <label for="id" class="a11yHidden">아이디</label>
             <input
               id="id"
-              maxlength="17"
               type="text"
               placeholder="아이디를 입력해주세요"
               class="id_input"
             />
-            <input type="button" value="중복확인" class="confirm_check" />
-          </div>
-          <div class="error_id">
-            6자 이상 16자 이하의 영문 혹은 영문과 숫자를 조합하세요
+            <button class="confirm_check">중복확인</button>
           </div>
 
           <div class="password_write">
@@ -57,15 +53,10 @@
             <label for="pw" class="a11yHidden">비밀번호</label>
             <input
               id="pw"
-              maxlength="17"
               type="password"
               placeholder="비밀번호를 입력해주세요"
               class="password_input"
             />
-          </div>
-          <div class="error_pw">최소 10자 이상 입력해주세요.</div>
-          <div class="none_error_pw">
-            영문/숫자/특수문자(공백제외)만 허용하며, 2개 이상 조합해주세요.
           </div>
 
           <div class="password_confirm">
@@ -76,15 +67,10 @@
             <label for="confirmpw" class="a11yHidden">비밀번호확인</label>
             <input
               id="confirmpw"
-              maxlength="17"
               type="password"
               placeholder="비밀번호를 한번 더 입력해주세요"
               class="password_confirm_input"
             />
-          </div>
-          <div class="error_confirm_pw">동일하게 좀 입력해라!</div>
-          <div class="none_error_confirm_pw">
-            비밀번호를 한번 더 입력해 주세요.
           </div>
 
           <div class="name_container">
@@ -100,7 +86,6 @@
               class="name_input"
             />
           </div>
-          <div class="error_name">이름을 입력해주세요.</div>
 
           <div class="email_container">
             <span class="email_title"
@@ -114,10 +99,8 @@
               placeholder="예: marketkurly@kurly.com"
               class="email_input"
             />
-            <input type="button" value="중복확인" class="email_confirm_check" />
+            <button class="confirm_check">중복확인</button>
           </div>
-          <div class="error_email">이메일 형식 좀 맟혀라!</div>
-          <div class="error_none_email">이메일을 입력해주세요.</div>
 
           <div class="phone_container">
             <span class="phone_title"
@@ -128,22 +111,11 @@
             <input
               id="phone"
               type="text"
-              maxlength="11"
               placeholder="숫자만 입력해주세요."
               class="phone_input"
             />
-
-            <label for="certification" class="a11yHidden">휴대폰</label>
-            <input
-              id="certification"
-              type="button"
-              disabled
-              value="인증번호 받기"
-              placeholder="숫자만 입력해주세요."
-              class="phone_confirm_check"
-            />
+            <button class="confirm_check">인증번호 받기</button>
           </div>
-          <div class="error_phone">휴대폰 번호를 입력해주세요.</div>
 
           <div class="address_container">
             <span class="address_title"
@@ -317,9 +289,7 @@
           <div class="last_line"></div>
 
           <div class="signup_btn">
-            <button class="congratulations" disabled="disabled">
-              가입하기
-            </button>
+            <button>가입하기</button>
           </div>
         </form>
       </div>
