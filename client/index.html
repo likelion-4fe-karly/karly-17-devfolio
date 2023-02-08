@@ -22,8 +22,7 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="/pages/index/index.js" defer type="module"></script>
-    <!-- <script src="/pages/index/index2.js" type="module"></script> -->
+    <script src="/pages/index/index.js" type="module"></script>
     <script src="/js/main.js" type="module"></script>
   </head>
 
@@ -46,9 +45,9 @@
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
           <div class="swiper index_recommend_product_swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"></div>
-            </div>
+            <div
+              class="swiper-wrapper index_recommend_product_swiper_wrapper"
+            ></div>
           </div>
         </div>
       </section>
@@ -58,153 +57,22 @@
           alt="더 풍성해진 10월의 퍼플위크 적립률 UP + 3종 쿠폰팩"
         />
       </div>
-      <section class="index_recommend_product">
+      <section class="index_regret_product">
         <h2>놓치면 후회할 가격</h2>
         <!-- Swiper -->
-        <div class="swiper_cover">
+        <div class="swiper_regret_cover">
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
-          <div class="swiper index_recommend_product_swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <ul>
-                  <li>
-                    <a class="index_recommend_product_swiper_item" href="#">
-                      <img
-                        src="./assets/index/recomment_food1.jpg"
-                        alt="풀무원 탱탱쫄면 4개입"
-                      />
-                      <p class="recommend_swiper_item_title">
-                        [풀무원] 탱탱쫄면 (4개입)
-                      </p>
-                      <p class="recommend_swiper_item_price">4,980 원</p>
-                      <div class="recommend_swiper_item_cart" tabindex="0">
-                        <img
-                          src="./assets/index/icon_cart.png"
-                          alt="장바구니 버튼"
-                        />
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="index_recommend_product_swiper_item" href="#">
-                      <img
-                        class="thumbnail"
-                        src="./assets/index/recomment_food2.jpg"
-                        alt="온더바디 죠르디 시카 자석 선쿠션"
-                      />
-                      <p class="recommend_swiper_item_title">
-                        [온더바디] 죠르디 시카 자석 선쿠션
-                      </p>
-                      <p class="recommend_swiper_item_price">32,500 원</p>
-                      <div class="recommend_swiper_item_cart" tabindex="0">
-                        <img
-                          src="./assets/index/icon_cart.png"
-                          alt="장바구니 버튼"
-                        />
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="index_recommend_product_swiper_item" href="#">
-                      <img
-                        class="thumbnail"
-                        src="./assets/index/recomment_food3.jpg"
-                        alt="유기농 밀키퀸 현미 4kg"
-                      />
-                      <p class="recommend_swiper_item_title">
-                        유기농 밀키퀸 현미 4kg
-                      </p>
-                      <p class="recommend_swiper_item_price">25,000 원</p>
-                      <div class="recommend_swiper_item_cart" tabindex="0">
-                        <img
-                          src="./assets/index/icon_cart.png"
-                          alt="장바구니 버튼"
-                        />
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="index_recommend_product_swiper_item" href="#">
-                      <img
-                        class="thumbnail"
-                        src="./assets/index/recomment_food4.jpg"
-                        alt="프로쉬 베이비 세탁세제"
-                      />
-                      <p class="recommend_swiper_item_title">
-                        [프로쉬] 베이비 세탁세제
-                      </p>
-                      <p class="recommend_swiper_item_price">
-                        <span>24%</span>18,900 원
-                      </p>
-                      <p class="recommend_swiper_item_origin_cost">24,000 원</p>
-                      <div class="recommend_swiper_item_cart" tabindex="0">
-                        <img
-                          src="./assets/index/icon_cart.png"
-                          alt="장바구니 버튼"
-                        />
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div class="swiper index_regret_product_swiper">
+            <div
+              class="swiper-wrapper index_regret_product_swiper_wrapper"
+            ></div>
           </div>
         </div>
       </section>
-      <div class="recent">
-        <div class="recent_product">
-          <!-- Swiper -->
-          <div class="swiper-button-next"></div>
-          <p>최근 본 상품</p>
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="">
-                  <img src="./assets/index/jjigae.jpg" alt="된장찌개 키트" />
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="">
-                  <img src="./assets/index/jjigae.jpg" alt="된장찌개 키트" />
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="">
-                  <img src="./assets/index/gompyo.jpg" alt="곰표 옥수수" />
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="">
-                  <img src="./assets/index/porklib.jpeg" alt="폭립" />
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="">
-                  <img src="./assets/index/jjigae.jpg" alt="된장찌개 키트" />
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="">
-                  <img src="./assets/index/jjigae.jpg" alt="된장찌개 키트" />
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="">
-                  <img src="./assets/index/gompyo.jpg" alt="곰표 옥수수" />
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="">
-                  <img src="./assets/index/porklib.jpeg" alt="폭립" />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-button-prev"></div>
-        </div>
-      </div>
+      <iframe data-include="/layout/recent.html"></iframe>
     </div>
+    <!-- 최근 본 상품 -->
     <iframe data-include="/layout/footer.html" data-height="681px"></iframe>
     <!-- 뷰티 플랫폼 POP UP -->
     <div class="beauty_popup">

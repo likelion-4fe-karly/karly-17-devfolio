@@ -1,26 +1,14 @@
 import { insertLast } from '/lib/dom/insert.js';
 
-insertLast;
 window.onload = function () {
-  fetch('http://localhost:3000/products')
+  fetch('http://localhost:3000/banner')
     .then((res) => res.json())
     .then((json) => {
       let html = '';
-
-      // const swiperWrapper = document.querySelector('.swiper-wrapper');
-
       json.forEach((image) => {
-        // const slide = document.createElement('div');
-        // slide.classList.add('swiper-slide');
-        // const img = document.createElement('img');
-        // img.src = image.src;
-        // img.alt = image.id;
-        // slide.appendChild(img);
-        // swiperWrapper.appendChild(slide);
-
         html += /* html */ `
         <div class="swiper-slide">
-          <img src="/assets/${image.image.banner}" alt="${image.image.alt}" />
+          <img src="${image.src}" alt="${image.alt}" />
         </div>
         `;
       });
@@ -28,13 +16,17 @@ window.onload = function () {
       insertLast('.swiper-wrapper-banner', html);
     });
 
-  const swiper1 = new Swiper('.index_visual_swiper', {
-    autoplay: true,
+  const banner_swiper = new Swiper('.index_visual_swiper', {
+    centeredSlides: true,
+    loop: false,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: '.swiper-pagination',
       type: 'fraction',
     },
-    loop: true,
     speed: 1000,
     parallax: true,
     a11y: {
@@ -57,21 +49,23 @@ let swiperPrev = document.querySelector(
 
 /* 메인 배너 */
 /* 이 상품 어때? */
-const swiper2 = new Swiper('.first .product', {
+const recommend_swiper = new Swiper('.index_recommend_product_swiper', {
   autoplay: false,
   loop: false,
   speed: 1000,
   parallax: true,
-  pagination: {},
   a11y: {
     prevSlideMessage: '이전 슬라이드',
     nextSlideMessage: '다음 슬라이드',
     slideLabelMessage:
       '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
   },
+  keyboard: {
+    enabled: true,
+  },
   navigation: {
-    prevEl: '.first .swiper-button-prev',
-    nextEl: '.first .swiper-button-next',
+    prevEl: '.swiper_cover .swiper-button-prev',
+    nextEl: '.swiper_cover .swiper-button-next',
   },
   on: {
     activeIndexChange: function () {
@@ -89,42 +83,97 @@ const swiper2 = new Swiper('.first .product', {
 fetch('http://localhost:3000/products')
   .then((res) => res.json())
   .then((json) => {
-    let html = '';
+    let swiperSlideHtml = '';
+    let index = 0;
 
-    console.log(json);
-    json.forEach((product) => {
-      html += /*html*/ `
-      <ul>
-        <li>
-          <a
-            class="index_recommend_product_swiper_item"
-            href="/pages/product_detail/product_detail.html"
-          >
-          <img
-            src="/assets/${product.image.view}"
-            alt="${product.image.alt}"
-          />
-          <p class="recommend_swiper_item_title">
-            ${product.name}
-          </p>
-          <p class="recommend_swiper_item_price">${product.price}원</p>
-          </a>
-          <div class="recommend_swiper_item_cart" tabindex="0">
-            <img
-              src="/assets/index/icon_cart.png"
-              alt="장바구니 버튼"
-            />
-          </div>
-      </li>
-    </ul>
+    while (
+      index++ <
+      Math.floor(json.length / 4) + Math.floor(json.length % 4)
+    ) {
+      swiperSlideHtml += /*html*/ `
+      <div class="swiper-slide swiper-slide-recommend${index}">
+        <ul>
+        </ul>
+      </div>
     `;
-    });
+    }
 
-    insertLast('.swiper-slide', html);
+    insertLast('.index_recommend_product_swiper_wrapper', swiperSlideHtml);
+
+    let ulArray = JSON.parse(JSON.stringify(json));
+    let liHtml = '';
+
+    // 배열 나누는 함수
+    const division = (array, number) => {
+      const length = array.length;
+      const divide =
+        Math.floor(length / number) + (Math.floor(length % number) > 0 ? 1 : 0);
+      const newArray = [];
+
+      for (let i = 0; i < divide; i++) {
+        newArray.push(array.splice(0, number));
+      }
+      return newArray;
+    };
+
+    let newArr = division(ulArray, 4);
+    let slideIndex = 0;
+
+    newArr.forEach((arr) => {
+      arr.forEach((product) => {
+        let saleRatio = product.saleRatio;
+        let salePrice = product.salePrice;
+        let price = product.price;
+
+        // 할인 하지 않을 때,
+        if (product.saleRatio === 0) {
+          saleRatio = '';
+          salePrice = price + '원';
+          price = '';
+        } else {
+          saleRatio *= 100;
+          saleRatio += '%';
+          salePrice += '원';
+          price += '원';
+        }
+
+        liHtml += /* html */ `
+            <li>
+              <a
+                class="index_recommend_product_swiper_item"
+                href="/pages/product_detail/product_detail.html"
+              >
+              <img
+                src="/assets/${product.image.view}"
+                alt="${product.image.alt}"
+              />
+              <p class="recommend_swiper_item_title">
+                ${product.name}
+              </p>
+              <div class="recommend_swiper_item_discount">
+                <p class="recommend_swiper_item_sale_ratio">${saleRatio}</p>
+                <p class="recommend_swiper_item_sale_price">${salePrice}</p>
+              </div>
+              <p class="recommend_swiper_item_price">${price}</p>
+              </a>
+              <div class="recommend_swiper_item_cart" tabindex="0">
+                <img
+                  class="recommend_swiper_item_cart_image"
+                  src="/assets/index/icon_cart.png"
+                  alt="장바구니 버튼"
+                />
+              </div>
+          </li>
+        `;
+      });
+      slideIndex++;
+      insertLast(`.swiper-slide-recommend${slideIndex} ul`, liHtml);
+      liHtml = '';
+    });
   });
 
 /*  놓치면 후회할 가격 */
-const swiper4 = new Swiper('.second .price', {
+const regret_swiper = new Swiper('.index_regret_product_swiper', {
   autoplay: false,
   loop: false,
   speed: 1000,
@@ -137,8 +186,8 @@ const swiper4 = new Swiper('.second .price', {
       '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
   },
   navigation: {
-    prevEl: '.second .swiper-button-prev',
-    nextEl: '.second .swiper-button-next',
+    prevEl: '.swiper_regret_cover .swiper-button-prev',
+    nextEl: '.swiper_regret_cover .swiper-button-next',
   },
   on: {
     activeIndexChange: function () {
@@ -150,6 +199,99 @@ const swiper4 = new Swiper('.second .price', {
     },
   },
 });
+
+// 놓치면 후회할 가격
+// TODO 비동기 통신 뿌리기
+fetch('http://localhost:3000/products')
+  .then((res) => res.json())
+  .then((json) => {
+    let swiperSlideHtml = '';
+    let index = 0;
+
+    while (
+      index++ <
+      Math.floor(json.length / 4) + Math.floor(json.length % 4)
+    ) {
+      swiperSlideHtml += /*html*/ `
+      <div class="swiper-slide swiper-slide-regret${index}">
+        <ul>
+        </ul>
+      </div>
+    `;
+    }
+
+    insertLast('.index_regret_product_swiper_wrapper', swiperSlideHtml);
+
+    let ulArray = JSON.parse(JSON.stringify(json));
+    let liHtml = '';
+
+    // 배열 나누는 함수
+    const division = (array, number) => {
+      const length = array.length;
+      const divide =
+        Math.floor(length / number) + (Math.floor(length % number) > 0 ? 1 : 0);
+      const newArray = [];
+
+      for (let i = 0; i < divide; i++) {
+        newArray.push(array.splice(0, number));
+      }
+      return newArray;
+    };
+
+    let newArr = division(ulArray, 4);
+    let slideIndex = 0;
+
+    newArr.forEach((arr) => {
+      arr.forEach((product) => {
+        let saleRatio = product.saleRatio;
+        let salePrice = product.salePrice;
+        let price = product.price;
+
+        // 할인 하지 않을 때,
+        if (product.saleRatio === 0) {
+          saleRatio = '';
+          salePrice = price + '원';
+          price = '';
+        } else {
+          saleRatio *= 100;
+          saleRatio += '%';
+          salePrice += '원';
+          price += '원';
+        }
+
+        liHtml += /* html */ `
+            <li>
+              <a
+                class="index_regret_product_swiper_item"
+                href="/pages/product_detail/product_detail.html"
+              >
+              <img
+                src="/assets/${product.image.view}"
+                alt="${product.image.alt}"
+              />
+              <p class="regret_swiper_item_title">
+                ${product.name}
+              </p>
+              <div class="regret_swiper_item_discount">
+                <p class="regret_swiper_item_sale_ratio">${saleRatio}</p>
+                <p class="regret_swiper_item_sale_price">${salePrice}</p>
+              </div>
+              <p class="regret_swiper_item_price">${price}</p>
+              </a>
+              <div class="regret_swiper_item_cart" tabindex="0">
+                <img
+                  src="/assets/index/icon_cart.png"
+                  alt="장바구니 버튼"
+                />
+              </div>
+          </li>
+        `;
+      });
+      slideIndex++;
+      insertLast(`.swiper-slide-regret${slideIndex} ul`, liHtml);
+      liHtml = '';
+    });
+  });
 
 /* 최근 본 상품 */
 const swiper3 = new Swiper('.recent_product .swiper', {
@@ -211,10 +353,9 @@ close.addEventListener('click', closeHandler);
 
 // ! 장바구니 POP UP 영역
 const cartPopUpContainer = document.querySelector('.cart_popup_container');
-const cartButton = document.querySelectorAll('.recommend_swiper_item_cart');
+const cartButton = document.querySelectorAll('.regret_swiper_item_cart');
 
 const cartHandler = () => {
-  //클래스에 on 추가
   cartPopUpContainer.classList.add('on');
 
   fetch('http://localhost:3000/products')
