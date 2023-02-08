@@ -293,17 +293,6 @@ fetch('http://localhost:3000/products')
     });
   });
 
-/* 최근 본 상품 */
-const swiper3 = new Swiper('.recent_product .swiper', {
-  direction: 'vertical',
-  slidesPerView: 3,
-  spaceBetween: 30,
-  navigation: {
-    prevEl: '.recent_product .swiper-button-prev',
-    nextEl: '.recent_product .swiper-button-next',
-  },
-});
-
 // ! 뷰티 플랫폼 POP UP 영역
 const popup = document.querySelector('.beauty_popup');
 const neverWatch = document.querySelector('.beauty_popup_never_watch');
