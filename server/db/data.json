@@ -179,7 +179,6 @@
       "price": "19,900",
       "saleRatio": 0.25,
       "salePrice": "15,920",
-
       "image": {
         "thumbnail": "relief/detail_thumbnail.jpg",
         "view": "relief/detail_view.jpg"
@@ -207,6 +206,13 @@
       "email": "qwe@naver.com",
       "uid": "AlJfIJZpGe",
       "name": "이경호"
+    },
+    {
+      "id": "choibo17",
+      "password": "choiboyoung17",
+      "email": "lady2412@naver.com",
+      "uid": "WvnLaxTGYF",
+      "name": "최보영"
     }
   ],
   "products_list": [

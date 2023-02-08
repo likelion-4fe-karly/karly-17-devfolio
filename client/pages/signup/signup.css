@@ -149,6 +149,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
 }
 
 .gender_wrapper input {
@@ -216,6 +217,7 @@ input[type='number']::-webkit-inner-spin-button {
   justify-content: space-between;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
 }
 
 .suggestion_id,
@@ -267,6 +269,7 @@ input[type='number']::-webkit-inner-spin-button {
 
 .check_list_first_type {
   gap: 8px;
+  cursor: pointer;
 }
 
 .check_list_second_type,
@@ -280,6 +283,7 @@ input[type='number']::-webkit-inner-spin-button {
   vertical-align: top;
   color: var(--gray-800);
   font-size: 15px;
+  cursor: pointer;
 }
 
 .check_list_wrapper a {

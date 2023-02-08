@@ -129,6 +129,11 @@ a:hover {
   bottom: 29px;
 }
 
+.event_banner {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 /* 이 상품 어때요?  */
 .index_regret_product,
 .index_recommend_product {
