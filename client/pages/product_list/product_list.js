@@ -1,11 +1,11 @@
 fetch('http://localhost:3000/products_list')
   .then((response) => response.json())
-  .then((product_lists) => {
+  .then((product_list) => {
     let markup = '';
 
-    product_lists.forEach((product_list) => {
+    product_list.forEach((product_list) => {
       console.log(product_list);
-      markup += /* html */ `
+      let markup = `
       <a>
         <div class="product_item_img_box">
           <img
@@ -69,41 +69,71 @@ fetch('http://localhost:3000/products_list')
                   <div class="item_info_delivery">샛별배송</div>
                   <div class="item_info_name">${product_list.name}</div>
                   <div class="item_price_sale">
-                    <span class="item_price_rate">${
-                      product_list.saleRatio
-                    }</span>
-                    <!--${
+                    ${
                       product_list.saleRatio
                         ? `<span class="item_price_rate">${product_list.saleRatio}</span>`
                         : ''
-                    }-->
+                    }
                     <span>${product_list.price}</span><span>원</span>
                     <div>
-                      <!--${
+                      ${
                         product_list.salePrice
                           ? `<del>${product_list.salePrice}<span>원</span></del>`
                           : ''
-                      } -->
+                      } 
                     </div>
                   </div>
                   <div class="item_info_coment">
                     ${product_list.description}
                   </div>
-                  <!--${
+                  ${
                     product_list.badge
                       ? `<div class="item_badge_group">
-                    <span class="badge_only">${product_list.Badge.karlyBadge}</span>
-                    <span>${product_list.Badge.limitedBadge}</span>
+                    <span class="badge_only">${product_list.badge.karly}</span>
+                    <span>${product_list.badge.limited}</span>
                   </div>`
                       : ''
-                  }-->
+                  }
         </div>
       </a>`;
 
-      console.log(markup);
+      document
+        .querySelector('div.product_list_grid')
+        .insertAdjacentHTML('beforeend', markup);
     });
   })
   .catch(() => {
     console.error('상품리스트 조회에 실패하였습니다.');
     alert('상품리스트 조회에 실패하였습니다.');
   });
+
+// accordion 만들기
+let accordion = document.getElementsByClassName('btn_toggle');
+let i;
+for (i = 0; i < accordion.length; i++) {
+  accordion[i].addEventListener('click', function () {
+    this.classList.toggle('active');
+    let accordion_item_list = this.nextElementSibling;
+    if (!this.classList.contains('active')) {
+      accordion_item_list.style.maxHeight = null;
+    } else {
+      accordion_item_list.style.maxHeight =
+        accordion_item_list.scrollHeight + 'px';
+    }
+  });
+}
+
+// 초기화 버튼
+// function listCheckbox() {
+//   const checkboxes = document.getElementsByName('productListItem');
+//   checkboxes.forEach((checkbox) => {
+//     checkbox.checked = false;
+//   });
+// }
+const checkboxes = document.getElementsByName('productListItem');
+
+function listCheckbox() {
+  checkboxes.forEach(function (checkbox) {
+    checkbox.checked = false;
+  });
+}
